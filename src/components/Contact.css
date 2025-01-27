@@ -1,0 +1,147 @@
+/* Container utama halaman kontak */
+.contact-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Judul utama */
+.contact-page h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Daftar kontak */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.contact-list li {
+  font-size: 1.2rem;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-list a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contact-list a:hover {
+  color: #0056b3;
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: #007bff;
+  transition: transform 0.3s ease;
+}
+
+.contact-list li:hover .icon {
+  transform: scale(1.2);
+}
+
+/* Formulir saran dan kritik */
+.feedback-form {
+  margin-top: 30px;
+  padding: 20px;
+  background: linear-gradient(145deg, #f3f3f3, #ffffff);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feedback-form label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  background: #fefefe;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+}
+
+.feedback-form button {
+  padding: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.feedback-form button:hover {
+  background: linear-gradient(45deg, #0056b3, #003f8c);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-form button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Pesan status */
+.status-message {
+  margin-top: 15px;
+  font-size: 1rem;
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

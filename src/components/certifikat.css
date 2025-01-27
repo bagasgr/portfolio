@@ -1,0 +1,73 @@
+/* Basic reset and layout settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 36px;
+    color: #2c3e50;
+}
+
+.sertifikat-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sertifikat {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.sertifikat-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sertifikat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.sertifikat-logo {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.sertifikat-details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.sertifikat-details p {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+.credential-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.credential-link:hover {
+    text-decoration: underline;
+}
