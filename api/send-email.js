@@ -4,7 +4,7 @@ const nodemailer = require("nodemailer");
 
 const app = express();
 app.use(express.json());
-app.use(cors()); // Tambahkan middleware CORS di sini
+app.use(cors());
 
 app.post("/send-email", async (req, res) => {
   const { feedback, user_email } = req.body;
@@ -12,13 +12,13 @@ app.post("/send-email", async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "bagasiyain205@gmail.com",
-      pass: "elgzstsequsytctd",
+      user: process.env.EMAIL_USER, // Ambil dari .env
+      pass: process.env.EMAIL_PASS, // Ambil dari .env
     },
   });
 
   const mailOptions = {
-    from: "bagasiyain205@gmail.com",
+    from: process.env.EMAIL_USER,
     to: user_email,
     subject: "Feedback Received",
     html: `
@@ -54,7 +54,7 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
