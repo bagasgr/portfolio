@@ -74,6 +74,12 @@ const Contact = () => {
             @bagasg.r04
           </a>
         </li>
+        <li>
+          <FaTiktok className="icon" /> TikTok:{" "}
+          <a href="https://tiktok.com/@bagasg.r04" target="_blank" rel="noopener noreferrer">
+            @bagasg.r04
+          </a>
+        </li>
       </ul>
 
       <form className="feedback-form" onSubmit={handleSubmit}>
