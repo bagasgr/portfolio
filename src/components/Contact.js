@@ -75,9 +75,9 @@ const Contact = () => {
           </a>
         </li>
         <li>
-          <FaTiktok className="icon" /> TikTok:{" "}
-          <a href="https://tiktok.com/@bagasg.r04" target="_blank" rel="noopener noreferrer">
-            @bagasg.r04
+          <FaTiktok className="icon" /> Youtube:{" "}
+          <a href="https://www.youtube.com/@bagasgilangramadhan7960" target="_blank" rel="noopener noreferrer">
+            @bagasgilangramadhan7960
           </a>
         </li>
       </ul>
