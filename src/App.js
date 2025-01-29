@@ -1,27 +1,24 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import routing components
-import './App.css'; // Pastikan file CSS ini ada dan digunakan
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Import routing components
+import "./App.css"; // Pastikan file CSS ini ada dan digunakan
 
 // Import gambar
-import programmerImg from './images/fota pro.jpeg';
-import cybersecurityImg from './images/cyber security.jpeg';
-import dataImg from './images/data.png';
-import softwareImg from './images/software.png';
-import devImg from './images/dev.png';
-import etImg from './images/et.png';
-import potoImg from './images/f.jpeg';
-import macinImg from './images/machine.png';
-import proImg from './images/projek.png';
+import programmerImg from "./images/fota pro.jpeg";
+import cybersecurityImg from "./images/cyber security.jpeg";
+import dataImg from "./images/data.png";
+import softwareImg from "./images/software.png";
+import devImg from "./images/dev.png";
+import etImg from "./images/et.png";
+import potoImg from "./images/f.jpeg";
+import macinImg from "./images/machine.png";
+import proImg from "./images/projek.png";
 
-
-
-import Header from './components/Header'; // Pastikan path ini sesuai
-import About from './components/About'; // Pastikan path ini sesuai
-import Pengalaman from './components/pengalaman'; // Pastikan path ini sesuai
-import Contact from './components/Contact'; // Pastikan path ini sesuai
-import Projects from './components/Projects'; // Pastikan path ini sesuai
-import Certifikat from './components/certifikat'; // Pastikan path ini sesuai
-
+import Header from "./components/Header"; // Pastikan path ini sesuai
+import About from "./components/About"; // Pastikan path ini sesuai
+import Pengalaman from "./components/pengalaman"; // Pastikan path ini sesuai
+import Contact from "./components/Contact"; // Pastikan path ini sesuai
+import Projects from "./components/Projects"; // Pastikan path ini sesuai
+import Certifikat from "./components/certifikat"; // Pastikan path ini sesuai
 
 // Define the App component
 function App() {
@@ -33,7 +30,8 @@ function App() {
           <div className="hero-content">
             <h1 className="hero-title">I Am Bagas Gilang Ramadhan</h1>
             <p className="hero-description">
-            A Software Engineer passionate about designing and building modern, dynamic, and scalable software solutions. With expertise in backend, frontend, DevOps, and cybersecurity, I aim to deliver impactful and innovative applications.
+              A Software Engineer passionate about designing and building modern, dynamic, and scalable software solutions. With expertise in backend, frontend, DevOps, and cybersecurity, I aim to deliver impactful and innovative
+              applications.
             </p>
             <div className="navigation">
               <a href="/about">About</a>
@@ -43,11 +41,7 @@ function App() {
               <a href="/contact">Contact</a>
             </div>
           </div>
-          <img
-            src={potoImg}
-            alt="Bagas Gilang Ramadhan"
-            className="hero-image"/>
-            
+          <img src={potoImg} alt="Bagas Gilang Ramadhan" className="hero-image" />
         </div>
         <h1> Skill</h1>
         {/* Fixed Image Section */}
@@ -99,12 +93,7 @@ function App() {
             <h2>Project Manager IT</h2>
             <img src={proImg} alt="Project Manager IT" className="profile-image" />
           </div>
-          
-          
         </div>
-
-        
-        
 
         {/* Routes */}
         <div className="content">

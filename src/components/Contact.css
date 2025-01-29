@@ -1,25 +1,39 @@
 /* Container utama halaman kontak */
 .contact-page {
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
-  font-family: 'Poppins', sans-serif;
-  color: #222;
-  background: linear-gradient(145deg, #ffffff, #e6e6e6);
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background: linear-gradient(145deg, #ffffff, #f1f1f1);
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 8px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  animation: fadeIn 1s ease-out;
 }
 
 /* Judul utama */
 .contact-page h1 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   text-align: center;
   color: #007bff;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
+  animation: slideInFromTop 1s ease-out;
+}
+
+/* Animasi judul slide-in */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Daftar kontak */
@@ -27,6 +41,7 @@
   list-style: none;
   padding: 0;
   margin: 20px 0;
+  animation: fadeIn 1.5s ease-out;
 }
 
 .contact-list li {
@@ -35,7 +50,7 @@
   display: flex;
   align-items: center;
   padding: 12px 15px;
-  background: #f9f9f9;
+  background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -43,7 +58,14 @@
 
 .contact-list li:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animasi untuk ikon kontak */
+.contact-list .icon {
+  font-size: 1.7rem;
+  color: #007bff;
+  transition: transform 0.3s ease;
 }
 
 .contact-list a {
@@ -58,12 +80,6 @@
   color: #0056b3;
 }
 
-.icon {
-  font-size: 1.5rem;
-  color: #007bff;
-  transition: transform 0.3s ease;
-}
-
 .contact-list li:hover .icon {
   transform: scale(1.2);
 }
@@ -71,13 +87,14 @@
 /* Formulir saran dan kritik */
 .feedback-form {
   margin-top: 30px;
-  padding: 20px;
+  padding: 30px;
   background: linear-gradient(145deg, #f3f3f3, #ffffff);
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
+  animation: fadeIn 2s ease-out;
 }
 
 .feedback-form label {
@@ -89,7 +106,7 @@
 
 .feedback-form input,
 .feedback-form textarea {
-  padding: 12px 15px;
+  padding: 15px 18px;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -101,9 +118,10 @@
 .feedback-form input:focus,
 .feedback-form textarea:focus {
   border-color: #007bff;
-  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
 }
 
+/* Tombol Kirim Formulir */
 .feedback-form button {
   padding: 15px;
   font-size: 1.2rem;
@@ -134,14 +152,35 @@
   text-align: center;
   color: green;
   font-weight: bold;
-  animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
 }
 
+/* Animasi Fade-in untuk elemen */
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 20px;
+  }
+
+  .contact-page h1 {
+    font-size: 2rem;
+  }
+
+  .feedback-form input,
+  .feedback-form textarea {
+    padding: 12px 15px;
+  }
+
+  .feedback-form button {
+    font-size: 1rem;
   }
 }

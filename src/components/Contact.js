@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaInstagram, FaTiktok } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 
 const Contact = () => {
   const [feedback, setFeedback] = useState("");
@@ -75,8 +75,8 @@ const Contact = () => {
           </a>
         </li>
         <li>
-          <FaTiktok className="icon" /> Youtube:{" "}
-          <a href="https://www.youtube.com/@bagasgilangramadhan7960" target="_blank" rel="noopener noreferrer">
+          <FaYoutube className="icon" /> YouTube:{" "}
+          <a href="https://youtube.com/@bagasg.r04" target="_blank" rel="noopener noreferrer">
             @bagasgilangramadhan7960
           </a>
         </li>
