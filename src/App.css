@@ -159,22 +159,147 @@ body {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  /* Hero Title */
   .hero-title {
     font-size: 2.5rem;
+    width: 100%; /* Untuk membuat lebar judul sesuai dengan layar */
+    border-right: none; /* Menghapus kursor setelah animasi selesai */
+    animation: none; /* Menghilangkan animasi ketik */
+  }
+
+  /* Hero Description */
+  .hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+
+  /* Navigation Links */
+  .navigation a {
+    padding: 8px 15px;
+    font-size: 1rem;
+    margin: 5px;
+  }
+
+  /* Hero Image */
+  .hero-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  /* Fixed Image Section */
+  .fixed-images {
+    padding: 20px;
+    grid-template-columns: 1fr 1fr; /* Membuat dua kolom pada perangkat kecil */
+  }
+
+  /* Content Section */
+  .content {
+    padding: 20px;
+  }
+
+  /* Adjusting margins for smaller screens */
+  .image-container,
+  .navigation a {
+    margin: 10px auto;
+  }
+}
+
+/* Responsive Design for Smaller Devices */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .hero-title {
+    font-size: 2rem; /* Reducing title font size */
+    width: 100%;
+    margin-bottom: 10px; /* Reduce space between title and description */
+    border-right: none;
+    animation: none;
   }
 
   .hero-description {
     font-size: 1rem;
-  }
-
-  .navigation a {
-    padding: 8px 15px;
-    font-size: 0.9rem;
+    margin-bottom: 15px;
   }
 
   .hero-image {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .navigation a {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+    margin: 5px;
+  }
+
+  .fixed-images {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .image-container h2 {
+    font-size: 1.2rem;
+  }
+
+  /* Button and Form Adjustments */
+  .feedback-form input,
+  .feedback-form textarea {
+    padding: 10px 12px;
+    font-size: 1rem;
+  }
+
+  .feedback-form button {
+    font-size: 1rem;
+  }
+
+  .feedback-form {
+    padding: 12px;
+  }
+}
+
+/* Responsive Design for Very Small Devices (Mobile) */
+@media (max-width: 480px) {
+  /* Hero Title */
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    max-width: 90%; /* Allowing more room for the description */
+  }
+
+  .hero-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .navigation a {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .fixed-images {
+    grid-template-columns: 1fr; /* Single column on very small screens */
+  }
+
+  .image-container h2 {
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .feedback-form input,
+  .feedback-form textarea {
+    font-size: 0.9rem;
+  }
+
+  .feedback-form button {
+    font-size: 0.9rem;
   }
 }
