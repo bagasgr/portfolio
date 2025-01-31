@@ -14,6 +14,8 @@ import c1 from "../images/c1.jpeg";
 import i1 from "../images/excel.jpeg";
 import ti from "../images/ti.jpeg";
 import ap from "../images/ap.png";
+import proyek from "../images/c3.png";
+import proyek1 from "../images/c4.png";
 
 const Projects = () => {
   return (
@@ -83,11 +85,17 @@ const Projects = () => {
             <img src={ap} alt="E-Commerce Schema" className="foto project9" />
           </a>
         </div>
-
         <div className="project-item">
-          <h3>Website Pribadi</h3>
-          <p>A personal website designed to showcase my experience, projects, and achievements in the IT field. This site includes various interactive sections and dynamic content.</p>
+          <h3>ASP.NET MVC dan Web API Integration menggunakan C#</h3>
+          <p>🔑 Fitur Utama Proyek:
+1️⃣ MVC Framework: Mengimplementasikan arsitektur Model-View-Controller untuk menghasilkan antarmuka pengguna yang interaktif dan terorganisir dengan baik.
+2️⃣ RESTful API: Menyediakan endpoint API untuk operasi CRUD (Create, Read, Update, Delete) yang dapat diakses oleh sistem eksternal.
+3️⃣ UI yang Menarik: Memanfaatkan CSS dan JavaScript untuk meningkatkan pengalaman pengguna.
+4️⃣ Best Practices: Proyek ini dirancang dengan mengikuti prinsip clean architecture dan scalability.
+</p>
+          <img src={proyek} alt="project4" className="foto project4" />
         </div>
+
       </div>
     </section>
   );

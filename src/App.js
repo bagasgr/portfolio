@@ -12,6 +12,7 @@ import etImg from "./images/et.png";
 import potoImg from "./images/f.jpeg";
 import macinImg from "./images/machine.png";
 import proImg from "./images/projek.png";
+import fotoImg from "./images/foto.jpg";
 
 import Header from "./components/Header"; // Pastikan path ini sesuai
 import About from "./components/About"; // Pastikan path ini sesuai
@@ -41,7 +42,7 @@ function App() {
               <a href="/contact">Contact</a>
             </div>
           </div>
-          <img src={potoImg} alt="Bagas Gilang Ramadhan" className="hero-image" />
+          <img src={fotoImg} alt="Bagas Gilang Ramadhan" className="hero-image" />
         </div>
         <h1> Skill</h1>
         {/* Fixed Image Section */}
