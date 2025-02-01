@@ -2,10 +2,21 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background-color: #000000; /* Hitam pekat */
-  color: #fff; /* Mengubah teks menjadi putih agar kontras dengan latar belakang hitam */
+  background-color: #000000; 
+  color: #fff; 
   overflow-x: hidden;
   box-sizing: border-box;
+  animation: fadeInBody 1s ease-out;
+}
+
+/* Animasi untuk body */
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Hero Section */
@@ -15,37 +26,73 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #000000; /* Hitam pekat */
+  background-color: #000000; 
   position: relative;
-  animation: fadeIn 2s ease-in-out;
+  animation: fadeInHero 2s ease-out;
   text-align: center;
   padding: 0 20px;
 }
 
-/* Properti dengan vendor prefix untuk kompatibilitas */
+/* Animasi untuk Hero Section */
+@keyframes fadeInHero {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero Title */
 .hero-title {
   font-size: 4rem;
   font-weight: 800;
   margin-bottom: 20px;
   text-transform: uppercase;
   background: linear-gradient(to right, #f7f5f5, #ece8e8);
-  -webkit-background-clip: text; /* Vendor prefix untuk Webkit-based browsers */
-  background-clip: text; /* Properti standar */
+  -webkit-background-clip: text; 
+  background-clip: text; 
   -webkit-text-fill-color: transparent;
-  animation: slideIn 2s ease-in-out;
+  animation: slideInTitle 2s ease-out;
   letter-spacing: 3px;
   color: #fff;
 }
 
-/* Deskripsi hero section */
+/* Animasi untuk Hero Title */
+@keyframes slideInTitle {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Hero Description */
 .hero-description {
   font-size: 1.2rem;
   margin-bottom: 30px;
   max-width: 600px;
   color: #7b7b7b;
   line-height: 1.5;
-  animation: fadeInUp 2s ease-in-out;
+  animation: fadeInUpDescription 1.5s ease-out;
   padding: 0 20px;
+}
+
+/* Animasi untuk Hero Description */
+@keyframes fadeInUpDescription {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Navigation */
@@ -62,6 +109,20 @@ body {
   font-size: 1.1rem;
   background: rgba(3, 3, 3, 0.1);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  animation: pulseButton 2s infinite;
+}
+
+/* Animasi untuk tombol Navigation */
+@keyframes pulseButton {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .navigation a:hover {
@@ -73,28 +134,40 @@ body {
 
 /* Skill Section */
 .skills-title {
-  font-size: 3.5rem; /* Menambah ukuran font untuk lebih menonjol */
+  font-size: 3.5rem;
   text-align: center;
   margin: 50px 0;
-  color: #080808; /* Warna ungu lembut yang lebih menarik */
-  text-transform: uppercase; /* Menambahkan huruf kapital untuk kesan lebih tegas */
-  letter-spacing: 3px; /* Memberikan jarak antar huruf untuk kesan lebih modern */
-  font-weight: 700; /* Meningkatkan ketebalan font untuk lebih terlihat */
-  background: linear-gradient(135deg, #000000, #000000); /* Gradien untuk efek lebih estetis */
-  background-clip: text; /* Efek background pada teks */
-  -webkit-background-clip: text; /* Untuk browser berbasis Webkit */
-  color: transparent; /* Membuat warna teks transparan agar gradien terlihat */
-  animation: fadeInUp 1.5s ease-out; /* Efek animasi agar teks muncul secara halus */
+  color: #080808; 
+  text-transform: uppercase; 
+  letter-spacing: 3px; 
+  font-weight: 700;
+  background: linear-gradient(135deg, #000000, #000000); 
+  background-clip: text; 
+  -webkit-background-clip: text; 
+  color: transparent; 
+  animation: fadeInSkills 2s ease-out; 
 }
 
-/* Skill Section Cards */
+/* Animasi untuk Skill Section Title */
+@keyframes fadeInSkills {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Skill Cards */
 .skills-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
   padding: 20px;
-  background-color: #000000; /* Hitam pekat */
+  background-color: #000000; 
 }
 
 .skill-card {
@@ -106,10 +179,22 @@ body {
   text-align: center;
   transition: 0.4s;
   border: 2px solid #ff7eb3;
-  animation: fadeInUp 2s ease-in-out;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
+  animation: fadeInCard 1.5s ease-out;
+}
+
+/* Animasi untuk Skill Cards */
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .skill-card::before {
@@ -157,6 +242,20 @@ body {
   cursor: pointer;
   transition: 0.3s ease;
   box-shadow: 0px 10px 20px rgba(255, 117, 140, 0.4);
+  animation: bounceButton 2s infinite;
+}
+
+/* Animasi untuk Button */
+@keyframes bounceButton {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .button:hover {
@@ -165,37 +264,19 @@ body {
   box-shadow: 0px 10px 25px rgba(255, 117, 140, 0.6);
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateX(-50px);
+/* Animasi untuk notifikasi */
+@keyframes slideInNotification {
+  0% {
+    transform: translateX(-50%) translateY(50px);
     opacity: 0;
   }
-  to {
-    transform: translateX(0);
-    opacity: 1;
+  60% {
+    transform: translateX(-50%) translateY(-10px);
+    opacity: 0.8;
   }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
+  100% {
+    transform: translateX(-50%) translateY(0);
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
@@ -206,42 +287,32 @@ body {
   left: 50%;
   transform: translateX(-50%);
   width: 380px;
-  background: linear-gradient(135deg, #2d3b55, #7f8eaf); /* Warna gradasi biru yang lebih elegan */
+  background: linear-gradient(135deg, #2d3b55, #7f8eaf); 
   color: #fff;
-  border-radius: 15px; /* Sudut lebih bulat dan modern */
+  border-radius: 15px;
   padding: 20px 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Bayangan yang lebih dramatis */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   display: flex;
-  flex-direction: column; /* Mengatur posisi konten menjadi vertikal */
+  flex-direction: column;
   justify-content: space-between;
   z-index: 1000;
-  font-family: 'Poppins', sans-serif; /* Font yang lebih modern dan ringan */
-  animation: slideIn 0.8s ease-out, popUp 0.6s ease-in-out; /* Animasi yang lebih halus */
-  transition: all 0.3s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+  animation: slideInNotification 0.8s ease-out, popUpNotification 0.6s ease-in-out;
   max-height: 350px;
-  overflow-y: auto; /* Scrollable jika konten panjang */
-  backdrop-filter: blur(15px); /* Efek blur latar belakang lebih tajam */
+  overflow-y: auto;
+  backdrop-filter: blur(10px); 
 }
 
-/* Animasi slide-in */
-@keyframes slideIn {
-  from {
-    transform: translateX(-50%) translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
-  }
-}
-
-/* Animasi pop-up */
-@keyframes popUp {
-  from {
+@keyframes popUpNotification {
+  0% {
     transform: scale(0.8);
     opacity: 0;
   }
-  to {
+  50% {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+  100% {
     transform: scale(1);
     opacity: 1;
   }
@@ -249,42 +320,43 @@ body {
 
 /* Ikon notifikasi */
 .notification-icon {
-  font-size: 35px; /* Ikon lebih besar agar lebih menarik */
+  font-size: 35px;
   margin-right: 20px;
-  color: #ffe600; /* Warna ikon kuning yang mencolok */
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: #ffe600;
+  transition: transform 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
-/* Efek hover pada ikon */
+/* Animasi hover pada ikon */
 .notification-icon:hover {
-  transform: rotate(360deg); /* Rotasi 360 derajat saat hover */
-  color: #ffdd57; /* Perubahan warna ikon saat hover */
+  transform: rotate(360deg);
+  color: #ffdd57;
 }
 
 /* Konten notifikasi */
 .notification-content {
   font-size: 18px;
   font-weight: 500;
-  color: #f9f9f9; /* Teks putih cerah untuk kontras yang baik */
+  color: #f9f9f9;
   line-height: 1.6;
   max-height: 250px;
-  overflow-y: auto; /* Menambahkan scroll vertikal jika konten lebih panjang */
-  margin-bottom: 20px; /* Memberikan ruang di bawah konten */
-  padding-right: 10px; /* Memberikan ruang untuk scroll */
+  overflow-y: auto;
+  margin-bottom: 20px;
+  padding-right: 10px;
+  transition: color 0.4s ease-in-out, font-weight 0.4s ease-in-out;
 }
 
 /* Hover effect pada konten notifikasi */
 .notification-content:hover {
-  color: #ffe600; /* Teks berubah menjadi kuning cerah saat hover */
-  font-weight: 600; /* Membuat teks lebih tebal */
-  text-decoration: underline; /* Menambahkan garis bawah pada teks */
+  color: #000000;
+  font-weight: 600;
+  text-decoration: underline;
 }
 
 /* Tombol tutup */
 .notification-close {
   background: transparent;
   border: none;
-  font-size: 30px; /* Ukuran tombol lebih besar untuk kemudahan interaksi */
+  font-size: 30px;
   color: #fff;
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -293,8 +365,8 @@ body {
 
 /* Efek hover pada tombol tutup */
 .notification-close:hover {
-  color: #ffdd57; /* Ubah warna menjadi kuning cerah */
-  transform: rotate(90deg); /* Rotasi tombol saat hover */
+  color: #0e0d0d;
+  transform: rotate(90deg);
   opacity: 1;
 }
 
@@ -305,14 +377,3 @@ body {
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
-/* Styling untuk notifikasi saat muncul */
-.notification.show {
-  transform: translateX(-50%) translateY(0);
-  opacity: 1;
-  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
-}
-
-/* Efek blur pada notifikasi */
-.notification.show {
-  backdrop-filter: blur(15px); /* Efek blur lebih tajam dan modern */
-}

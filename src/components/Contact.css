@@ -4,8 +4,8 @@
   margin: 0 auto;
   padding: 30px;
   font-family: "Poppins", sans-serif;
-  color: #fff; /* Mengubah warna teks menjadi putih */
-  background: #000000; /* Menggunakan latar belakang hitam */
+  color: #fff;
+  background: #000000;
   border-radius: 20px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 8px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -16,7 +16,7 @@
 .contact-page h1 {
   font-size: 2.8rem;
   text-align: center;
-  color: #fff; /* Warna teks menjadi putih */
+  color: #fff;
   margin-bottom: 30px;
   font-weight: 700;
   text-transform: uppercase;
@@ -50,34 +50,36 @@
   display: flex;
   align-items: center;
   padding: 12px 15px;
-  background: #333; /* Latar belakang item menjadi lebih gelap */
+  background: #333;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  animation: fadeIn 1.5s ease-out;
 }
 
 .contact-list li:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #444; /* Mengubah warna latar belakang saat hover */
 }
 
 /* Animasi untuk ikon kontak */
 .contact-list .icon {
   font-size: 1.7rem;
-  color: #fff; /* Mengubah warna ikon menjadi putih */
-  transition: transform 0.3s ease;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .contact-list a {
   margin-left: 15px;
   text-decoration: none;
-  color: #fff; /* Warna teks link menjadi putih */
+  color: #fff;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .contact-list a:hover {
-  color: #007bff; /* Mengubah warna saat hover */
+  color: #007bff;
 }
 
 .contact-list li:hover .icon {
@@ -88,7 +90,7 @@
 .feedback-form {
   margin-top: 30px;
   padding: 30px;
-  background: #333; /* Latar belakang formulir menjadi lebih gelap */
+  background: #333;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -100,7 +102,7 @@
 .feedback-form label {
   font-size: 1rem;
   font-weight: 600;
-  color: #fff; /* Mengubah warna label menjadi putih */
+  color: #fff;
   margin-bottom: 5px;
 }
 
@@ -111,15 +113,26 @@
   border: 1px solid #ccc;
   border-radius: 10px;
   outline: none;
-  background: #444; /* Latar belakang input dan textarea lebih gelap */
-  color: #fff; /* Warna teks input dan textarea menjadi putih */
+  background: #444;
+  color: #fff;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  animation: fadeIn 2s ease-out;
 }
 
 .feedback-form input:focus,
 .feedback-form textarea:focus {
   border-color: #007bff;
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+/* Animasi Fade-in untuk elemen */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Tombol Kirim Formulir */
@@ -133,6 +146,7 @@
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  animation: fadeIn 2s ease-out;
 }
 
 .feedback-form button:hover {
@@ -151,19 +165,9 @@
   margin-top: 15px;
   font-size: 1rem;
   text-align: center;
-  color: #28a745; /* Warna pesan sukses menjadi hijau cerah */
+  color: #28a745;
   font-weight: bold;
   animation: fadeIn 1s ease-in-out;
-}
-
-/* Animasi Fade-in untuk elemen */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 /* Responsif untuk perangkat mobile */
@@ -176,6 +180,11 @@
     font-size: 2rem;
   }
 
+  .contact-list li {
+    font-size: 1rem;
+    padding: 10px 12px;
+  }
+
   .feedback-form input,
   .feedback-form textarea {
     padding: 12px 15px;
@@ -183,5 +192,34 @@
 
   .feedback-form button {
     font-size: 1rem;
+  }
+
+  .feedback-form {
+    gap: 15px;
+  }
+}
+
+/* Responsif untuk perangkat dengan lebar lebih kecil */
+@media (max-width: 480px) {
+  .contact-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-list li {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+
+  .feedback-form input,
+  .feedback-form textarea {
+    padding: 10px 12px;
+  }
+
+  .feedback-form button {
+    font-size: 0.9rem;
+  }
+
+  .feedback-form {
+    gap: 10px;
   }
 }
