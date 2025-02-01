@@ -198,3 +198,121 @@ body {
     transform: translateY(0);
   }
 }
+
+/* Styling untuk pop-up notifikasi */
+.notification {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 380px;
+  background: linear-gradient(135deg, #2d3b55, #7f8eaf); /* Warna gradasi biru yang lebih elegan */
+  color: #fff;
+  border-radius: 15px; /* Sudut lebih bulat dan modern */
+  padding: 20px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Bayangan yang lebih dramatis */
+  display: flex;
+  flex-direction: column; /* Mengatur posisi konten menjadi vertikal */
+  justify-content: space-between;
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif; /* Font yang lebih modern dan ringan */
+  animation: slideIn 0.8s ease-out, popUp 0.6s ease-in-out; /* Animasi yang lebih halus */
+  transition: all 0.3s ease-in-out;
+  max-height: 350px;
+  overflow-y: auto; /* Scrollable jika konten panjang */
+  backdrop-filter: blur(15px); /* Efek blur latar belakang lebih tajam */
+}
+
+/* Animasi slide-in */
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%) translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animasi pop-up */
+@keyframes popUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Ikon notifikasi */
+.notification-icon {
+  font-size: 35px; /* Ikon lebih besar agar lebih menarik */
+  margin-right: 20px;
+  color: #ffe600; /* Warna ikon kuning yang mencolok */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Efek hover pada ikon */
+.notification-icon:hover {
+  transform: rotate(360deg); /* Rotasi 360 derajat saat hover */
+  color: #ffdd57; /* Perubahan warna ikon saat hover */
+}
+
+/* Konten notifikasi */
+.notification-content {
+  font-size: 18px;
+  font-weight: 500;
+  color: #f9f9f9; /* Teks putih cerah untuk kontras yang baik */
+  line-height: 1.6;
+  max-height: 250px;
+  overflow-y: auto; /* Menambahkan scroll vertikal jika konten lebih panjang */
+  margin-bottom: 20px; /* Memberikan ruang di bawah konten */
+  padding-right: 10px; /* Memberikan ruang untuk scroll */
+}
+
+/* Hover effect pada konten notifikasi */
+.notification-content:hover {
+  color: #ffe600; /* Teks berubah menjadi kuning cerah saat hover */
+  font-weight: 600; /* Membuat teks lebih tebal */
+  text-decoration: underline; /* Menambahkan garis bawah pada teks */
+}
+
+/* Tombol tutup */
+.notification-close {
+  background: transparent;
+  border: none;
+  font-size: 30px; /* Ukuran tombol lebih besar untuk kemudahan interaksi */
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+  opacity: 0.8;
+}
+
+/* Efek hover pada tombol tutup */
+.notification-close:hover {
+  color: #ffdd57; /* Ubah warna menjadi kuning cerah */
+  transform: rotate(90deg); /* Rotasi tombol saat hover */
+  opacity: 1;
+}
+
+/* Efek pop-out pada notifikasi saat hilang */
+.notification.hide {
+  transform: translateX(-50%) translateY(50px);
+  opacity: 0;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+/* Styling untuk notifikasi saat muncul */
+.notification.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+/* Efek blur pada notifikasi */
+.notification.show {
+  backdrop-filter: blur(15px); /* Efek blur lebih tajam dan modern */
+}
