@@ -88,7 +88,7 @@ const certifikat = () => {
                     <div className="sertifikat-details">
                         <h2>Keamanan Siber untuk Wirausaha</h2>
                         <p>Kominfo | Keahlian: Keamanan siber</p>
-                        <a href="kominfo1.png" className="credential-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://lms.sdmdigital.id/course/view.php?id=755" className="credential-link" target="_blank" rel="noopener noreferrer">
                             Tampilkan kredensial
                         </a>
                     </div>
@@ -121,7 +121,7 @@ const certifikat = () => {
                     <div className="sertifikat-details">
                         <h2>Guide to Learn R with AI at DQLab</h2>
                         <p>DQLab</p>
-                        <a href="certificate-DQLABAI002ONTPLK.pdf" className="credential-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://academy.dqlab.id/Certificate_check/result/DQLABBGINRADQUSR/NONTRACK#mycertificate" className="credential-link" target="_blank" rel="noopener noreferrer">
                             Tampilkan kredensial
                         </a>
                     </div>
@@ -132,7 +132,7 @@ const certifikat = () => {
                     <div className="sertifikat-details">
                         <h2>Guide to Learn SQL with AI at DQLab</h2>
                         <p>DQLab</p>
-                        <a href="certificate-DQLABAI003TGWAAC.pdf" className="credential-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://academy.dqlab.id/Certificate_check/result/DQLABINTP1QQIRPJ/NONTRACK#mycertificate" className="credential-link" target="_blank" rel="noopener noreferrer">
                             Tampilkan kredensial
                         </a>
                     </div>
@@ -143,7 +143,7 @@ const certifikat = () => {
                     <div className="sertifikat-details">
                         <h2>Introduction to Data Science with R</h2>
                         <p>DQLab</p>
-                        <a href="certificate-DQLABBGINRADQUSR.pdf" className="credential-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://academy.dqlab.id/main/rachievement" className="credential-link" target="_blank" rel="noopener noreferrer">
                             Tampilkan kredensial
                         </a>
                     </div>
@@ -154,7 +154,7 @@ const certifikat = () => {
                     <div className="sertifikat-details">
                         <h2>Sertifikasi Cyber Security</h2>
                         <p>Micromentor</p>
-                        <a href="cyber_security.pdf" className="credential-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://lms.sdmdigital.id/mod/page/view.php?id=10671" className="credential-link" target="_blank" rel="noopener noreferrer">
                             Tampilkan kredensial
                         </a>
                     </div>
@@ -165,7 +165,7 @@ const certifikat = () => {
                     <div className="sertifikat-details">
                         <h2>Introduction to Data Science with Python</h2>
                         <p>DQLab | Keahlian: Analitik Data</p>
-                        <a href="SERTIFIKAT_PHYTON.png" className="credential-link" target="_blank" rel="noopener noreferrer">
+                        <a href="https://academy.dqlab.id/Certificate_check/result/DQLABAI002ONTPLK/NONTRACK#mycertificate" className="credential-link" target="_blank" rel="noopener noreferrer">
                             Tampilkan kredensial
                         </a>
                     </div>

@@ -132,6 +132,9 @@ body {
   transform: scale(1.1);
 }
 
+
+
+
 /* Skill Section */
 .skills-title {
   font-size: 3.5rem;
@@ -178,7 +181,7 @@ body {
   backdrop-filter: blur(20px);
   text-align: center;
   transition: 0.4s;
-  border: 2px solid #ff7eb3;
+  border: 2px solid #e01e6f;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
@@ -202,7 +205,7 @@ body {
   position: absolute;
   width: 200%;
   height: 200%;
-  background: linear-gradient(45deg, rgba(255, 117, 140, 0.3), transparent);
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), transparent);
   top: -100%;
   left: -100%;
   transition: 0.5s;
@@ -280,92 +283,73 @@ body {
   }
 }
 
-/* Styling untuk pop-up notifikasi */
+/* Styling untuk pop-up notifikasi dengan tampilan modern */
 .notification {
   position: fixed;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  width: 380px;
-  background: linear-gradient(135deg, #2d3b55, #7f8eaf); 
+  width: 80%; /* Membuat pop-up responsif dengan lebar 80% dari layar */
+  max-width: 700px; /* Membatasi lebar maksimum */
+  background: linear-gradient(135deg, #000000, #000000);
   color: #fff;
-  border-radius: 15px;
-  padding: 20px 30px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  padding: 35px 50px; /* Memperbesar padding */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: 1000;
   font-family: 'Poppins', sans-serif;
   animation: slideInNotification 0.8s ease-out, popUpNotification 0.6s ease-in-out;
-  max-height: 350px;
+  max-height: 600px; /* Memperbesar tinggi maksimum pop-up */
   overflow-y: auto;
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-@keyframes popUpNotification {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.6;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* Ikon notifikasi */
+/* Ikon notifikasi dengan efek animasi */
 .notification-icon {
-  font-size: 35px;
-  margin-right: 20px;
-  color: #ffe600;
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #f8f8f5;
   transition: transform 0.4s ease-in-out, color 0.4s ease-in-out;
+  animation: bounceIcon 1.5s infinite alternate;
 }
 
-/* Animasi hover pada ikon */
-.notification-icon:hover {
-  transform: rotate(360deg);
-  color: #ffdd57;
-}
-
-/* Konten notifikasi */
+/* Konten notifikasi dengan efek menarik */
 .notification-content {
   font-size: 18px;
   font-weight: 500;
   color: #f9f9f9;
   line-height: 1.6;
-  max-height: 250px;
+  max-height: 280px;
   overflow-y: auto;
   margin-bottom: 20px;
   padding-right: 10px;
   transition: color 0.4s ease-in-out, font-weight 0.4s ease-in-out;
 }
 
-/* Hover effect pada konten notifikasi */
 .notification-content:hover {
-  color: #000000;
+  color: #f8f8f4;
   font-weight: 600;
-  text-decoration: underline;
+  text-shadow: 0 0 5px rgba(245, 245, 243, 0.8);
 }
 
-/* Tombol tutup */
+/* Tombol tutup dengan desain interaktif */
 .notification-close {
   background: transparent;
   border: none;
-  font-size: 30px;
+  font-size: 28px;
   color: #fff;
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
   opacity: 0.8;
+  align-self: flex-end;
 }
 
-/* Efek hover pada tombol tutup */
 .notification-close:hover {
-  color: #0e0d0d;
+  color: #ff5252;
   transform: rotate(90deg);
   opacity: 1;
 }
@@ -377,3 +361,23 @@ body {
   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .notification {
+    width: 90%; /* Menyesuaikan lebar menjadi 90% pada layar lebih kecil */
+    padding: 25px 35px; /* Mengurangi padding agar sesuai */
+    max-height: 500px; /* Membatasi tinggi maksimum lebih kecil */
+  }
+
+  .notification-icon {
+    font-size: 35px; /* Mengurangi ukuran ikon untuk layar kecil */
+  }
+
+  .notification-content {
+    font-size: 16px; /* Mengurangi ukuran font untuk layar kecil */
+  }
+
+  .notification-close {
+    font-size: 24px; /* Mengurangi ukuran font untuk tombol tutup */
+  }
+}
