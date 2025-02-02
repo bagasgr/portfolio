@@ -121,7 +121,7 @@
 
 .feedback-form input:focus,
 .feedback-form textarea:focus {
-  border-color: #007bff;
+  border-color: #020202;
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
 }
 
@@ -150,7 +150,7 @@
 }
 
 .feedback-form button:hover {
-  background: linear-gradient(45deg, #0056b3, #003f8c);
+  background: linear-gradient(45deg, #070707, #003f8c);
   transform: translateY(-3px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
