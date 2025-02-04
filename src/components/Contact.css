@@ -1,90 +1,178 @@
-/* Container utama halaman kontak */
+/* Contact Page Styling */
 .contact-page {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 30px;
-  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 50px auto;
   color: #fff;
-  background: #000000;
-  border-radius: 20px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 8px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  position: relative;
   overflow: hidden;
-  animation: fadeIn 1s ease-out;
+  animation: fadeIn 1.5s ease-in-out;
+  width: 100%;
 }
 
-/* Judul utama */
+/* Heading Styling */
 .contact-page h1 {
-  font-size: 2.8rem;
-  text-align: center;
-  color: #fff;
-  margin-bottom: 30px;
+  font-size: 3rem;
   font-weight: 700;
+  margin-bottom: 30px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  animation: slideInFromTop 1s ease-out;
+  color: #fff;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
 }
 
-/* Animasi judul slide-in */
-@keyframes slideInFromTop {
-  from {
+/* Icon List Styling */
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); /* Default grid layout for responsive */
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  justify-items: center;
+  transition: grid-template-columns 0.3s ease;
+}
+
+/* Icon Styling */
+.contact-list li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  cursor: pointer;
+  transform: scale(1);
+  animation: iconFadeIn 1.5s ease-in-out;
+}
+
+/* Hover Effect */
+.contact-list li:hover {
+  transform: scale(1.2);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+  background-color: #f8cdda; /* Add background color on hover */
+}
+
+/* Icon Styling */
+.icon {
+  font-size: 2.5rem;
+  color: #1d2b64;
+  transition: color 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+}
+
+/* Hover Effects */
+.contact-list li:hover .icon {
+  color: #f8cdda;
+  transform: rotate(360deg);
+}
+
+/* Icon Links */
+.contact-list li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Glow Effect for Hover */
+.contact-list li:hover .icon {
+  text-shadow: 0 0 20px #f8cdda, 0 0 30px #f8cdda, 0 0 40px #f8cdda;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  0% {
     opacity: 0;
     transform: translateY(-20px);
   }
-  to {
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Daftar kontak */
-.contact-list {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-  animation: fadeIn 1.5s ease-out;
+@keyframes iconFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-.contact-list li {
-  font-size: 1.2rem;
-  margin: 15px 0;
-  display: flex;
-  align-items: center;
-  padding: 12px 15px;
-  background: #333;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  animation: fadeIn 1.5s ease-out;
+/* Media Queries for Smaller Screens */
+
+/* For tablets and small screens (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .contact-list {
+    grid-template-columns: repeat(4, 1fr); /* 4 icons per row */
+    gap: 20px;
+  }
+  .contact-page {
+    padding: 40px;
+  }
+  .contact-page h1 {
+    font-size: 2.5rem;
+  }
+  .contact-list li {
+    width: 80px;
+    height: 80px;
+  }
+  .icon {
+    font-size: 2rem; /* Adjust icon size for tablets */
+  }
 }
 
-.contact-list li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  background-color: #444; /* Mengubah warna latar belakang saat hover */
+/* For Mobile Screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .contact-list {
+    grid-template-columns: repeat(3, 1fr); /* 3 icons per row */
+    gap: 15px;
+  }
+  .contact-list li {
+    width: 70px;
+    height: 70px;
+  }
+  .icon {
+    font-size: 1.8rem; /* Adjust icon size for mobile */
+  }
+  .contact-page h1 {
+    font-size: 2rem;
+  }
 }
 
-/* Animasi untuk ikon kontak */
-.contact-list .icon {
-  font-size: 1.7rem;
-  color: #fff;
-  transition: transform 0.3s ease, color 0.3s ease;
+/* For Extra Small Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .contact-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 icons per row */
+    gap: 10px;
+  }
+  .contact-list li {
+    width: 60px;
+    height: 60px;
+  }
+  .icon {
+    font-size: 1.6rem; /* Adjust icon size for small mobile */
+  }
+  .contact-page {
+    padding: 20px;
+  }
+  .contact-page h1 {
+    font-size: 1.8rem;
+  }
 }
 
-.contact-list a {
-  margin-left: 15px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.contact-list a:hover {
-  color: #007bff;
-}
-
-.contact-list li:hover .icon {
-  transform: scale(1.2);
-}
 
 /* Formulir saran dan kritik */
 .feedback-form {

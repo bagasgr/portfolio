@@ -5,7 +5,8 @@ import profileImg from '../images/foto2.jpg'; // Pastikan path dan nama file gam
 function About() {
   return (
     <div className="about-container">
-      <h2>About Me</h2>
+      <h2 class="about-title">About Me</h2>
+
       
       {/* Gambar Profil */}
       <div className="image-wrapper">
@@ -20,7 +21,7 @@ function About() {
   development. My goal is to create innovative solutions that are not only functional but also user-friendly and secure.
 </p>
 <p>
-  I am a student at Universitas Indraprasta, currently in my 7th semester of Informatics Engineering. I have a
+  I am a student at Universitas Indraprasta, currently in my 8th semester of Informatics Engineering. I have a
   strong foundation in programming languages like JavaScript, PHP, and Java, and I am also skilled in database
   management and system design. Throughout my studies, I've worked on various projects, including e-commerce websites,
   inventory management systems, and web applications, which have honed my skills in both frontend and backend development.

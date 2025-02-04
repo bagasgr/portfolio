@@ -13,7 +13,7 @@ h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #00bfae; /* Bright accent color */
+  color: #0f0f0f; /* Bright accent color */
   text-transform: uppercase; /* Uppercase for a bolder look */
   margin: 0;
   animation: fadeIn 2s ease-out; /* Fade-in effect for the header */

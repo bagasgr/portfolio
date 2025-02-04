@@ -1,15 +1,16 @@
 /* Global Styles */
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  background-color: #000000; 
-  color: #fff; 
+  font-family: "Roboto", sans-serif; /* Modern and clean font */
+  background: linear-gradient(135deg, #0f0f0f, #212121);  /* Dark gradient background for a sleek look */
+  color: #EAEAEA;  /* Light gray text for readability */
   overflow-x: hidden;
   box-sizing: border-box;
-  animation: fadeInBody 1s ease-out;
+  animation: fadeInBody 1.2s ease-out;
+  padding: 0;
 }
 
-/* Animasi untuk body */
+/* Animation for body */
 @keyframes fadeInBody {
   from {
     opacity: 0;
@@ -26,18 +27,19 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #000000; 
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 40, 80, 0.6)); /* Dark gradient for the hero section */
   position: relative;
-  animation: fadeInHero 2s ease-out;
+  animation: fadeInHero 1.5s ease-out;
   text-align: center;
   padding: 0 20px;
+  transform-origin: center center;
 }
 
-/* Animasi untuk Hero Section */
+/* Animation for Hero Section */
 @keyframes fadeInHero {
   from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -48,22 +50,21 @@ body {
 /* Hero Title */
 .hero-title {
   font-size: 4rem;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 20px;
   text-transform: uppercase;
-  background: linear-gradient(to right, #f7f5f5, #ece8e8);
-  -webkit-background-clip: text; 
-  background-clip: text; 
+  background: linear-gradient(to right, #4C9BFF, #63C2FF); /* Subtle blue gradient */
+  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: slideInTitle 2s ease-out;
   letter-spacing: 3px;
-  color: #fff;
 }
 
-/* Animasi untuk Hero Title */
+/* Animation for Hero Title */
 @keyframes slideInTitle {
   from {
-    transform: translateX(-100px);
+    transform: translateX(-150px);
     opacity: 0;
   }
   to {
@@ -77,13 +78,37 @@ body {
   font-size: 1.2rem;
   margin-bottom: 30px;
   max-width: 600px;
-  color: #7b7b7b;
-  line-height: 1.5;
-  animation: fadeInUpDescription 1.5s ease-out;
+  color: #B0B0B0;  /* Lighter gray for description */
+  line-height: 1.7;
+  animation: fadeInUpDescription 1.2s ease-out;
   padding: 0 20px;
 }
 
-/* Animasi untuk Hero Description */
+/* Animation for Hero Description */
+@keyframes fadeInUpDescription {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Hero Description */
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  color: #B0B0B0;  /* Lighter gray for description */
+  line-height: 1.7;
+  animation: fadeInUpDescription 1.2s ease-out;
+  padding: 0 20px;
+}
+
+/* Animation for Hero Description */
 @keyframes fadeInUpDescription {
   from {
     opacity: 0;
@@ -99,136 +124,95 @@ body {
 .navigation a {
   display: inline-block;
   margin: 10px;
-  padding: 12px 24px;
-  border: 2px solid #ff758c;
+  padding: 14px 28px;
+  border: 2px solid #63C2FF;
   border-radius: 30px;
   text-decoration: none;
-  color: #ff758c;
-  transition: 0.4s;
+  color: #63C2FF;
+  transition: 0.4s ease;
   font-weight: 600;
   font-size: 1.1rem;
-  background: rgba(3, 3, 3, 0.1);
+  background: rgba(30, 30, 30, 0.2);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  animation: pulseButton 2s infinite;
 }
 
-/* Animasi untuk tombol Navigation */
-@keyframes pulseButton {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
+/* Hover effect for navigation buttons */
 .navigation a:hover {
-  background: linear-gradient(120deg, #ff758c, #ff7eb3);
+  background: linear-gradient(120deg, #63C2FF, #4C9BFF);
   color: white;
-  box-shadow: 0px 0px 15px #ff758c;
+  box-shadow: 0px 0px 15px #63C2FF;
   transform: scale(1.1);
 }
 
-
-
-
-/* Skill Section */
-.skills-title {
-  font-size: 3.5rem;
-  text-align: center;
-  margin: 50px 0;
-  color: #080808; 
-  text-transform: uppercase; 
-  letter-spacing: 3px; 
-  font-weight: 700;
-  background: linear-gradient(135deg, #000000, #000000); 
-  background-clip: text; 
-  -webkit-background-clip: text; 
-  color: transparent; 
-  animation: fadeInSkills 2s ease-out; 
-}
-
-/* Animasi untuk Skill Section Title */
-@keyframes fadeInSkills {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Skill Cards */
+/* Skill Cards Section */
 .skills-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  padding: 20px;
-  background-color: #000000; 
+  gap: 40px;
+  padding: 60px;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 100, 255, 0.6)); /* Blue gradient for tech feel */
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
+/* Skill Card Styling */
 .skill-card {
-  width: 280px;
-  padding: 25px;
-  background: rgba(10, 10, 10, 0.5);
+  width: 300px;
+  padding: 40px;
+  background: rgba(20, 20, 20, 0.9);
   border-radius: 20px;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
   text-align: center;
-  transition: 0.4s;
-  border: 2px solid #e01e6f;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  border: 2px solid #4C9BFF;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   position: relative;
   overflow: hidden;
-  animation: fadeInCard 1.5s ease-out;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background 0.5s ease;
+  cursor: pointer;
 }
 
-/* Animasi untuk Skill Cards */
-@keyframes fadeInCard {
-  from {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.skill-card::before {
-  content: "";
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.3), transparent);
-  top: -100%;
-  left: -100%;
-  transition: 0.5s;
-}
-
-.skill-card:hover::before {
-  top: 0;
-  left: 0;
-}
-
+/* Hover effects for Skill Card */
 .skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 40px rgba(255, 117, 140, 0.3);
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: 0px 20px 50px rgba(0, 100, 255, 0.3);
+  background: rgba(20, 20, 20, 1);
+  border-color: #63C2FF;
 }
 
-.skill-image {
+/* Skill Card Title */
+.skill-card .skill-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #EAEAEA;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Skill Description */
+.skill-card .skill-description {
+  font-size: 16px;
+  color: #D0D0D0;
+  margin-top: 10px;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+/* Skill Image Hover Effect */
+.skill-card .skill-image {
   width: 100%;
   border-radius: 15px;
-  transition: 0.3s;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 0.9;
 }
 
+/* Neon Effect on Skill Card */
 .skill-card:hover .skill-image {
-  transform: rotateY(180deg);
+  opacity: 1;
+  filter: grayscale(0);
+  box-shadow: 0 0 25px rgba(0, 100, 255, 0.8);
 }
 
 /* Button Aesthetic */
@@ -238,36 +222,22 @@ body {
   font-size: 1.2rem;
   font-weight: bold;
   color: #fff;
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  background: linear-gradient(135deg, #4C9BFF, #63C2FF);
   border: none;
   border-radius: 30px;
   text-decoration: none;
   cursor: pointer;
   transition: 0.3s ease;
-  box-shadow: 0px 10px 20px rgba(255, 117, 140, 0.4);
-  animation: bounceButton 2s infinite;
-}
-
-/* Animasi untuk Button */
-@keyframes bounceButton {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+  box-shadow: 0px 10px 20px rgba(70, 130, 180, 0.4);
 }
 
 .button:hover {
-  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  background: linear-gradient(135deg, #63C2FF, #4C9BFF);
   transform: scale(1.05);
-  box-shadow: 0px 10px 25px rgba(255, 117, 140, 0.6);
+  box-shadow: 0px 10px 25px rgba(70, 130, 180, 0.6);
 }
 
-/* Animasi untuk notifikasi */
+/* Notification Slide-in Animation */
 @keyframes slideInNotification {
   0% {
     transform: translateX(-50%) translateY(50px);
@@ -283,18 +253,18 @@ body {
   }
 }
 
-/* Styling untuk pop-up notifikasi dengan tampilan modern */
+/* General Notification Styles */
 .notification {
   position: fixed;
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80%; /* Membuat pop-up responsif dengan lebar 80% dari layar */
-  max-width: 700px; /* Membatasi lebar maksimum */
+  width: 85%;
+  max-width: 700px;
   background: linear-gradient(135deg, #000000, #000000);
   color: #fff;
   border-radius: 20px;
-  padding: 35px 50px; /* Memperbesar padding */
+  padding: 35px 50px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -302,41 +272,14 @@ body {
   z-index: 1000;
   font-family: 'Poppins', sans-serif;
   animation: slideInNotification 0.8s ease-out, popUpNotification 0.6s ease-in-out;
-  max-height: 600px; /* Memperbesar tinggi maksimum pop-up */
+  max-height: 600px;
   overflow-y: auto;
   backdrop-filter: blur(12px);
   border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
 }
 
-/* Ikon notifikasi dengan efek animasi */
-.notification-icon {
-  font-size: 40px;
-  margin-bottom: 15px;
-  color: #f8f8f5;
-  transition: transform 0.4s ease-in-out, color 0.4s ease-in-out;
-  animation: bounceIcon 1.5s infinite alternate;
-}
-
-/* Konten notifikasi dengan efek menarik */
-.notification-content {
-  font-size: 18px;
-  font-weight: 500;
-  color: #f9f9f9;
-  line-height: 1.6;
-  max-height: 280px;
-  overflow-y: auto;
-  margin-bottom: 20px;
-  padding-right: 10px;
-  transition: color 0.4s ease-in-out, font-weight 0.4s ease-in-out;
-}
-
-.notification-content:hover {
-  color: #f8f8f4;
-  font-weight: 600;
-  text-shadow: 0 0 5px rgba(245, 245, 243, 0.8);
-}
-
-/* Tombol tutup dengan desain interaktif */
+/* Close Button Styles */
 .notification-close {
   background: transparent;
   border: none;
@@ -354,30 +297,97 @@ body {
   opacity: 1;
 }
 
-/* Efek pop-out pada notifikasi saat hilang */
-.notification.hide {
-  transform: translateX(-50%) translateY(50px);
-  opacity: 0;
-  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+/* Notification Content */
+.notification-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-/* Responsif untuk layar kecil */
+.notification-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.notification-message {
+  font-size: 16px;
+  color: #f0f0f0;
+  line-height: 1.5;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens */
 @media (max-width: 768px) {
   .notification {
-    width: 90%; /* Menyesuaikan lebar menjadi 90% pada layar lebih kecil */
-    padding: 25px 35px; /* Mengurangi padding agar sesuai */
-    max-height: 500px; /* Membatasi tinggi maksimum lebih kecil */
-  }
-
-  .notification-icon {
-    font-size: 35px; /* Mengurangi ukuran ikon untuk layar kecil */
-  }
-
-  .notification-content {
-    font-size: 16px; /* Mengurangi ukuran font untuk layar kecil */
+    width: 90%;
+    padding: 20px 30px;
+    max-width: 500px;
+    font-size: 14px;
+    bottom: 20px;
   }
 
   .notification-close {
-    font-size: 24px; /* Mengurangi ukuran font untuk tombol tutup */
+    font-size: 24px;
+  }
+
+  .notification-content {
+    gap: 12px;
+  }
+
+  .notification-title {
+    font-size: 16px;
+  }
+
+  .notification-message {
+    font-size: 14px;
+  }
+}
+
+/* For mobile devices (portrait) */
+@media (max-width: 480px) {
+  .notification {
+    width: 95%;
+    padding: 15px 20px;
+    max-width: 400px;
+    font-size: 12px;
+    bottom: 10px;
+  }
+
+  .notification-close {
+    font-size: 20px;
+  }
+
+  .notification-content {
+    gap: 10px;
+  }
+
+  .notification-title {
+    font-size: 14px;
+  }
+
+  .notification-message {
+    font-size: 12px;
+  }
+}
+
+/* For Very Small Screens (extra small devices) */
+@media (max-width: 360px) {
+  .notification {
+    padding: 12px 18px;
+    max-width: 350px;
+  }
+
+  .notification-close {
+    font-size: 18px;
+  }
+
+  .notification-title {
+    font-size: 12px;
+  }
+
+  .notification-message {
+    font-size: 10px;
   }
 }
