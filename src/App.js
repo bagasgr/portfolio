@@ -44,7 +44,7 @@ function App() {
               <a href="/certifikat">Certifikat</a>
               <a href="/contact">Contact</a>
               <a 
-    href="/pdf/BagasGilangRamadhan_software_Developer.pdf" 
+    href="/pdf/BagasGilangRamadhan_softwareDeveloper(1).pdf" 
     target="_blank" 
     rel="noopener noreferrer"
   >
