@@ -8,6 +8,10 @@ import kominfologo from '../images/kominfo.jpeg';
 import dqlablogo from '../images/dqlab.png';
 import micrologo from '../images/micro.png';
 
+
+
+
+
 const certifikat = () => {
     return (
         <section className="sertifikat-container">
@@ -84,15 +88,20 @@ const certifikat = () => {
                 </div>
 
                 <div className="sertifikat-item">
-                <img src={kominfologo} alt="Logo Kominfo" className="sertifikat-logo" />
-                    <div className="sertifikat-details">
-                        <h2>Keamanan Siber untuk Wirausaha</h2>
-                        <p>Kominfo | Keahlian: Keamanan siber</p>
-                        <a href="https://lms.sdmdigital.id/course/view.php?id=755" className="credential-link" target="_blank" rel="noopener noreferrer">
-                            Tampilkan kredensial
-                        </a>
-                    </div>
-                </div>
+            <img src={kominfologo} alt="Logo Kominfo" className="sertifikat-logo" />
+            <div className="sertifikat-details">
+                <h2>Keamanan Siber untuk Wirausaha</h2>
+                <p>Kominfo | Keahlian: Keamanan Siber</p>
+                <a 
+                    href="/pdf/Sertifikat_BAGAS GILANG RAMADHAN_Keamanan Siber untuk Wirausaha (1).pdf" 
+                    className="credential-link" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    Tampilkan kredensial
+                </a>
+            </div>
+        </div>
 
                 <div className="sertifikat-item">
                 <img src={dicodinglogo}alt="Logo Dicoding" className="sertifikat-logo" />

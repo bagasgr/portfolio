@@ -43,6 +43,13 @@ function App() {
               <a href="/projects">Projects</a>
               <a href="/certifikat">Certifikat</a>
               <a href="/contact">Contact</a>
+              <a 
+    href="/pdf/BagasGilangRamadhan_software_Developer.pdf" 
+    target="_blank" 
+    rel="noopener noreferrer"
+  >
+    Resume
+  </a>
             </div>
           </div>
           <img src={fotoImg} alt="Bagas Gilang Ramadhan" className="hero-image" />
