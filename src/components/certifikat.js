@@ -37,9 +37,14 @@ const certifikat = () => {
                     <div className="sertifikat-details">
                         <h2>Fundamentals of machine learning</h2>
                         <p>Microsoft| Diterbitkan 31 January 2025</p>
-                        <a href="https://learn.microsoft.com/en-us/users/bagasgilangramadhan-0878/achievements/print/uytqq5u3" className="credential-link" target="_blank" rel="noopener noreferrer">
-                            Tampilkan kredensial
-                        </a>
+                        <a 
+                    href="/pdf/microsoft.pdf" 
+                    className="credential-link" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    Tampilkan kredensial
+                </a>
                     </div>
                 </div>
 
@@ -52,6 +57,22 @@ const certifikat = () => {
                         <a href="https://www.dicoding.com/users/bagas_gilang_ramadha/academies" className="credential-link" target="_blank" rel="noopener noreferrer">
                             Tampilkan kredensial
                         </a>
+                    </div>
+                </div>
+
+                <div className="sertifikat-item">
+                <img src={microsoft} alt="Logo microsoft" className="sertifikat-logo" />
+                    <div className="sertifikat-details">
+                        <h2>GitHub Copilot Fundamentals - Understand the AI pair programmer</h2>
+                        <p>Microsoft Learn | Diterbitkan February 13, 2025</p>
+                        <a 
+                    href="/pdf/microsoft2.pdf" 
+                    className="credential-link" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    Tampilkan kredensial
+                </a>
                     </div>
                 </div>
 
