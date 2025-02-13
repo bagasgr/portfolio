@@ -7,6 +7,7 @@ import digitalentlogo from '../images/digitalent.png';
 import kominfologo from '../images/kominfo.jpeg';
 import dqlablogo from '../images/dqlab.png';
 import micrologo from '../images/micro.png';
+import microsoft from '../images/microsoft.png';
 
 
 
@@ -29,13 +30,14 @@ const certifikat = () => {
                     </div>
                 </div>
 
+                
+
                 <div className="sertifikat-item">
-                <img src={dicodinglogo} alt="Logo Dicoding" className="sertifikat-logo" />
+                <img src={microsoft} alt="Logo Microsoft" className="sertifikat-logo" />
                     <div className="sertifikat-details">
-                        <h2>Belajar Strategi Pengembangan Diri</h2>
-                        <p>Dicoding Indonesia | Diterbitkan Okt 2024 Kedaluwarsa Okt 2027</p>
-                        <p>ID Kredensial: 1OP8413N8ZQK</p>
-                        <a href="https://www.dicoding.com/users/bagas_gilang_ramadha/academies" className="credential-link" target="_blank" rel="noopener noreferrer">
+                        <h2>Fundamentals of machine learning</h2>
+                        <p>Microsoft| Diterbitkan 31 January 2025</p>
+                        <a href="https://learn.microsoft.com/en-us/users/bagasgilangramadhan-0878/achievements/print/uytqq5u3" className="credential-link" target="_blank" rel="noopener noreferrer">
                             Tampilkan kredensial
                         </a>
                     </div>
@@ -44,9 +46,22 @@ const certifikat = () => {
                 <div className="sertifikat-item">
                 <img src={dicodinglogo} alt="Logo Dicoding" className="sertifikat-logo" />
                     <div className="sertifikat-details">
-                        <h2>Belajar Dasar AI</h2>
-                        <p>Dicoding Indonesia | Diterbitkan Sep 2024 Kedaluwarsa Sep 2027</p>
-                        <p>ID Kredensial: JMZV4288JXN9</p>
+                        <h2>Belajar Back-End Pemula dengan JavaScript</h2>
+                        <p>Dicoding Indonesia | Diterbitkan 24 Januari 2025 Kedaluwarsa 24 Januari 2028</p>
+                        <p>ID Kredensial: GRX53LRLYZ0M</p>
+                        <a href="https://www.dicoding.com/users/bagas_gilang_ramadha/academies" className="credential-link" target="_blank" rel="noopener noreferrer">
+                            Tampilkan kredensial
+                        </a>
+                    </div>
+                </div>
+
+
+                <div className="sertifikat-item">
+                <img src={dicodinglogo} alt="Logo Dicoding" className="sertifikat-logo" />
+                    <div className="sertifikat-details">
+                        <h2>Belajar Fundamental Front-End Web Development</h2>
+                        <p>Dicoding Indonesia | Diterbitkan Sep 2024 Kedaluwarsa 12 Februari 2028</p>
+                        <p>ID Kredensial: 4EXGV494GXRL</p>
                         <a href="https://www.dicoding.com/users/bagas_gilang_ramadha/academies" className="credential-link" target="_blank" rel="noopener noreferrer">
                             Tampilkan kredensial
                         </a>

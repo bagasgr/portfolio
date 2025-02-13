@@ -16,6 +16,8 @@ import ti from "../images/ti.jpeg";
 import ap from "../images/ap.png";
 import proyek from "../images/c3.png";
 import proyek1 from "../images/c4.png";
+import catatan from "../images/catatan.png";
+import catatan2 from "../images/catatan2.png";
 
 const Projects = () => {
   return (
@@ -38,7 +40,18 @@ const Projects = () => {
         </div>
         <div className="project-item">
           <h3>Bookshelf API</h3>
-          <p>A bookshelf management system built with JavaScript for the back end. It allows users to manage and display their book collections.</p>
+          <p>Bookshelf API is a backend project developed to manage book collections using RESTful API. This project allows users to perform CRUD (Create, Read, Update, Delete) operations on book data, which is stored in JSON-based storage.
+
+Key Features:
+Adding Books - Users can add new books with information such as title, author, year of publication, and whether they have finished reading or not.
+Viewing Book List - The API provides an endpoint to view all stored books, with the option to filter by read status.
+Viewing Book Details - Users can view detailed information of a particular book based on its ID.
+Updating Books - The API allows updating book data based on the submitted book ID.
+Deleting Books - Users can delete specific books from the list based on their ID.
+Technology Used:
+Hapi.js as a Node.js-based backend framework for building RESTful APIs.
+JSON-based Storage for storing book data in JSON form.
+Middleware to validate input data and handle errors.</p>
 
           <img src={b1} alt="project3" className="foto project3" />
           <img src={b2} alt="project3" className="foto project3" />
@@ -86,14 +99,78 @@ const Projects = () => {
           </a>
         </div>
         <div className="project-item">
-          <h3>ASP.NET MVC dan Web API Integration menggunakan C#</h3>
-          <p>🔑 Fitur Utama Proyek:
-1️⃣ MVC Framework: Mengimplementasikan arsitektur Model-View-Controller untuk menghasilkan antarmuka pengguna yang interaktif dan terorganisir dengan baik.
-2️⃣ RESTful API: Menyediakan endpoint API untuk operasi CRUD (Create, Read, Update, Delete) yang dapat diakses oleh sistem eksternal.
-3️⃣ UI yang Menarik: Memanfaatkan CSS dan JavaScript untuk meningkatkan pengalaman pengguna.
-4️⃣ Best Practices: Proyek ini dirancang dengan mengikuti prinsip clean architecture dan scalability.
+          <h3>ASP.NET MVC and Web API Integration using C#</h3>
+          <p>🔑 Project Main Features:
+1️⃣ MVC Framework: Implements Model-View-Controller architecture to produce an interactive and well-organized user interface.
+2️⃣ RESTful API: Provides API endpoints for CRUD (Create, Read, Update, Delete) operations that can be accessed by external systems.
+3️⃣ Engaging UI: Leverages CSS and JavaScript to enhance user experience.
+4️⃣ Best Practices: This project was designed following the principles of clean architecture and scalability.
 </p>
           <img src={proyek} alt="project4" className="foto project4" />
+        </div>
+
+        <div className="project-item">
+          <h3>Aplikasi Catatan</h3>
+          <p>Notes App
+Notes App
+📝 Project Name:
+Notes App
+
+📖 Summary:
+This Notes application is a web-based application that allows users to write, view, and delete notes. This project uses Web Components to build a more modular, structured, and reusable UI.
+
+🎯 Project Goals:
+Break down the UI into reusable components using Web Components.
+Create a clean & organized code structure, separating input forms, note lists, and individual note views.
+Use Custom Events for communication between components without direct dependencies.
+Increase application flexibility & scalability for further development.
+📌 Key Features
+✅ Displays a list of notes
+✅ Added new notes
+✅ Delete notes
+✅ Responsive and simple design
+✅ Using Web Components for UI separation
+
+🔹 Technology Used
+🟣 HTML5 – For page structure
+🔵 CSS3 – For component styling
+🟡 JavaScript (ES6) – For interactivity and data management
+🟢 Web Components – For UI modularization with customElements</p>
+          <div>
+            <img src={catatan} alt="project" className="foto project" />
+            
+          </div>
+        </div>
+
+        <div className="project-item">
+          <h3>Aplikasi Catatan Berbasis Web dengan RESTful API & Webpack</h3>
+          <p>I have just completed the development of a Web-Based Notes Application that implements RESTful API, Webpack, and CSS Grid. 🎯
+
+🔥 Key Features:
+✅ Notes Management – Dynamically add, delete, and archive notes.
+✅ Integrated with RESTful API – Uses Fetch API to retrieve, add, and delete data.
+✅ Loading Indicator – Displays data loading status for a more responsive experience.
+✅ Module Management with Webpack – Optimizes frontend resources using a module bundler.
+✅ Responsive Layout with CSS Grid & Flexbox – Organizes note lists using modern layout techniques for a clean and flexible design.
+
+🛠 Technologies Used:
+🔹 JavaScript (ES6+): Handles events, API fetching, and DOM manipulation.
+🔹 Webpack: A module bundler to optimize CSS & JS files.
+🔹 CSS Grid & Flexbox: Ensures a modern and responsive layout.
+🔹 RESTful API: Enables communication between the frontend and backend for data management.
+
+🎯 Project Goals:
+This project aims to enhance my experience in developing modern, modular, and efficient web applications. By using Webpack, I can better manage dependencies and optimize application performance.
+
+💡 Challenges & Learnings:
+💪 Optimizing code with Webpack to ensure proper CSS loading.
+💪 Adjusting layout with CSS Grid for a clean and responsive design.
+💪 Using the Fetch API with asynchronous functions for a smoother user experience.
+
+🚀 This project has helped me improve my skills in modern web development and application performance optimization. I am excited to apply these technologies to future projects!</p>
+          <div>
+            <img src={catatan2} alt="project2" className="foto project2" />
+          </div>
         </div>
 
       </div>

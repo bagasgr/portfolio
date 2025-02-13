@@ -20,6 +20,85 @@ body {
   }
 }
 
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+
+  .navigation a {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    padding: 20px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    max-width: 500px;
+  }
+
+  .skill-card {
+    width: 250px;
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    max-width: 400px;
+  }
+
+  .navigation a {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .skill-card {
+    width: 200px;
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-description {
+    font-size: 0.85rem;
+    max-width: 300px;
+  }
+
+  .navigation a {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .skill-card {
+    width: 180px;
+    padding: 20px;
+  }
+}
+
+
 /* Hero Section */
 .hero-section {
   display: flex;
@@ -120,76 +199,85 @@ body {
   }
 }
 
+.hero-image {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+  border: 5px solid transparent;
+  background: linear-gradient(45deg, #00aaff, #0066ff);
+  padding: 8px;
+  box-shadow: 0px 0px 25px rgba(0, 170, 255, 0.6), inset 0px 0px 10px rgba(0, 170, 255, 0.3);
+  animation: neon-flicker 1.5s infinite alternate, floating 3s ease-in-out infinite;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .hero-image {
+    max-width: 200px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image {
+    max-width: 150px;
+    padding: 4px;
+  }
+}
+
+
+
 /* Navigation */
 .navigation a {
   display: inline-block;
-  margin: 10px;
-  padding: 16px 32px;
-  border: 2px solid #63C2FF;
-  border-radius: 50px;
+  padding: 12px 28px;
+  border: 2px solid #4CAFFF;
+  border-radius: 30px;
   text-decoration: none;
-  color: #63C2FF;
+  color: #4CAFFF;
   font-weight: 600;
-  font-size: 1.2rem;
-  background: linear-gradient(45deg, rgba(99, 194, 255, 0.3), rgba(30, 30, 30, 0.2));
-  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2), 0px 4px 20px rgba(99, 194, 255, 0.2);
+  font-size: 1rem;
+  background: linear-gradient(45deg, rgba(76, 175, 255, 0.2), rgba(30, 30, 30, 0.1));
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
   position: relative;
   overflow: hidden;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
   text-align: center;
-  transform: scale(1);
 }
 
-/* Hover effect for navigation buttons */
+/* Hover effect */
 .navigation a:hover {
-  background: linear-gradient(135deg, #63C2FF, #4C9BFF);
+  background: linear-gradient(135deg, #4CAFFF, #368BFF);
   color: white;
-  box-shadow: 0px 12px 30px rgba(99, 194, 255, 0.4), 0px 6px 40px rgba(0, 0, 0, 0.2);
-  transform: translateY(-8px) scale(1.1);
-  animation: buttonGlow 1.5s ease-in-out infinite;
+  box-shadow: 0px 5px 20px rgba(76, 175, 255, 0.5);
+  transform: translateY(-4px);
 }
 
-/* Ripple effect on hover */
-.navigation a::before {
+/* Shine effect */
+.navigation a::after {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300%;
-  height: 300%;
-  background-color: rgba(99, 194, 255, 0.4);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  animation: ripple 0.6s linear;
-  pointer-events: none;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.3), transparent);
+  transition: all 0.5s ease-in-out;
 }
 
-/* Ripple animation */
-@keyframes ripple {
-  0% {
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 0;
-  }
+.navigation a:hover::after {
+  left: 100%;
 }
 
-/* Glowing effect and shine */
-@keyframes buttonGlow {
-  0% {
-    box-shadow: 0px 0px 25px 6px rgba(99, 194, 255, 0.6);
-  }
-  50% {
-    box-shadow: 0px 0px 35px 12px rgba(99, 194, 255, 0.8);
-  }
-  100% {
-    box-shadow: 0px 0px 25px 6px rgba(99, 194, 255, 0.6);
-  }
+/* Active state */
+.navigation a:active {
+  transform: translateY(2px);
+  box-shadow: 0px 3px 10px rgba(76, 175, 255, 0.3);
 }
-
 
 
 /* Skill Cards Section */
@@ -439,3 +527,45 @@ body {
     font-size: 10px;
   }
 }
+
+/* Efek Paralaks */
+.hero {
+  background-attachment: fixed;
+}
+
+/* Efek Hover Interaktif */
+.hero-content:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efek Animasi Berulang untuk Judul */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.hero-title {
+  animation: pulse 3s infinite;
+}
+
+/* Tombol Call-to-Action */
+.hero-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-btn:hover {
+  background: linear-gradient(45deg, #feb47b, #ff7e5f);
+  transform: scale(1.1);
+}
+
