@@ -13,6 +13,8 @@ import potoImg from "./images/f.jpeg";
 import macinImg from "./images/machine.png";
 import proImg from "./images/projek.png";
 import fotoImg from "./images/foto.jpg";
+import fotobagasImg from "./images/fotobagas3.jpg";
+
 
 // Import Komponen
 import About from "./components/About";
@@ -52,7 +54,7 @@ function App() {
   </a>
             </div>
           </div>
-          <img src={fotoImg} alt="Bagas Gilang Ramadhan" className="hero-image" />
+          <img src={fotobagasImg} alt="Bagas Gilang Ramadhan" className="hero-image" />
         </div>
 
         {/* Skill Section */}

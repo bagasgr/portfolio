@@ -12,6 +12,7 @@ body {
     color: #333;
 }
 
+/* Header */
 h1 {
     text-align: center;
     margin: 20px 0;
@@ -19,24 +20,28 @@ h1 {
     color: #959da5;
 }
 
+/* Container utama sertifikat */
 .sertifikat-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Grid sertifikat */
 .sertifikat {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
 
+/* Item sertifikat */
 .sertifikat-item {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
 .sertifikat-item:hover {
@@ -44,13 +49,15 @@ h1 {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Logo Sertifikat */
 .sertifikat-logo {
-    width: 100px;
+    width: 120px;
     height: auto;
     display: block;
-    margin-bottom: 15px;
+    margin: 0 auto 15px;
 }
 
+/* Detail Sertifikat */
 .sertifikat-details h2 {
     font-size: 20px;
     margin-bottom: 10px;
@@ -61,13 +68,87 @@ h1 {
     color: #7f8c8d;
 }
 
+/* Link Kredensial */
 .credential-link {
     display: inline-block;
     margin-top: 10px;
     color: #3498db;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .credential-link:hover {
     text-decoration: underline;
+}
+
+/* 🔹 RESPONSIVE DESIGN 🔹 */
+
+/* Tablet Mode (Maksimal 1024px) */
+@media (max-width: 1024px) {
+    .sertifikat {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .sertifikat-item {
+        padding: 18px;
+    }
+
+    .sertifikat-details h2 {
+        font-size: 18px;
+    }
+
+    .sertifikat-details p {
+        font-size: 15px;
+    }
+}
+
+/* Mobile Mode (Maksimal 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .sertifikat-container {
+        padding: 10px;
+    }
+
+    .sertifikat {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .sertifikat-logo {
+        width: 100px;
+    }
+
+    .sertifikat-details h2 {
+        font-size: 17px;
+    }
+
+    .sertifikat-details p {
+        font-size: 14px;
+    }
+}
+
+/* Small Mobile Mode (Maksimal 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .sertifikat-item {
+        padding: 15px;
+    }
+
+    .sertifikat-logo {
+        width: 90px;
+    }
+
+    .sertifikat-details h2 {
+        font-size: 16px;
+    }
+
+    .sertifikat-details p {
+        font-size: 13px;
+    }
 }

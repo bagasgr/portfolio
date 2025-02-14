@@ -4,45 +4,80 @@
   background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: #fff;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* Projects.css */
+/* Container untuk proyek */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Hero Image */
 .projects-container .hero-image {
-  width: 150px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
 }
 
+.projects-container .hero-image:hover {
+  transform: scale(1.1);
+}
 
+/* Title */
 .projects h2 {
   font-size: 2.5em;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  animation: slideDown 1s ease-in-out;
 }
 
+/* Project List */
 .project-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
-  margin: auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1100px;
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
 }
 
+/* Project Item */
 .project-item {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   overflow: hidden;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   padding: 20px;
+  max-width: 350px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
 }
 
 .project-item:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.05);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 .project-item h3 {
-  font-size: 1.8em;
+  font-size: 1.6em;
   margin-bottom: 15px;
   color: #ffcc00;
 }
@@ -53,6 +88,7 @@
   color: #ddd;
 }
 
+/* Foto */
 .foto {
   width: 100%;
   height: auto;
@@ -62,14 +98,105 @@
 }
 
 .foto:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
+/* RESPONSIVE DESIGN */
+
+/* Tablet Mode (Layar Maksimal 1024px) */
+@media (max-width: 1024px) {
   .projects h2 {
-    font-size: 2em;
+    font-size: 2.2em;
   }
+
+  .project-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+
+  .project-item {
+    max-width: 300px;
+  }
+}
+
+/* Mobile Mode (Layar Maksimal 768px) */
+@media (max-width: 768px) {
+  .projects {
+    padding: 40px 10px;
+  }
+
+  .projects-container .hero-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .projects h2 {
+    font-size: 1.8em;
+  }
+
   .project-list {
     grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .project-item {
+    max-width: 90%;
+    padding: 15px;
+  }
+}
+
+/* Small Mobile Mode (Layar Maksimal 480px) */
+@media (max-width: 480px) {
+  .projects {
+    padding: 30px 5px;
+  }
+
+  .projects h2 {
+    font-size: 1.5em;
+  }
+
+  .project-item {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .project-item h3 {
+    font-size: 1.4em;
+  }
+
+  .project-item p {
+    font-size: 0.9em;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
