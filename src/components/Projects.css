@@ -1,202 +1,171 @@
-/* Projects.css */
-.projects {
-  padding: 60px 20px;
-  background: linear-gradient(135deg, #1e3c72, #2a5298);
-  color: #fff;
+/* ============================= */
+/*         GLOBAL STYLES         */
+/* ============================= */
+body {
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ============================= */
+/*       PROJECTS SECTION        */
+/* ============================= */
+#projects {
+  background: radial-gradient(circle, rgba(20,20,20,1) 0%, rgba(5,5,5,1) 100%);
+  padding: 80px 0;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
+  position: relative;
 }
 
-/* Container untuk proyek */
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  padding: 20px;
-  animation: fadeIn 1s ease-in-out;
+/* Efek lampu latar */
+#projects::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(255, 204, 0, 0.15) 10%, transparent 80%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
 }
 
-/* Hero Image */
-.projects-container .hero-image {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.projects-container .hero-image:hover {
-  transform: scale(1.1);
-}
-
-/* Title */
-.projects h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+/* Judul utama */
+#projects h2 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ffcc00;
   text-transform: uppercase;
   letter-spacing: 2px;
-  animation: slideDown 1s ease-in-out;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
 }
 
-/* Project List */
-.project-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  max-width: 1100px;
-  width: 100%;
-  padding: 10px;
-  justify-content: center;
-}
-
-/* Project Item */
-.project-item {
-  background: rgba(255, 255, 255, 0.1);
+/* ============================= */
+/*         PROJECT CARDS         */
+/* ============================= */
+.project-card {
+  background: linear-gradient(145deg, #222222, #161616);
+  border: none;
   border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   padding: 20px;
-  max-width: 350px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  animation: fadeInUp 1s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
+  position: relative;
+  overflow: hidden;
 }
 
-.project-item:hover {
-  transform: translateY(-10px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(255, 204, 0, 0.6);
 }
 
-.project-item h3 {
-  font-size: 1.6em;
-  margin-bottom: 15px;
-  color: #ffcc00;
-}
-
-.project-item p {
-  font-size: 1em;
-  line-height: 1.6;
-  color: #ddd;
-}
-
-/* Foto */
-.foto {
+/* Efek garis bawah animasi */
+.project-card::after {
+  content: "";
+  position: absolute;
   width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-top: 15px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffcc00, #ff6600);
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
 
-.foto:hover {
+.project-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* ============================= */
+/*           TEXT STYLE          */
+/* ============================= */
+.project-card .card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 0 0 8px rgba(255, 204, 0, 0.8);
+}
+
+.project-card .card-text {
+  font-size: 1rem;
+  color: #dddddd;
+  text-align: justify;
+}
+
+/* ============================= */
+/*         PROJECT IMAGES        */
+/* ============================= */
+.project-img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-img:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
 }
 
-/* RESPONSIVE DESIGN */
-
-/* Tablet Mode (Layar Maksimal 1024px) */
-@media (max-width: 1024px) {
-  .projects h2 {
-    font-size: 2.2em;
-  }
-
-  .project-list {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-  }
-
-  .project-item {
-    max-width: 300px;
-  }
+/* ============================= */
+/*       VIEW PROJECT BUTTON     */
+/* ============================= */
+.btn-primary {
+  background: linear-gradient(90deg, #ffcc00, #ff6600);
+  border: none;
+  font-weight: bold;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Mobile Mode (Layar Maksimal 768px) */
+.btn-primary:hover {
+  background: linear-gradient(90deg, #ff6600, #ffcc00);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+}
+
+/* Efek glow */
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 80%);
+  top: -100%;
+  left: -10%;
+  transform: rotate(25deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover::before {
+  top: 100%;
+}
+
+/* ============================= */
+/*       RESPONSIVE DESIGN       */
+/* ============================= */
 @media (max-width: 768px) {
-  .projects {
-    padding: 40px 10px;
+  #projects h2 {
+    font-size: 2.2rem;
   }
 
-  .projects-container .hero-image {
-    width: 100px;
-    height: 100px;
+  .project-card .card-title {
+    font-size: 1.3rem;
   }
 
-  .projects h2 {
-    font-size: 1.8em;
+  .project-card .card-text {
+    font-size: 0.9rem;
   }
 
-  .project-list {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .project-item {
-    max-width: 90%;
-    padding: 15px;
-  }
-}
-
-/* Small Mobile Mode (Layar Maksimal 480px) */
-@media (max-width: 480px) {
-  .projects {
-    padding: 30px 5px;
-  }
-
-  .projects h2 {
-    font-size: 1.5em;
-  }
-
-  .project-item {
-    max-width: 100%;
-    padding: 10px;
-  }
-
-  .project-item h3 {
-    font-size: 1.4em;
-  }
-
-  .project-item p {
-    font-size: 0.9em;
-  }
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .btn-primary {
+    font-size: 0.9rem;
   }
 }
