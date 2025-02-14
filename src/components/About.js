@@ -13,38 +13,8 @@ function About() {
         <img src={profileImg} alt="Profile" className="profile-image" />
       </div>
       
-     {/* Deskripsi Tentang Anda */}
-<p>
-  Hi, I'm Bagas Gilang Ramadhan, a passionate developer with experience in various technologies such as
-  React, Node.js, and more. I specialize in both frontend and backend development, and I have a keen interest
-  in cybersecurity. I'm always looking to expand my skills and tackle new challenges in the world of software
-  development. My goal is to create innovative solutions that are not only functional but also user-friendly and secure.
-</p>
-<p>
-  I am a student at Universitas Indraprasta, currently in my 8th semester of Informatics Engineering. I have a
-  strong foundation in programming languages like JavaScript, PHP, and Java, and I am also skilled in database
-  management and system design. Throughout my studies, I've worked on various projects, including e-commerce websites,
-  inventory management systems, and web applications, which have honed my skills in both frontend and backend development.
-</p>
-<p>
-  When I'm not coding, I enjoy reading about the latest trends in technology, experimenting with new programming
-  languages, and working on personal projects to sharpen my skills. I am particularly interested in artificial intelligence,
-  machine learning, and data science, and I'm constantly exploring new ways to integrate these technologies into my work.
-</p>
-<p>
-  Outside of my technical interests, I am also passionate about collaborating with others and contributing to open-source
-  projects. I believe that learning from others and sharing knowledge is a key aspect of growing as a developer. My goal is to
-  continuously improve and contribute to building a better, more connected world through technology.
-</p>
-<p>
-  In addition to my technical skills, I have experience in problem-solving, teamwork, and project management. Whether it's
-  working on academic assignments, collaborating with peers, or contributing to group projects, I always aim to bring a
-  positive attitude and strong work ethic to every task.
-</p>
-<p>
-  I look forward to connecting with like-minded professionals and potential collaborators who share my passion for
-  technology and innovation.
-</p>
+      
+ <p> Hi! I'm <b>Bagas Gilang Ramadhan</b>, a passionate software developer with expertise in <b>React, Node.js, PHP, Javascript, Phyton and Java</b>. I specialize in both <b>frontend and backend development</b>, with a deep interest in <b>cybersecurity</b>. Constantly eager to learn and explore new challenges, I strive to build innovative, secure, and user-friendly digital solutions. </p> <p> Currently, I am in my 8th semester at <b>Universitas Indraprasta</b>, majoring in Informatics Engineering. My skill set includes programming languages like <b>JavaScript, PHP, and Java</b>, along with <b>database management and system design</b>. Throughout my studies, I have worked on diverse projects, such as <b>e-commerce websites, inventory management systems, web applications, and machine learning models</b>, allowing me to refine my development skills across various domains. </p> <p> One of my notable projects is a **Graduation Prediction System using the K-Nearest Neighbor (KNN) Algorithm**. This project aims to analyze student data and predict their likelihood of graduation based on key academic performance indicators. By implementing **KNN classification**, I was able to create an efficient model that helps educators and institutions assess student progress and take proactive steps to improve graduation rates. This experience has strengthened my knowledge of **machine learning, data analysis, and predictive modeling**. </p> <p> I am always excited to stay updated with the latest technology trends, experiment with new programming languages, and work on personal projects to sharpen my skills. My interests extend beyond software development to areas like <b>Artificial Intelligence (AI), Machine Learning, and Data Science</b>. I believe these technologies hold immense potential to revolutionize the digital landscape. </p> <p> Beyond coding, I enjoy collaborating with like-minded professionals and contributing to <b>open-source projects</b>. I strongly believe that learning from others and sharing knowledge is essential for personal and professional growth. My goal is to continually improve and contribute to creating a more innovative and connected world through technology. </p> <p> In addition to my technical expertise, I have strong skills in <b>problem-solving, teamwork, and project management</b>. Whether working on academic assignments, collaborating on group projects, or leading development initiatives, I always bring a positive attitude and a strong work ethic to every challenge. </p> <p> I am always open to new opportunities and collaborations with individuals or companies that share my passion for technology and innovation. Feel free to connect with me to discuss potential projects, exchange ideas, or explore new possibilities! </p>
     </div>
   );
 }
