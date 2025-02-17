@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 
+
 // Import Gambar
 import programmerImg from "./images/fota pro.jpeg";
 import cybersecurityImg from "./images/cyber security.jpeg";
@@ -23,6 +24,8 @@ import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Certifikat from "./components/certifikat";
 
+
+
 function App() {
   const [notification, setNotification] = useState(null);
 
@@ -30,6 +33,7 @@ function App() {
     setNotification({ title, content });
   };
 
+  
   return (
     <Router>
       <div className="App">

@@ -38,7 +38,7 @@ body {
 #projects h2 {
   font-size: 3rem;
   font-weight: bold;
-  color: #ffcc00;
+  color: #0d4acf;
   text-transform: uppercase;
   letter-spacing: 3px;
   margin-bottom: 50px;
@@ -64,7 +64,7 @@ body {
 
 .project-card:hover {
   transform: translateY(-12px) scale(1.05);
-  border: 1px solid #ffcc00;
+  border: 1px solid #124fd3;
 }
 
 /* Efek garis bawah animasi */
@@ -73,7 +73,7 @@ body {
   position: absolute;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #ffcc00, #ff6600);
+  background: linear-gradient(90deg, #0051ff, #072fe0);
   bottom: 0;
   left: 0;
   transform: scaleX(0);
@@ -90,7 +90,7 @@ body {
 .project-card .card-title {
   font-size: 1.6rem;
   font-weight: bold;
-  color: #ffcc00;
+  color: #073ce9;
 }
 
 .project-card .card-text {
@@ -119,7 +119,7 @@ body {
 /*       VIEW PROJECT BUTTON     */
 /* ============================= */
 .btn-primary {
-  background: linear-gradient(90deg, #ffcc00, #ff6600);
+  background: linear-gradient(90deg, #003cff, #ff6600);
   border: none;
   font-weight: bold;
   padding: 14px 28px;
@@ -131,7 +131,7 @@ body {
 }
 
 .btn-primary:hover {
-  background: linear-gradient(90deg, #ff6600, #ffcc00);
+  background: linear-gradient(90deg, #006eff, #ffcc00);
   transform: scale(1.1);
 }
 
