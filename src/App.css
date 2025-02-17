@@ -163,17 +163,7 @@ body {
   padding: 0 20px;
 }
 
-/* Animation for Hero Description */
-@keyframes fadeInUpDescription {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+
 
 
 /* Hero Description */
@@ -546,9 +536,41 @@ body {
   100% { transform: scale(1); }
 }
 
-.hero-title {
-  animation: pulse 3s infinite;
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
 }
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.hero-title {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid black; /* Efek kursor berkedip */
+  font-size: 2.5vw; /* Ukuran responsif */
+  font-weight: bold;
+  animation: typing 4s steps(40) forwards, blink 0.7s infinite;
+  width: fit-content;
+}
+
+/* Responsif untuk ukuran kecil */
+@media (max-width: 768px) {
+  .hero-title {
+      font-size: 5vw; /* Lebih besar di layar kecil */
+      border-right: 2px solid black;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+      font-size: 6vw; /* Lebih besar di HP */
+      border-right: 1px solid black;
+  }
+}
+
 
 /* Tombol Call-to-Action */
 .hero-btn {
