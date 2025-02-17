@@ -152,3 +152,101 @@ h1 {
         font-size: 13px;
     }
 }
+
+/* Main container for the certificate item */
+.sertifikat-item1 {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 380px;
+    margin: 20px auto;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for interactivity */
+.sertifikat-item1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Styling for logos section */
+.sertifikat-logos {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.sertifikat-logomi,
+.sertifikat-logodi {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Styling for the details section */
+.sertifikat-details {
+    margin-top: 15px;
+}
+
+.sertifikat-details h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.sertifikat-details p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 18px;
+}
+
+/* Styling for the credential link */
+.credential-link {
+    font-size: 14px;
+    color: #0d0d0e;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid #070808;
+    padding: 8px 14px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for the credential link */
+.credential-link:hover {
+    background-color: #070707;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .sertifikat-item1 {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .sertifikat-logomi,
+    .sertifikat-logodi {
+        width: 50px;
+        height: 50px;
+    }
+
+    .sertifikat-details h2 {
+        font-size: 18px;
+    }
+
+    .credential-link {
+        font-size: 13px;
+        padding: 7px 12px;
+    }
+}
+

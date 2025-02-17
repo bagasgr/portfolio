@@ -8,6 +8,7 @@ import kominfologo from '../images/kominfo.jpeg';
 import dqlablogo from '../images/dqlab.png';
 import micrologo from '../images/micro.png';
 import microsoft from '../images/microsoft.png';
+import cari from '../images/cari.png';
 
 
 
@@ -19,6 +20,32 @@ const certifikat = () => {
             <h1>Sertifikat dan Lisensi</h1>
 
             <div className="sertifikat">
+
+            <div className="sertifikat-item1">
+    <div className="sertifikat-logos">
+        <img src={microsoft} alt="Logo Microsoft" className="sertifikat-logomi" />
+        <img src={dicodinglogo} alt="Logo Dicoding" className="sertifikat-logodi" />
+    </div>
+    <div className="sertifikat-details">
+    <h2>elevAIte with Dicoding Program</h2>
+    <p>Microsoft | Diterbitkan 17 February 2025</p>
+    <a 
+        href="/pdf/kelulusan.pdf" 
+        className="credential-link" 
+        target="_blank" 
+        rel="noopener noreferrer">
+        
+           
+            Tampilkan kredensial
+        
+    </a>
+</div>
+
+
+
+</div>
+
+
                 <div className="sertifikat-item">
                 <img src={ciscoLogo} alt="Logo Cisco" className="sertifikat-logo" />
                     <div className="sertifikat-details">

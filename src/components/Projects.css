@@ -2,17 +2,20 @@
 /*         GLOBAL STYLES         */
 /* ============================= */
 body {
-  background-color: #0d0d0d;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
   color: #ffffff;
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 /* ============================= */
 /*       PROJECTS SECTION        */
 /* ============================= */
 #projects {
-  background: radial-gradient(circle, rgba(20,20,20,1) 0%, rgba(5,5,5,1) 100%);
-  padding: 80px 0;
+  background: radial-gradient(circle, rgba(30,30,30,1) 0%, rgba(10,10,10,1) 100%);
+  padding: 100px 0;
   text-align: center;
   position: relative;
 }
@@ -23,43 +26,45 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle, rgba(255, 204, 0, 0.15) 10%, transparent 80%);
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(255, 204, 0, 0.2) 10%, transparent 80%);
   transform: translate(-50%, -50%);
   z-index: 0;
+  opacity: 0.7;
 }
 
 /* Judul utama */
 #projects h2 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: bold;
   color: #ffcc00;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 40px;
+  letter-spacing: 3px;
+  margin-bottom: 50px;
   position: relative;
   z-index: 1;
-  text-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+  animation: fadeInDown 1s ease-in-out;
 }
 
 /* ============================= */
 /*         PROJECT CARDS         */
 /* ============================= */
 .project-card {
-  background: linear-gradient(145deg, #222222, #161616);
-  border: none;
+  background: rgba(34, 34, 34, 0.9);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  padding: 20px;
+  padding: 25px;
   transition: all 0.4s ease-in-out;
-  box-shadow: 0 0 20px rgba(255, 204, 0, 0.2);
   position: relative;
   overflow: hidden;
+  transform: scale(1);
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 30px rgba(255, 204, 0, 0.6);
+  transform: translateY(-12px) scale(1.05);
+  border: 1px solid #ffcc00;
 }
 
 /* Efek garis bawah animasi */
@@ -72,7 +77,7 @@ body {
   bottom: 0;
   left: 0;
   transform: scaleX(0);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out;
 }
 
 .project-card:hover::after {
@@ -83,16 +88,16 @@ body {
 /*           TEXT STYLE          */
 /* ============================= */
 .project-card .card-title {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #ffcc00;
-  text-shadow: 0 0 8px rgba(255, 204, 0, 0.8);
 }
 
 .project-card .card-text {
   font-size: 1rem;
   color: #dddddd;
   text-align: justify;
+  line-height: 1.5;
 }
 
 /* ============================= */
@@ -100,15 +105,14 @@ body {
 /* ============================= */
 .project-img {
   width: 100%;
-  max-height: 200px;
+  max-height: 220px;
   object-fit: cover;
   border-radius: 12px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .project-img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+  transform: scale(1.1) rotate(2deg);
 }
 
 /* ============================= */
@@ -118,9 +122,9 @@ body {
   background: linear-gradient(90deg, #ffcc00, #ff6600);
   border: none;
   font-weight: bold;
-  padding: 12px 24px;
+  padding: 14px 28px;
   font-size: 1rem;
-  border-radius: 10px;
+  border-radius: 12px;
   transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
@@ -128,25 +132,24 @@ body {
 
 .btn-primary:hover {
   background: linear-gradient(90deg, #ff6600, #ffcc00);
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+  transform: scale(1.1);
 }
 
-/* Efek glow */
+/* Efek animasi tombol */
 .btn-primary::before {
   content: "";
   position: absolute;
-  width: 120%;
-  height: 300%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 80%);
-  top: -100%;
-  left: -10%;
+  width: 150%;
+  height: 400%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 80%);
+  top: -120%;
+  left: -15%;
   transform: rotate(25deg);
   transition: all 0.3s ease-in-out;
 }
 
 .btn-primary:hover::before {
-  top: 100%;
+  top: 120%;
 }
 
 /* ============================= */
@@ -154,18 +157,31 @@ body {
 /* ============================= */
 @media (max-width: 768px) {
   #projects h2 {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
 
   .project-card .card-title {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .project-card .card-text {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .btn-primary {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    padding: 12px 24px;
+  }
+}
+
+/* Animasi untuk judul */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
