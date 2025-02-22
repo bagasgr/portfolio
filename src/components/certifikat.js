@@ -50,7 +50,7 @@ const certifikat = () => {
                 <img src={ciscoLogo} alt="Logo Cisco" className="sertifikat-logo" />
                     <div className="sertifikat-details">
                         <h2>Introduction to Cybersecurity</h2>
-                        <p>Dicoding Indonesia | Diterbitkan Jan 2025</p>
+                        <p>Cisco Networking Academy | Diterbitkan Jan 2025</p>
                         <a href="https://www.credly.com/badges/bf25ef93-68f8-4626-9b1c-c24eab038010/linked_in_profile" className="credential-link" target="_blank" rel="noopener noreferrer">
                             Tampilkan kredensial
                         </a>

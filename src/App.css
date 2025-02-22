@@ -165,7 +165,6 @@ body {
 
 
 
-
 /* Hero Description */
 .hero-description {
   font-size: 1.2rem;
@@ -173,21 +172,24 @@ body {
   max-width: 600px;
   color: #B0B0B0;  /* Lighter gray for description */
   line-height: 1.7;
-  animation: fadeInUpDescription 1.2s ease-out;
+  animation: fadeInUpDescription 1.2s ease-out, bounce 1s infinite;  /* Menambahkan animasi bounce ke elemen */
   padding: 0 20px;
 }
+.rotate-in {
+  animation: rotateIn 1s ease-out;
+}
 
-/* Animation for Hero Description */
-@keyframes fadeInUpDescription {
+@keyframes rotateIn {
   from {
+    transform: rotate(-200deg);
     opacity: 0;
-    transform: translateY(30px);
   }
   to {
+    transform: rotate(0);
     opacity: 1;
-    transform: translateY(0);
   }
 }
+
 
 .hero-image {
   width: 100%;
@@ -638,4 +640,65 @@ body {
 
 .hero-image:hover {
   transform: scale(1.05) rotate(2deg);
+}
+
+/* Button styles */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #0066cc; /* Deep blue */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for 3D effect */
+  transition: all 0.3s ease;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* 3D effect: Add black gradient for depth */
+.scroll-to-top::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(145deg, #333, #000);
+  border-radius: 8px;
+  z-index: -1;
+  filter: blur(4px);
+}
+
+/* Button hover and active effects */
+.scroll-to-top:hover {
+  background-color: #005bb5; /* Slightly darker blue */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+  transform: translateY(-2px); /* Slight upward movement */
+}
+
+/* Button active effect */
+.scroll-to-top:active {
+  background-color: #004b99; /* Even darker blue */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Shadow for pressed effect */
+  transform: translateY(2px); /* Move downward on click */
+}
+
+/* Animation for entry */
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Make the button slide in from the right */
+.scroll-to-top {
+  animation: slideIn 0.5s ease-out;
 }
