@@ -9,10 +9,8 @@ import dataImg from "./images/data.png";
 import softwareImg from "./images/software.png";
 import devImg from "./images/dev.png";
 import etImg from "./images/et.png";
-import potoImg from "./images/f.jpeg";
 import macinImg from "./images/machine.png";
 import proImg from "./images/projek.png";
-import fotoImg from "./images/foto.jpg";
 import fotobagasImg from "./images/fotobagas3.jpg";
 
 // Import Komponen
@@ -25,31 +23,19 @@ import Certifikat from "./components/certifikat";
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const checkScrollPosition = () => {
-    if (window.scrollY > 300) {  // Determines the scroll position, 300px as an example
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-  };
-
   useEffect(() => {
-    window.addEventListener('scroll', checkScrollPosition); // Add event listener when scrolling
+    const checkScrollPosition = () => {
+      setIsVisible(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", checkScrollPosition);
     return () => {
-      window.removeEventListener('scroll', checkScrollPosition); // Clean up listener when component unmounts
+      window.removeEventListener("scroll", checkScrollPosition);
     };
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
   return (
     isVisible && (
-      <button 
-        onClick={scrollToTop} 
-        className="scroll-to-top"  // Apply the class for styling
-      >
+      <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="scroll-to-top">
         Kembali ke Atas
       </button>
     )
@@ -63,6 +49,10 @@ function App() {
     setNotification({ title, content });
   };
 
+  const closeNotification = () => {
+    setNotification(null);
+  };
+
   return (
     <Router>
       <div className="App">
@@ -70,22 +60,14 @@ function App() {
         <div className="hero-section">
           <div className="hero-content">
             <h1 className="hero-title">I Am <span>Bagas Gilang Ramadhan</span></h1>
-            <p className="hero-description">
-              A Software Developer who is passionate about designing and building innovative, dynamic, and scalable software solutions to create extraordinary digital experiences.
-            </p>
+            <p className="hero-description">A Software Developer passionate about building innovative and scalable solutions.</p>
             <div className="navigation">
               <a href="/about">About</a>
               <a href="/pengalaman">Work Experience</a>
               <a href="/projects">Projects</a>
               <a href="/certifikat">Certifikat</a>
               <a href="/contact">Contact</a>
-              <a 
-                href="/pdf/BagasGilangRamadhan_softwareDeveloper(1).pdf" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                Resume
-              </a>
+              <a href="/pdf/BagasGilangRamadhan_softwareDeveloper(1).pdf" target="_blank" rel="noopener noreferrer">Resume</a>
             </div>
           </div>
           <img src={fotobagasImg} alt="Bagas Gilang Ramadhan" className="hero-image" />
@@ -93,65 +75,14 @@ function App() {
 
         {/* Skill Section */}
         <div className="skills-section">
-          {[
-            {
-              title: "Fullstack Developer",
-              img: programmerImg,
-              content: `🔹 Frontend: HTML, CSS, JavaScript, React.js for interactive & responsive UI.
-🔹 Backend: PHP (Laravel), Node.js (Hapi.js, Express.js) for APIs & data management.
-🔹 Database: MySQL, MongoDB for storing & managing data.
-🔹 Security: JWT Authentication, password hashing for data protection.
-...` 
-            },
-            {
-              title: "Cybersecurity Specialist",
-              img: cybersecurityImg,
-              content: `Experience in Cybersecurity
-I have experience in Cybersecurity, gained through official training and competitions that have sharpened my cybersecurity skills.
-...`
-            },
-            {
-              title: "Data Analyst",
-              img: dataImg,
-              content: `Experience in Data Analysis
-I have experience in data analysis using various tools and technologies and have worked on data science-based projects to support more accurate decision-making.
-...`
-            },
-            {
-              title: "Software Engineering",
-              img: softwareImg,
-              content: `Experience in Software Engineering
-I have experience in software development using various technologies and methodologies and have worked on web and desktop applications to meet user and business needs.
-...`
-            },
-            {
-              title: "DevOps Engineer",
-              img: devImg,
-              content: `Experience in DevOps Engineering
-I have experience in automation and infrastructure management to support efficient and high-quality software development.
-...`
-            },
-            {
-              title: "Ethical Hacking",
-              img: etImg,
-              content: `Experience in Ethical Hacking
-I have experience in Ethical Hacking and Cybersecurity, which I have gained through competitions and intensive training.
-...`
-            },
-            {
-              title: "Machine Learning",
-              img: macinImg,
-              content: `Experience in Machine Learning
-I have experience in applying machine learning algorithms to solve business problems and generate accurate predictions.
-...`
-            },
-            {
-              title: "Project Manager IT",
-              img: proImg,
-              content: `Experience in Project Management
-I have managed IT projects from initiation to closure and have worked closely with clients to deliver on time and on budget.
-...`
-            }
+          {[{ title: "Fullstack Developer", img: programmerImg, content: "Experience in Fullstack Development..." },
+            { title: "Cybersecurity Specialist", img: cybersecurityImg, content: "Experience in Cybersecurity..." },
+            { title: "Data Analyst", img: dataImg, content: "Experience in Data Analysis..." },
+            { title: "Software Engineering", img: softwareImg, content: "Experience in Software Engineering..." },
+            { title: "DevOps Engineer", img: devImg, content: "Experience in DevOps Engineering..." },
+            { title: "Ethical Hacking", img: etImg, content: "Experience in Ethical Hacking..." },
+            { title: "Machine Learning", img: macinImg, content: "Experience in Machine Learning..." },
+            { title: "Project Manager IT", img: proImg, content: "Experience in Project Management..." }
           ].map((skill, index) => (
             <div className="skill-card" key={index} onClick={() => handleImageClick(skill.title, skill.content)}>
               <img src={skill.img} alt={skill.title} className="skill-image" />
@@ -165,6 +96,7 @@ I have managed IT projects from initiation to closure and have worked closely wi
           <div className="notification">
             <h2>{notification.title}</h2>
             <p>{notification.content}</p>
+            <button className="close-button" onClick={closeNotification}>Close</button>
           </div>
         )}
 
