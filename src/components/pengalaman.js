@@ -12,50 +12,51 @@ import bknImg from '../images/bkn.png';
 const experiences = [
   {
     logo: gtlImg,
-    title: "Operator Warehouse",
+    title: "Warehouse Operator",
     company: "GTL",
-    type: "Pekerja Lepas",
-    date: "Sep 2021 ",
-    location: "Cilincing, Jakarta Utara",
-    description: `Saya pernah di divisi inbound, inventory, dan outbound:
-      - Inbound: Saya melakukan receveid data yaitu menghitung serta mencocokkan barang melalui link Tokopedia untuk barang yang baru datang dari supplier yang akan dimasukkan ke gudang.
-      - Inventory: Saya melakukan putway atau barang yang sudah di receveid saya susun dan mendata barang pada rak yang kosong.
-      - Outbound: Picker: mengambil barang pesanan, Console: memisahkan barang yang diambil oleh picker, Checker: memastikan barang benar sesuai pesanan, Packer: mengepack barang, Dispatch: memisahkan barang ke ekspedisi yang sudah ditentukan serta membuat surat jalan.`
+    type: "Freelancer",
+    date: "Sep 2021",
+    location: "Cilincing, North Jakarta",
+    description: `I have worked in inbound, inventory, and outbound divisions:
+      - Inbound: Performed received data tasks, counting and verifying items via Tokopedia links for newly arrived goods from suppliers to be stored in the warehouse.
+      - Inventory: Conducted putaway by organizing received items and recording them on empty racks.
+      - Outbound: Picker: Retrieved ordered items. Console: Separated picked items. Checker: Ensured items matched the orders. Packer: Packed the items. Dispatch: Sorted items for designated shipping expeditions and prepared delivery notes.`
   },
   {
     logo: swiftImg,
-    title: "Receveid Data (Inbound)",
+    title: "Received Data (Inbound)",
     company: "Swift - a Tokopedia Company",
-    type: "Pekerja Lepas",
-    date: "Sep 2021 - Sep 2023 · 2 thn 1 bln",
-    location: "Indonesia (Jarak Jauh)",
-    description: `Saya pernah di divisi inbound, inventory, dan outbound:
-      - Inbound: Melakukan receveid data untuk barang baru.
-      - Inventory: Mendata dan menyusun barang pada rak kosong.
-      - Outbound: Mengambil barang pesanan, memisahkan, memastikan, dan mengepack barang.`
+    type: "Freelancer",
+    date: "Sep 2021 - Sep 2023 · 2 yrs 1 mo",
+    location: "Indonesia (Remote)",
+    description: `I have worked in inbound, inventory, and outbound divisions:
+      - Inbound: Conducted received data tasks for newly arrived goods.
+      - Inventory: Recorded and organized items on empty racks.
+      - Outbound: Retrieved, separated, verified, and packed ordered items.`
   },
   {
     logo: shopImg,
-    title: "Operator Warehouse",
+    title: "Warehouse Operator",
     company: "Shopee",
-    type: "Pekerja Lepas",
-    date: "Des 2020 - Jul 2021 · 8 bln",
-    location: "Indonesia (Di lokasi)",
-    description: `Saya pernah bekerja di warehouse Shopee, dengan divisi yang berpindah-pindah:
-      - Inbound: Checker dan quantity control.
-      - Inventory: Mencarikan stok barang dan mengecek perbedaan data.
-      - Outbound: Mengambil barang pesanan, mengepack barang.`
+    type: "Freelancer",
+    date: "Dec 2020 - Jul 2021 · 8 mos",
+    location: "Indonesia (On-site)",
+    description: `I worked in Shopee's warehouse, rotating between different divisions:
+      - Inbound: Performed checking and quantity control.
+      - Inventory: Located stock items and verified data discrepancies.
+      - Outbound: Retrieved and packed ordered items.`
   },
   {
-    logo: bknImg ,
-    title: "Arsip Data",
-    company: "Badan Kepegawaian Negara",
-    type: "Magang",
-    date: "Sep 2018 - Nov 2018 · 3 bln",
-    location: "Indonesia (Di lokasi)",
-    description: `Saat praktek kerja lapangan (PKL), saya membantu mendata di komputer dan menaruh dokumen para menteri yang aktif maupun tidak aktif.`
+    logo: bknImg,
+    title: "Data Archiving",
+    company: "National Civil Service Agency (BKN)",
+    type: "Internship",
+    date: "Sep 2018 - Nov 2018 · 3 mos",
+    location: "Indonesia (On-site)",
+    description: `During my internship (PKL), I assisted in data entry and organized documents of both active and inactive government officials.`
   }
 ];
+
 
 const Pengalaman = () => {
   return (
