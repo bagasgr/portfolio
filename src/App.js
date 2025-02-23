@@ -36,7 +36,7 @@ const ScrollToTopButton = () => {
   return (
     isVisible && (
       <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="scroll-to-top">
-       back to top
+       Back to Top
       </button>
     )
   );
