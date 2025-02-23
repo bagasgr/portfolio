@@ -1,10 +1,11 @@
-/* Contact Page Styling */
+/* Contact Page Styling with Glassmorphism */
 .contact-page {
   text-align: center;
   padding: 60px;
-  background: linear-gradient(135deg, #1d2b64, #f8cdda);
+  background: linear-gradient(135deg, #000428, #004e92);
+  backdrop-filter: blur(15px);
   border-radius: 25px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
   max-width: 900px;
   margin: 50px auto;
   color: #fff;
@@ -13,301 +14,114 @@
   overflow: hidden;
   animation: fadeIn 1.5s ease-in-out;
   width: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Heading Styling */
 .contact-page h1 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  font-weight: 800;
   margin-bottom: 30px;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #fff;
-  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Add subtle shadow */
+  letter-spacing: 3px;
+  color: #00d4ff;
+  text-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 1.5s ease-in-out;
 }
 
-/* Icon List Styling */
+/* Contact Icons List */
 .contact-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); /* Default grid layout for responsive */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
   gap: 20px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  justify-items: center;
-  transition: grid-template-columns 0.3s ease;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-/* Icon Styling */
 .contact-list li {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90px;
-  height: 90px;
-  background-color: #fff;
+  width: 80px;
+  height: 80px;
+  background: rgba(0, 212, 255, 0.2);
+  backdrop-filter: blur(10px);
   border-radius: 50%;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
   cursor: pointer;
-  transform: scale(1);
-  animation: iconFadeIn 1.5s ease-in-out;
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Hover Effect */
 .contact-list li:hover {
-  transform: scale(1.2);
-  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
-  background-color: #f8cdda; /* Add background color on hover */
+  transform: scale(1.15) rotate(8deg);
+  box-shadow: 0 20px 50px rgba(0, 212, 255, 0.5);
 }
 
-/* Icon Styling */
 .icon {
-  font-size: 2.5rem;
-  color: #1d2b64;
-  transition: color 0.3s ease, transform 0.3s ease;
-  z-index: 1;
+  font-size: 5.5rem;
+  color: #00d4ff;
+  transition: transform 0.4s ease, color 0.4s ease;
 }
 
-/* Hover Effects */
+/* Increase Instagram Icon Size */
+.contact-list li.instagram .icon {
+  font-size: 3rem;
+}
+
 .contact-list li:hover .icon {
-  color: #f8cdda;
-  transform: rotate(360deg);
+  transform: rotate(360deg) scale(1.1);
+  color: #fff;
 }
 
-/* Icon Links */
-.contact-list li a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* Glow Effect for Hover */
-.contact-list li:hover .icon {
-  text-shadow: 0 0 20px #f8cdda, 0 0 30px #f8cdda, 0 0 40px #f8cdda;
-}
-
-/* Keyframes for Animations */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes iconFadeIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Media Queries for Smaller Screens */
-
-/* For tablets and small screens (max-width: 1024px) */
-@media (max-width: 1024px) {
-  .contact-list {
-    grid-template-columns: repeat(4, 1fr); /* 4 icons per row */
-    gap: 20px;
-  }
-  .contact-page {
-    padding: 40px;
-  }
-  .contact-page h1 {
-    font-size: 2.5rem;
-  }
-  .contact-list li {
-    width: 80px;
-    height: 80px;
-  }
-  .icon {
-    font-size: 2rem; /* Adjust icon size for tablets */
-  }
-}
-
-/* For Mobile Screens (max-width: 768px) */
-@media (max-width: 768px) {
-  .contact-list {
-    grid-template-columns: repeat(3, 1fr); /* 3 icons per row */
-    gap: 15px;
-  }
-  .contact-list li {
-    width: 70px;
-    height: 70px;
-  }
-  .icon {
-    font-size: 1.8rem; /* Adjust icon size for mobile */
-  }
-  .contact-page h1 {
-    font-size: 2rem;
-  }
-}
-
-/* For Extra Small Mobile Screens (max-width: 480px) */
-@media (max-width: 480px) {
-  .contact-list {
-    grid-template-columns: repeat(2, 1fr); /* 2 icons per row */
-    gap: 10px;
-  }
-  .contact-list li {
-    width: 60px;
-    height: 60px;
-  }
-  .icon {
-    font-size: 1.6rem; /* Adjust icon size for small mobile */
-  }
-  .contact-page {
-    padding: 20px;
-  }
-  .contact-page h1 {
-    font-size: 1.8rem;
-  }
-}
-
-
-/* Formulir saran dan kritik */
+/* Feedback Form */
 .feedback-form {
-  margin-top: 30px;
-  padding: 30px;
-  background: #333;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+  padding: 40px;
+  background: rgba(0, 212, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
   animation: fadeIn 2s ease-out;
-}
-
-.feedback-form label {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .feedback-form input,
 .feedback-form textarea {
-  padding: 15px 18px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  padding: 18px;
+  font-size: 1.1rem;
+  border: 2px solid transparent;
+  border-radius: 12px;
   outline: none;
-  background: #444;
+  background: rgba(0, 0, 0, 0.15);
   color: #fff;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
-  animation: fadeIn 2s ease-out;
+  transition: border 0.4s ease, box-shadow 0.4s ease;
 }
 
 .feedback-form input:focus,
 .feedback-form textarea:focus {
-  border-color: #020202;
-  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  border: 2px solid #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.8);
 }
 
-/* Animasi Fade-in untuk elemen */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Tombol Kirim Formulir */
 .feedback-form button {
-  padding: 15px;
-  font-size: 1.2rem;
+  padding: 18px;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #fff;
-  background: linear-gradient(45deg, #050505, #0056b3);
+  background: linear-gradient(45deg, #00d4ff, #004e92);
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  animation: fadeIn 2s ease-out;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .feedback-form button:hover {
-  background: linear-gradient(45deg, #070707, #003f8c);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.feedback-form button:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Pesan status */
-.status-message {
-  margin-top: 15px;
-  font-size: 1rem;
-  text-align: center;
-  color: #28a745;
-  font-weight: bold;
-  animation: fadeIn 1s ease-in-out;
-}
-
-/* Responsif untuk perangkat mobile */
-@media (max-width: 768px) {
-  .contact-page {
-    padding: 20px;
-  }
-
-  .contact-page h1 {
-    font-size: 2rem;
-  }
-
-  .contact-list li {
-    font-size: 1rem;
-    padding: 10px 12px;
-  }
-
-  .feedback-form input,
-  .feedback-form textarea {
-    padding: 12px 15px;
-  }
-
-  .feedback-form button {
-    font-size: 1rem;
-  }
-
-  .feedback-form {
-    gap: 15px;
-  }
-}
-
-/* Responsif untuk perangkat dengan lebar lebih kecil */
-@media (max-width: 480px) {
-  .contact-page h1 {
-    font-size: 1.8rem;
-  }
-
-  .contact-list li {
-    font-size: 0.9rem;
-    padding: 8px 10px;
-  }
-
-  .feedback-form input,
-  .feedback-form textarea {
-    padding: 10px 12px;
-  }
-
-  .feedback-form button {
-    font-size: 0.9rem;
-  }
-
-  .feedback-form {
-    gap: 10px;
-  }
+  transform: scale(1.1) translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 212, 255, 0.5);
 }

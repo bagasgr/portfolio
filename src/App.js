@@ -66,8 +66,8 @@ function App() {
               <a href="/pengalaman">Work Experience</a>
               <a href="/projects">Projects</a>
               <a href="/certifikat">Certifikat</a>
-              <a href="/contact">Contact</a>
               <a href="/pdf/BagasGilangRamadhan_softwareDeveloper(1).pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+              <a href="/contact">Contact</a>
             </div>
           </div>
           <img src={fotobagasImg} alt="Bagas Gilang Ramadhan" className="hero-image" />
