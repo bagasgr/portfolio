@@ -6,14 +6,15 @@ import "./Projects.css";
 // Import Gambar
 import php1 from "../images/php1.jpeg";
 import php2 from "../images/php2.jpeg";
-import buku1 from "../images/buku1.jpeg";
-import buku2 from "../images/buku2.jpeg";
-import b1 from "../images/b1.jpeg";
+import buku1 from "../images/rakbuku.png";
+import buku2 from "../images/rakbuku1.png";
+import b1 from "../images/backend.png";
 import b2 from "../images/b2.jpeg";
 import net1 from "../images/ntebeans1.jpeg";
 import s1 from "../images/s1.jpeg";
 import s2 from "../images/s3.jpeg";
-import c1 from "../images/c1.jpeg";
+import c1 from "../images/coco.png";
+import c2 from "../images/coco1.jpeg";
 import i1 from "../images/excel.jpeg";
 import ti from "../images/ti.jpeg";
 import ap from "../images/ap.png";
@@ -27,7 +28,7 @@ const projectData = [
   { title: "Bookshelf API", description: "A backend project to manage book collections using RESTful API with Hapi.js.", images: [b1, b2] },
   { title: "Inventory Gudang", description: "A warehouse management system developed using NetBeans.", images: [net1] },
   { title: "Website Aplikasi Rata-rata Nilai Kelulusan di SDN Jati Waringin X", description: "A prediction system using KNN machine learning and Chart.js.", images: [s1, s2], link: "https://www.youtube.com/watch?v=Se4DLPreYBU" },
-  { title: "Penjualan Chocolatos", description: "A product sales application for Chocolatos.", images: [c1] },
+  { title: "Penjualan Chocolatos", description: "A product sales application for Chocolatos.", images: [c1, c2] },
   { title: "Membuat Diagram pada Excel", description: "Creating data visualizations and diagrams in Microsoft Excel.", images: [i1] },
   { title: "Portfolio Menggunakan React.js", description: "A personal portfolio website using React.js.", images: [ti] },
   { title: "Website E-Commerce 'Toko Online'", description: "An e-commerce website with shopping cart and checkout features.", images: [ap], link: "https://www.youtube.com/watch?v=hPsEMfLVoE4&t=1s" },
