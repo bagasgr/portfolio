@@ -15,7 +15,7 @@ import s1 from "../images/s1.jpeg";
 import s2 from "../images/s3.jpeg";
 import c1 from "../images/coco.png";
 import c2 from "../images/coco1.jpeg";
-import i1 from "../images/excel.jpeg";
+import i1 from "../images/excel1.jpeg";
 import ti from "../images/ti.jpeg";
 import ap from "../images/ap.png";
 import proyek from "../images/c3.png";
