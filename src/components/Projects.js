@@ -21,6 +21,7 @@ import ap from "../images/ap.png";
 import proyek from "../images/c3.png";
 import catatan from "../images/catatan.png";
 import catatan2 from "../images/catatan2.png";
+import webpri from "../images/por1.png";
 
 const projectData = [
   { title: "Absensi Karyawan Web", description: "A web-based employee attendance system built with PHP.", images: [php1, php2] },
@@ -30,7 +31,7 @@ const projectData = [
   { title: "Website Aplikasi Rata-rata Nilai Kelulusan di SDN Jati Waringin X", description: "A prediction system using KNN machine learning and Chart.js.", images: [s1, s2], link: "https://www.youtube.com/watch?v=Se4DLPreYBU" },
   { title: "Penjualan Chocolatos", description: "A product sales application for Chocolatos.", images: [c1, c2] },
   { title: "Membuat Diagram pada Excel", description: "Creating data visualizations and diagrams in Microsoft Excel.", images: [i1] },
-  { title: "Portfolio Menggunakan React.js", description: "A personal portfolio website using React.js.", images: [ti] },
+  { title: "Portfolio Menggunakan React.js", description: "A personal portfolio website using React.js.", images: [webpri] },
   { title: "Website E-Commerce 'Toko Online'", description: "An e-commerce website with shopping cart and checkout features.", images: [ap], link: "https://www.youtube.com/watch?v=hPsEMfLVoE4&t=1s" },
   { title: "ASP.NET MVC and Web API Integration using C#", description: "A project implementing MVC framework and RESTful API.", images: [proyek] },
   { title: "Notes App", description: "A web-based notes application using Web Components.", images: [catatan] },
