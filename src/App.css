@@ -160,6 +160,7 @@ body {
   text-align: center;
   text-shadow: 0 0 15px rgba(0, 102, 255, 0.7);
   transition: transform 0.3s ease, color 0.3s ease;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 /* Hover Effect on Hero Title */
@@ -190,6 +191,7 @@ body {
   -webkit-text-fill-color: transparent;
   text-shadow: 0 0 20px rgba(0, 102, 255, 0.6), 0 0 50px rgba(0, 102, 255, 0.3);
   transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  animation: scaleFade 2s ease-in-out;
 }
 
 .iam:hover {
@@ -208,6 +210,7 @@ body {
   text-align: center;
   letter-spacing: 1px;
   transition: transform 0.4s ease, color 0.3s ease;
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 .name::after {
@@ -230,6 +233,29 @@ body {
 .name:hover::after {
   width: 100%;
   opacity: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleFade {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* MEDIA QUERIES FOR RESPONSIVE DESIGN */
@@ -270,55 +296,60 @@ body {
 
 /* Animated Title */
 .animated-title {
-  font-size: 1.5rem; /* Menambah ukuran font */
-  font-weight: 600; /* Menguatkan ketebalan font */
-  color: #f8f9fa;
-  background: rgba(0, 0, 0, 0.7); /* Background lebih gelap */
-  padding: 20px 40px; /* Mengurangi jarak padding */
-  margin-top: 25px;
-  border-radius: 50px; /* Sudut lebih bulat */
+  font-size: 2.5rem; /* Lebih besar dan mencolok */
+  font-weight: 900; /* Super bold */
+  color: white; /* Warna teks tetap jelas */
+  padding: 20px 60px;
+  margin-top: 30px;
+  border-radius: 50px;
   display: inline-block;
   white-space: nowrap;
   position: relative;
   z-index: 2;
   overflow: hidden;
-  transition: transform 0.4s ease, color 0.4s ease;
-  animation: glowEffect 2.5s infinite alternate, waveEffect 3s ease-in-out infinite;
+  text-transform: uppercase; /* Huruf kapital semua */
+  letter-spacing: 3px; /* Spasi antar huruf lebih lebar */
+  border: 4px solid rgba(255, 255, 255, 0.8); /* Border putih elegan */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(45deg, #ff00ff, #00ffea, #007bff, #ff007b, #ffcc00);
+  background-size: 400%;
+  animation: glowEffect 1.5s infinite alternate, waveEffect 3s ease-in-out infinite, colorShift 6s infinite alternate, textGlow 2s infinite alternate;
+  transition: all 0.4s ease-in-out;
 }
 
-/* Efek Glow yang lebih dramatis */
+/* Efek Glowing 3D */
 @keyframes glowEffect {
-  0% { text-shadow: 0 0 15px rgba(0, 102, 255, 0.7), 0 0 25px rgba(0, 102, 255, 0.6); }
-  50% { text-shadow: 0 0 35px rgba(0, 102, 255, 1), 0 0 50px rgba(0, 102, 255, 0.8); }
-  100% { text-shadow: 0 0 15px rgba(0, 102, 255, 0.7), 0 0 25px rgba(0, 102, 255, 0.6); }
+  0% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.8); }
+  50% { text-shadow: 0 0 50px rgba(255, 255, 255, 1), 0 0 70px rgba(0, 255, 255, 0.9); }
+  100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.8); }
 }
 
 /* Efek Gelombang */
 @keyframes waveEffect {
-  0% {
-    transform: translateY(0);
-    text-shadow: 0 0 15px rgba(0, 102, 255, 0.7);
-  }
-  50% {
-    transform: translateY(-8px);
-    text-shadow: 0 0 30px rgba(0, 102, 255, 0.8);
-  }
-  100% {
-    transform: translateY(0);
-    text-shadow: 0 0 15px rgba(0, 102, 255, 0.7);
-  }
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-5px) rotate(2deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Efek Warna Berganti */
+@keyframes colorShift {
+  0% { background-position: 0%; }
+  50% { background-position: 100%; }
+  100% { background-position: 0%; }
+}
+
+/* Efek Cahaya di Teks */
+@keyframes textGlow {
+  0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+  100% { text-shadow: 0 0 40px rgba(255, 255, 255, 1); }
 }
 
 /* Hover Effect */
 .animated-title:hover {
-  color: #00b7ff; /* Mengubah warna teks saat hover */
-  transform: scale(1.05); /* Meningkatkan ukuran sedikit */
-  box-shadow: 0 0 15px rgba(0, 102, 255, 1), 0 0 25px rgba(0, 102, 255, 0.7); /* Menambah efek bayangan */
-}
-
-/* Transisi warna saat hover */
-.animated-title:hover {
-  transition: all 0.4s ease;
+  transform: scale(1.15) rotate(2deg);
+  filter: brightness(1.3);
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 50px rgba(255, 255, 255, 1), 0 0 70px rgba(0, 255, 255, 1);
 }
 
 /* Hero Description */
