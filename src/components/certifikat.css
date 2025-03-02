@@ -1,252 +1,95 @@
-/* Basic reset and layout settings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Header */
-h1 {
-    text-align: center;
-    margin: 20px 0;
-    font-size: 36px;
-    color: #959da5;
-}
-
-/* Container utama sertifikat */
+/* sertifikat.css */
 .sertifikat-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-/* Grid sertifikat */
-.sertifikat {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-/* Item sertifikat */
-.sertifikat-item {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-}
-
-.sertifikat-item:hover {
+    padding: 50px 20px;
+    background: #0a0a0a; /* Warna hitam pekat */
+    color: #fff;
+    min-height: 100vh;
+  }
+  
+  .sertifikat-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 170, 255, 0.8);
+  }
+  
+  .sertifikat-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+  }
+  
+  .sertifikat-item {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 68, 255, 0.3));
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 68, 255, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 350px;
+    border: 1px solid rgba(0, 170, 255, 0.7);
+  }
+  
+  .sertifikat-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Logo Sertifikat */
-.sertifikat-logo {
-    width: 120px;
+    box-shadow: 0px 10px 25px rgba(0, 170, 255, 1);
+  }
+  
+  .sertifikat-logo {
+    width: 80px;
     height: auto;
-    display: block;
-    margin: 0 auto 15px;
-}
-
-/* Detail Sertifikat */
-.sertifikat-details h2 {
-    font-size: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 5px rgba(0, 170, 255, 0.7));
+  }
+  
+  .sertifikat-details {
+    text-align: center;
+  }
+  
+  .sertifikat-details h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
     margin-bottom: 10px;
-}
-
-.sertifikat-details p {
-    font-size: 16px;
-    color: #7f8c8d;
-}
-
-/* Link Kredensial */
-.credential-link {
+    color: #00aaff; /* Biru neon */
+    text-shadow: 0 0 10px rgba(0, 170, 255, 1);
+  }
+  
+  .sertifikat-details p {
+    font-size: 0.9rem;
+    color: #d0eaff;
+  }
+  
+  .credential-link {
     display: inline-block;
     margin-top: 10px;
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.credential-link:hover {
-    text-decoration: underline;
-}
-
-/* 🔹 RESPONSIVE DESIGN 🔹 */
-
-/* Tablet Mode (Maksimal 1024px) */
-@media (max-width: 1024px) {
-    .sertifikat {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    .sertifikat-item {
-        padding: 18px;
-    }
-
-    .sertifikat-details h2 {
-        font-size: 18px;
-    }
-
-    .sertifikat-details p {
-        font-size: 15px;
-    }
-}
-
-/* Mobile Mode (Maksimal 768px) */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    .sertifikat-container {
-        padding: 10px;
-    }
-
-    .sertifikat {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .sertifikat-logo {
-        width: 100px;
-    }
-
-    .sertifikat-details h2 {
-        font-size: 17px;
-    }
-
-    .sertifikat-details p {
-        font-size: 14px;
-    }
-}
-
-/* Small Mobile Mode (Maksimal 480px) */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 24px;
-    }
-
-    .sertifikat-item {
-        padding: 15px;
-    }
-
-    .sertifikat-logo {
-        width: 90px;
-    }
-
-    .sertifikat-details h2 {
-        font-size: 16px;
-    }
-
-    .sertifikat-details p {
-        font-size: 13px;
-    }
-}
-
-/* Main container for the certificate item */
-.sertifikat-item1 {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 380px;
-    margin: 20px auto;
-    padding: 25px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Hover effect for interactivity */
-.sertifikat-item1:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Styling for logos section */
-.sertifikat-logos {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-.sertifikat-logomi,
-.sertifikat-logodi {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-}
-
-/* Styling for the details section */
-.sertifikat-details {
-    margin-top: 15px;
-}
-
-.sertifikat-details h2 {
-    font-size: 20px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 12px;
-}
-
-.sertifikat-details p {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 18px;
-}
-
-/* Styling for the credential link */
-.credential-link {
-    font-size: 14px;
-    color: #0d0d0e;
-    text-decoration: none;
-    font-weight: 500;
-    border: 1px solid #070808;
-    padding: 8px 14px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Hover effect for the credential link */
-.credential-link:hover {
-    background-color: #070707;
+    padding: 10px 18px;
+    background: linear-gradient(135deg, #007bff, #0d0d0e);
     color: #fff;
+    font-weight: bold;
     text-decoration: none;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 600px) {
-    .sertifikat-item1 {
-        max-width: 90%;
-        padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(18, 18, 19, 0.8);
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  .credential-link:hover {
+    background: linear-gradient(135deg, #0056b3, #121313);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgb(7, 14, 17);
+  }
+  
+  @media (max-width: 768px) {
+    .sertifikat-list {
+      grid-template-columns: 1fr;
     }
-
-    .sertifikat-logomi,
-    .sertifikat-logodi {
-        width: 50px;
-        height: 50px;
+  
+    .sertifikat-item {
+      width: 90%;
     }
-
-    .sertifikat-details h2 {
-        font-size: 18px;
-    }
-
-    .credential-link {
-        font-size: 13px;
-        padding: 7px 12px;
-    }
-}
-
+  }
+  

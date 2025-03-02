@@ -63,10 +63,13 @@ function App() {
         {/* Hero Section */}
         <div className="hero-section">
           <div className="hero-content">
-            <h1 className="hero-title">
-              <span className="iam">I Am</span>{" "}
-              <span className="name">Bagas Gilang Ramadhan</span>
-            </h1>
+          <h1 className="hero-title">
+  <span className="iam">I Am</span>{" "}
+  <span className="name">Bagas Gilang Ramadhan</span>
+  <br />
+  <span className="profesi">IT Enthusiast</span>
+</h1>
+
             <h2 className="animated-title">
               <Typewriter
                 options={{
@@ -76,6 +79,7 @@ function App() {
                     "Fullstack Developer",
                     "Cybersecurity Specialist",
                     "Data Analyst",
+                    "Data Scientist",
                     "Software Engineer",
                     "Ethical Hacking",
                     "Machine Learning",
