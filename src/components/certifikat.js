@@ -44,12 +44,6 @@ const certificates = [
     credentialUrl: "https://www.dicoding.com/users/bagas_gilang_ramadha/academies",
   },
   {
-    logo: dicodinglogo,
-    title: "Belajar Dasar Structured Query Language (SQL)",
-    issuer: "Dicoding Indonesia",
-    credentialUrl: "https://www.dicoding.com/users/bagas_gilang_ramadha/academies",
-  },
-  {
     logo: digitalentlogo,
     title: "Keamanan Siber untuk Wirausaha",
     issuer: "Digital Talent Scholarship",
@@ -58,11 +52,55 @@ const certificates = [
     credentialUrl: "https://digitalent.komdigi.go.id/cek-sertifikat#",
   },
   {
-    logo: dqlablogo,
-    title: "Guide to Learn R with AI at DQLab",
-    issuer: "DQLab",
-    credentialUrl: "s://academy.dqlab.id/Certificate_check/result/DQLABBGINRADQUSR/NONTRACK#mycertificate",
+    logo: dicodinglogo,
+    title: "Belajar Dasar Structured Query Language (SQL)",
+    issuer: "Dicoding Indonesia",
+    credentialUrl: "https://www.dicoding.com/users/bagas_gilang_ramadha/academies",
   },
+  {
+    logo: ciscoLogo,
+    title: "Networking Basics",
+    issuer: "Cisco Networking Academy",
+    date: "Jan 2025",
+    credentialUrl: "/pdf/_certificate_bagasiyain205-gmail-com_efacd468-6f66-4337-83d0-4769165658bd (1).pdf",
+  },
+  {
+    logo: dqlablogo,
+    title: "Guide to Learn Python with AI at DQLab",
+    issuer: "DQLab",
+    credentialUrl: "https://academy.dqlab.id/main/rachievement",
+  },
+
+
+  {
+    logo: dicodinglogo,
+    title: "Belajar Fundamental Front-End Web Development",
+    issuer: "Dicoding Indonesia",
+    date: "12 Februari 2025",
+    expiration: "12 Februari 2029",
+    credentialId: "4EXGV494GXRL",
+    credentialUrl: "https://www.dicoding.com/certificates/4EXGV494GXRL",
+  },
+
+  {
+    logo: dicodinglogo,
+    title: "Belajar Dasar Data Science",
+    issuer: "Dicoding Indonesia",
+    date: "11 Oktober 2024",
+    expiration: "11 Oktober 2027",
+    credentialId: "2VX3466GNZYQ",
+    credentialUrl: "https://www.dicoding.com/certificates/2VX3466GNZYQ",
+  },
+
+  {
+    logo: ciscoLogo,
+    title: "Ethical Hacker",
+    issuer: "Cisco Networking Academy",
+    date: "14 Sep 2024",
+    credentialUrl:
+      "https://www.credly.com/badges/fde140e7-ac5b-43fc-81db-bed89c1c3030/linked_in_profile",
+  },
+
   {
     logo: kominfologo,
     title: "Cybersecurity for Entrepreneurs",
