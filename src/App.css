@@ -730,21 +730,21 @@ body {
   transform: translate(-50%, -50%); /* Center horizontally and vertically */
   width: 80%;
   max-width: 600px;
-  background: linear-gradient(135deg, #2c2c2c, #404040); /* Softer gradient */
+  background: linear-gradient(135deg, #6c757d, #343a40); /* Softer yet refined gradient */
   color: #fff;
-  border-radius: 15px;
+  border-radius: 20px;
   padding: 25px 35px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Improved shadow for depth */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   z-index: 1000;
   font-family: 'Poppins', sans-serif;
   animation: slideInNotification 0.8s ease-out, popUpNotification 0.6s ease-in-out;
-  max-height: 70vh; /* Restricts the height */
+  max-height: 70vh; /* Restrict the height */
   overflow: hidden; /* Hide overflow outside the notification */
-  backdrop-filter: blur(8px);
-  border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border for elegance */
   transition: all 0.3s ease;
 }
 
@@ -755,16 +755,17 @@ body {
   gap: 20px;
   overflow-y: auto; /* Enables vertical scrolling */
   max-height: calc(70vh - 80px); /* Leave space for padding and close button */
-  padding-right: 15px; /* Space for scrollbar */
+  padding-right: 10px; /* Space for scrollbar */
+  margin-bottom: 20px; /* Space at the bottom */
 }
 
 .notification-content::-webkit-scrollbar {
-  width: 8px; /* Narrow scrollbar */
+  width: 10px; /* Slightly wider scrollbar */
 }
 
 .notification-content::-webkit-scrollbar-thumb {
-  background-color: #999; /* Light thumb color */
-  border-radius: 10px;
+  background-color: #007bff; /* Blue thumb color */
+  border-radius: 5px;
 }
 
 .notification-content::-webkit-scrollbar-track {
@@ -781,32 +782,33 @@ body {
   transition: color 0.3s ease, transform 0.3s ease;
   opacity: 0.8;
   align-self: flex-end;
-  margin-top: -10px;
+  margin-top: -15px;
 }
 
 .notification-close:hover {
-  color: #ff5252;
+  color: #ff6347; /* Red hover color for contrast */
   transform: rotate(90deg);
   opacity: 1;
 }
 
 /* Notification Title */
 .notification-title {
-  font-size: 24px; /* Larger title for better emphasis */
-  font-weight: bold;
+  font-size: 28px; /* Larger title for better emphasis */
+  font-weight: 600;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 1px; /* Spacing between letters for clarity */
-  margin-bottom: 10px; /* Space between title and message */
+  letter-spacing: 1.5px; /* Increased spacing for a more refined look */
+  margin-bottom: 15px; /* Space between title and message */
+  text-align: center; /* Centered title for better aesthetics */
 }
 
 /* Notification Message */
 .notification-message {
   font-size: 18px;
-  color: #f0f0f0;
-  line-height: 1.7; /* Increased line-height for better readability */
+  color: #e0e0e0;
+  line-height: 1.8; /* Increased line-height for better readability */
   text-align: justify; /* Justifies text for a more polished look */
-  margin-bottom: 15px; /* Adds space at the bottom for padding */
+  margin-bottom: 20px; /* Adds space at the bottom for padding */
 }
 
 /* Animation */
@@ -823,7 +825,7 @@ body {
 
 @keyframes popUpNotification {
   0% {
-    transform: scale(0.8);
+    transform: scale(0.85);
   }
   100% {
     transform: scale(1);
@@ -836,7 +838,7 @@ body {
 @media (max-width: 768px) {
   .notification {
     width: 85%;
-    padding: 20px 25px;
+    padding: 20px 30px;
     max-width: 500px;
     font-size: 14px;
     top: 40%;
@@ -851,7 +853,7 @@ body {
   }
 
   .notification-title {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .notification-message {
@@ -878,7 +880,7 @@ body {
   }
 
   .notification-title {
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .notification-message {

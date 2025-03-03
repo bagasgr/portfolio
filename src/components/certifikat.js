@@ -102,10 +102,46 @@ const certificates = [
   },
 
   {
+    logo: microsoft,
+    title: "Fundamental AI Concepts",
+    issuer: "Microsoft",
+    date: "16 February , 2025",
+    credentialUrl: "/pdf/Achievements1 - bagasgilangramadhan-0878 _ Microsoft Learn.pdf",
+  },
+
+  {
+    logo: microsoft,
+    title: "Track model training in Jupyter notebooks with MLflow",
+    issuer: "Microsoft",
+    date: " 27 February , 2025",
+    credentialUrl: "/pdf/Achievements 2- bagasgilangramadhan-0878 _ Microsoft Learn.pdf",
+  },
+
+  {
+    logo: dicodinglogo,
+    title: "Belajar Dasar Git dengan GitHub",
+    issuer: "Dicoding Indonesia",
+    date: "13 Februari 2025",
+    expiration: "13 Februari 2028",
+    credentialId: "QLZ93R64DZ5D",
+    credentialUrl: "https://www.dicoding.com/certificates/QLZ93R64DZ5D",
+  },
+
+  {
     logo: kominfologo,
     title: "Cybersecurity for Entrepreneurs",
     issuer: "DQLab",
     credentialUrl: "/pdf/Sertifikat_BAGAS GILANG RAMADHAN_Keamanan Siber untuk Wirausaha (1).pdf",
+  },
+
+  {
+    logo: dicodinglogo,
+    title: "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
+    issuer: "Dicoding Indonesia",
+    date: "10 Februari 2025",
+    expiration: "10 Februari 2028",
+    credentialId: "98XWEGY1WXM3",
+    credentialUrl: "https://www.dicoding.com/certificates/98XWEGY1WXM3",
   }
 ];
 
