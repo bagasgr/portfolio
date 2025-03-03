@@ -1,62 +1,137 @@
-/* Projects.css */
+/* Projects.css - Super Enhanced */
 
+/* Global Project Card */
 .project-card {
-  transition: all 0.3s ease-in-out;
-  border-radius: 12px;
+  transition: all 0.4s ease-in-out;
+  border-radius: 18px;
   overflow: hidden;
-  background: #eee9e9;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeIn 0.8s ease-in-out;
 }
 
 .project-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-7px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
+/* Title Styling */
 .card-title {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  color: #333;
+  color: #1e1e1e;
+  text-align: center;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
 }
 
+.card-title::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #ff416c);
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Description Styling */
 .card-text {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  color: #5e5d5d;
+  color: #555;
+  text-align: center;
+  line-height: 1.6;
+  padding: 0 10px;
 }
 
+/* Image Styling */
 .project-img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
+  border-radius: 12px;
+  transition: transform 0.4s ease-in-out, filter 0.3s ease;
 }
 
 .project-img:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  filter: brightness(1.1);
 }
 
+/* Button Styling */
 .btn-primary {
-  background: linear-gradient(135deg, #050505, #0056b3);
+  background: linear-gradient(135deg, #000000, #1b07d4);
   border: none;
-  font-weight: 500;
-  transition: all 0.3s;
+  font-weight: 600;
+  transition: all 0.4s ease-in-out;
+  display: block;
+  width: 85%;
+  margin: 15px auto;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 65, 108, 0.5);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #0056b3, #004494);
-  transform: scale(1.05);
+  background: linear-gradient(135deg, #020202, #007bff);
+  transform: scale(1.08);
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.6);
 }
 
+/* Floating Icons */
+.project-card::before {
+  content: "🚀";
+  font-size: 2rem;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover::before {
+  opacity: 0.8;
+}
+
+/* Animasi Masuk */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styling */
 @media (max-width: 768px) {
   .project-card {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    padding: 18px;
   }
+
   .card-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
+
   .card-text {
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    width: 100%;
   }
 }
-
