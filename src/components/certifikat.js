@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./certifikat.css";
 import ciscoLogo from "../images/cisco.png";
 import dic from "../images/dico.jpeg";
@@ -7,6 +7,8 @@ import digitalentlogo from "../images/digitalent.png";
 import kominfologo from "../images/kominfo.jpeg";
 import dqlablogo from "../images/dqlab.png";
 import microsoft from "../images/microsoft.png";
+import AOS from "aos"; // Import AOS
+import "aos/dist/aos.css"; // Import AOS CSS
 
 // Data sertifikat dalam array untuk efisiensi
 const certificates = [
@@ -61,7 +63,6 @@ const certificates = [
     issuer: "DQLab",
     credentialUrl: "s://academy.dqlab.id/Certificate_check/result/DQLABBGINRADQUSR/NONTRACK#mycertificate",
   },
-
   {
     logo: kominfologo,
     title: "Cybersecurity for Entrepreneurs",
@@ -71,18 +72,29 @@ const certificates = [
 ];
 
 const Certifikat = () => {
+  // Initialize AOS when the component mounts
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <section className="sertifikat-container">
       <h1>Sertifikat dan Lisensi</h1>
       <div className="sertifikat-list">
         {certificates.map((cert, index) => (
-          <div className="sertifikat-item" key={index}>
+          <div
+            className="sertifikat-item"
+            key={index}
+            data-aos={index % 2 === 0 ? "fade-left" : "fade-right"} // Alternate fade direction for variety
+            data-aos-delay={index * 100} // Add delay to each item for sequential animation
+          >
             <img
               src={cert.logo}
               alt={`Logo ${cert.issuer}`}
               className="sertifikat-logo"
+              data-aos="zoom-in" // Zoom-in effect on the logo
             />
-            <div className="sertifikat-details">
+            <div className="sertifikat-details" data-aos="fade-up"> {/* Add fade-up effect to details */}
               <h2>{cert.title}</h2>
               <p>{cert.issuer} | Diterbitkan {cert.date}</p>
               {cert.expiration && <p>Kedaluwarsa: {cert.expiration}</p>}

@@ -1,9 +1,10 @@
-// src/components/Projects.js
-import React from "react";
+import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Projects.css";
+import AOS from "aos"; // Import AOS
+import "aos/dist/aos.css"; // Import AOS CSS
 
-// Import Gambar
+// Import Images
 import php1 from "../images/php1.jpeg";
 import php2 from "../images/php2.jpeg";
 import buku1 from "../images/rakbuku.png";
@@ -40,26 +41,46 @@ const projectData = [
 ];
 
 const Projects = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: true }); // Initialize AOS with duration for smooth effects
+  }, []);
+
   return (
     <section id="projects" className="py-5 bg-light">
       <div className="container text-center">
-        <h2 className="mb-4 fw-bold">Projects</h2>
+        <h2 className="mb-4 fw-bold" data-aos="fade-up">Projects</h2>
         <div className="row">
           {projectData.map((project, index) => (
-            <div key={index} className="col-md-6 col-lg-4 mb-4">
+            <div
+              key={index}
+              className="col-md-6 col-lg-4 mb-4"
+              data-aos="zoom-in" // Zoom-in effect when the card comes into view
+              data-aos-delay={index * 100} // Add delay to each project card for sequential animation
+            >
               <div className="card shadow-sm project-card">
                 <div className="card-body">
-                  <h5 className="card-title fw-semibold">{project.title}</h5>
-                  <p className="card-text">{project.description}</p>
+                  <h5 className="card-title fw-semibold" data-aos="fade-up" data-aos-delay={index * 200}>
+                    {project.title}
+                  </h5>
+                  <p className="card-text" data-aos="fade-up" data-aos-delay={index * 300}>
+                    {project.description}
+                  </p>
                   {project.images && (
                     <div className="d-flex flex-wrap justify-content-center gap-2">
                       {project.images.map((img, imgIndex) => (
-                        <img key={imgIndex} src={img} alt={project.title} className="img-thumbnail project-img" />
+                        <img
+                          key={imgIndex}
+                          src={img}
+                          alt={project.title}
+                          className="img-thumbnail project-img"
+                          data-aos="fade-up"
+                          data-aos-delay={index * 400 + imgIndex * 100}
+                        />
                       ))}
                     </div>
                   )}
                   {project.video && (
-                    <div className="mt-3">
+                    <div className="mt-3" data-aos="fade-up">
                       <video width="100%" controls>
                         <source src={project.video} type="video/mp4" />
                         Browser Anda tidak mendukung video tag.
@@ -67,7 +88,14 @@ const Projects = () => {
                     </div>
                   )}
                   {project.link && (
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary mt-3">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary mt-3"
+                      data-aos="fade-up"
+                      data-aos-delay={index * 500}
+                    >
                       View Project
                     </a>
                   )}

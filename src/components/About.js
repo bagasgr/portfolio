@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./About.css";
 
-// Import semua foto
+// Import AOS
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+// Import all images
 import profileImg1 from "../images/foto1.jpg";
 import profileImg2 from "../images/foto2.jpg";
 import profileImg3 from "../images/foto3.jpg";
@@ -13,41 +17,45 @@ function About() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showFullText, setShowFullText] = useState(false);
 
-  // Fungsi untuk pindah ke gambar berikutnya
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
-  // Fungsi untuk pindah ke gambar sebelumnya
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
-
-  // Auto-slide setiap 3 detik
+  // Initialize AOS animation
   useEffect(() => {
+    AOS.init({
+      duration: 1000, // Set the duration for animations
+      easing: 'ease-in-out', // Set the easing type for animations
+    });
+
+    // Auto-slide every 3 seconds
     const interval = setInterval(nextSlide, 3000);
     return () => clearInterval(interval);
   }, []);
 
-  // Fungsi untuk toggle Read More
+  // Function to go to the next image
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
+  // Function to go to the previous image
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+  };
+
+  // Function to toggle 'Read More' text
   const toggleReadMore = () => {
     setShowFullText(!showFullText);
   };
 
   return (
     <article className="about-container">
-      <h2 className="about-title">About Me</h2>
+      <h2 className="about-title" data-aos="fade-up">About Me</h2>
 
       {/* Slideshow Container */}
-      <div className="slider-container">
-       
+      <div className="slider-container" data-aos="fade-in">
         <div className="image-wrapper">
           <img src={images[currentIndex]} alt="Profile" className="profile-image fade-in" />
         </div>
-       
       </div>
 
-      <p>
+      <p data-aos="fade-up">
         Hi! I'm <b>Bagas Gilang Ramadhan</b>, a dedicated and passionate <b>Software Developer</b> with expertise in 
         <b>React, Node.js, PHP, and Java</b>. I specialize in both <b>frontend and backend development</b>, 
         and have a strong interest in <b>Cybersecurity, AI, and Machine Learning</b>. 
@@ -56,16 +64,16 @@ function About() {
 
       {showFullText && (
         <>
-          <p>
+          <p data-aos="fade-up">
             I am currently in my 8th semester at <b>Universitas Indraprasta</b>, majoring in Informatics Engineering. 
             My technical skills include programming languages such as <b>JavaScript, PHP, Python, and Java</b>, 
             along with expertise in <b>database management, system architecture, and cloud computing (AWS)</b>.
           </p>
 
-          <p>
+          <p data-aos="fade-up">
             Throughout my career, I have worked on several impactful projects:
           </p>
-          <ul>
+          <ul data-aos="fade-up">
             <li>
               <b>E-commerce Platform:</b> Developed a full-featured online store with a seamless shopping cart, 
               user authentication, and an intuitive admin dashboard.
@@ -83,22 +91,22 @@ function About() {
             </li>
           </ul>
 
-          <p>
+          <p data-aos="fade-up">
             Apart from software development, I am deeply interested in <b>Cybersecurity</b>, ensuring secure application development 
             by implementing best practices such as data encryption and secure authentication mechanisms. Additionally, I have been 
             actively exploring <b>Machine Learning and AI</b> to develop intelligent and predictive software solutions.
           </p>
 
-          <p>
+          <p data-aos="fade-up">
             My skills also extend to <b>system analysis and design</b>, including expertise in:
           </p>
-          <ul>
+          <ul data-aos="fade-up">
             <li>Creating <b>Use Case Diagrams</b> to define system interactions.</li>
             <li>Designing <b>Entity-Relationship Diagrams (ERD)</b> for database structuring.</li>
             <li>Developing <b>Flowcharts</b> to visualize software logic.</li>
           </ul>
 
-          <p>
+          <p data-aos="fade-up">
             I thrive in collaborative environments and enjoy working with teams to create impactful solutions. 
             I am always open to new opportunities, challenges, and discussions in the field of technology. 
             If you're looking for a dedicated developer with a passion for innovation, let's connect and explore new possibilities!
@@ -106,7 +114,7 @@ function About() {
         </>
       )}
 
-      <button className="read-more-btn" onClick={toggleReadMore}>
+      <button className="read-more-btn" onClick={toggleReadMore} data-aos="fade-up">
         {showFullText ? 'Show Less' : 'Read more'}
       </button>
     </article>

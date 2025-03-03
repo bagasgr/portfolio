@@ -1,13 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './pengalaman.css';
-
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';  // Memastikan CSS AOS juga diimpor
 
 import gtlImg from '../images/gtl.png';
 import swiftImg from '../images/swift.png';
 import shopImg from '../images/shopee.png';
 import bknImg from '../images/bkn.png';
-
 
 const experiences = [
   {
@@ -17,10 +16,7 @@ const experiences = [
     type: "Freelancer",
     date: "Sep 2021",
     location: "Cilincing, North Jakarta",
-    description: `I have worked in inbound, inventory, and outbound divisions:
-      - Inbound: Performed received data tasks, counting and verifying items via Tokopedia links for newly arrived goods from suppliers to be stored in the warehouse.
-      - Inventory: Conducted putaway by organizing received items and recording them on empty racks.
-      - Outbound: Picker: Retrieved ordered items. Console: Separated picked items. Checker: Ensured items matched the orders. Packer: Packed the items. Dispatch: Sorted items for designated shipping expeditions and prepared delivery notes.`
+    description: `I have worked in inbound, inventory, and outbound divisions: ...`
   },
   {
     logo: swiftImg,
@@ -29,10 +25,7 @@ const experiences = [
     type: "Freelancer",
     date: "Sep 2021 - Sep 2023 · 2 yrs 1 mo",
     location: "Indonesia (Remote)",
-    description: `I have worked in inbound, inventory, and outbound divisions:
-      - Inbound: Conducted received data tasks for newly arrived goods.
-      - Inventory: Recorded and organized items on empty racks.
-      - Outbound: Retrieved, separated, verified, and packed ordered items.`
+    description: `I have worked in inbound, inventory, and outbound divisions: ...`
   },
   {
     logo: shopImg,
@@ -41,10 +34,7 @@ const experiences = [
     type: "Freelancer",
     date: "Dec 2020 - Jul 2021 · 8 mos",
     location: "Indonesia (On-site)",
-    description: `I worked in Shopee's warehouse, rotating between different divisions:
-      - Inbound: Performed checking and quantity control.
-      - Inventory: Located stock items and verified data discrepancies.
-      - Outbound: Retrieved and packed ordered items.`
+    description: `I worked in Shopee's warehouse, rotating between different divisions: ...`
   },
   {
     logo: bknImg,
@@ -57,18 +47,22 @@ const experiences = [
   }
 ];
 
-
 const Pengalaman = () => {
+  // Inisialisasi AOS setelah komponen dipasang
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // Efek animasi terjadi hanya sekali saat elemen masuk layar
+  }, []);
+
   return (
     <div className="experience-container">
       {experiences.map((exp, index) => (
-        <div key={index} className="experience-card">
+        <div key={index} className="experience-card" data-aos="fade-up">
           <img src={exp.logo} alt={`${exp.company} logo`} className="company-logo" />
-          <h2>{exp.title}</h2>
-          <h3>{exp.company} · {exp.type}</h3>
-          <p><strong>{exp.date}</strong></p>
-          <p><em>{exp.location}</em></p>
-          <p>{exp.description}</p>
+          <h2 data-aos="fade-right">{exp.title}</h2>
+          <h3 data-aos="fade-left">{exp.company} · {exp.type}</h3>
+          <p data-aos="fade-up"><strong>{exp.date}</strong></p>
+          <p data-aos="fade-down"><em>{exp.location}</em></p>
+          <p data-aos="zoom-in">{exp.description}</p>
         </div>
       ))}
     </div>
@@ -76,4 +70,3 @@ const Pengalaman = () => {
 };
 
 export default Pengalaman;
-
