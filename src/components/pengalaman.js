@@ -50,7 +50,7 @@ const experiences = [
 const Pengalaman = () => {
   // Inisialisasi AOS setelah komponen dipasang
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true }); // Efek animasi terjadi hanya sekali saat elemen masuk layar
+    AOS.init({ duration: 5000, once: true }); // Efek animasi terjadi hanya sekali saat elemen masuk layar
   }, []);
 
   return (

@@ -74,7 +74,7 @@ const certificates = [
 const Certifikat = () => {
   // Initialize AOS when the component mounts
   useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
+    AOS.init({ duration: 5000, once: true });
   }, []);
 
   return (

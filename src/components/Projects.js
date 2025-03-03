@@ -42,7 +42,7 @@ const projectData = [
 
 const Projects = () => {
   useEffect(() => {
-    AOS.init({ duration: 1200, once: true }); // Initialize AOS with duration for smooth effects
+    AOS.init({ duration: 4200, once: true }); // Initialize AOS with duration for smooth effects
   }, []);
 
   return (
