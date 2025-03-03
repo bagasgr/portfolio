@@ -1,95 +1,124 @@
-/* sertifikat.css */
+/* sertifikat.css - Stylish & Modern */
 .sertifikat-container {
     text-align: center;
     padding: 50px 20px;
-    background: #0a0a0a; /* Warna hitam pekat */
-    color: #fff;
+    background: linear-gradient(135deg, #0a0f1f, #162447);
+    color: white;
     min-height: 100vh;
-  }
-  
-  .sertifikat-container h1 {
-    font-size: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.sertifikat-container::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 195, 255, 0.3);
+    filter: blur(80px);
+    border-radius: 50%;
+    top: -50px;
+    left: -50px;
+    animation: glow 5s infinite alternate ease-in-out;
+}
+
+@keyframes glow {
+    from { transform: translateY(0); }
+    to { transform: translateY(20px); }
+}
+
+.sertifikat-container h1 {
+    font-size: 2.8rem;
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 10px rgba(0, 170, 255, 0.8);
-  }
-  
-  .sertifikat-list {
+    color: #00c3ff;
+    text-shadow: 3px 3px 20px rgba(255, 255, 255, 0.3);
+}
+
+.sertifikat-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     justify-items: center;
     padding: 20px;
-  }
-  
-  .sertifikat-item {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 68, 255, 0.3));
+}
+
+.sertifikat-item {
+    background: linear-gradient(145deg, #1f2937, #374151);
     border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 68, 255, 0.6);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 195, 255, 0.5);
+    transition: transform 0.4s ease-in-out;
     max-width: 350px;
-    border: 1px solid rgba(0, 170, 255, 0.7);
-  }
-  
-  .sertifikat-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 10px 25px rgba(0, 170, 255, 1);
-  }
-  
-  .sertifikat-logo {
-    width: 80px;
+    border: 1px solid rgba(0, 195, 255, 0.7);
+}
+
+.sertifikat-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 195, 255, 0.7);
+}
+
+.sertifikat-logo {
+    width: 100px;
     height: auto;
     margin-bottom: 15px;
     border-radius: 8px;
-    filter: drop-shadow(0 0 5px rgba(0, 170, 255, 0.7));
-  }
-  
-  .sertifikat-details {
+    border: 3px solid #00c3ff;
+    box-shadow: 0 10px 40px rgba(0, 195, 255, 0.6);
+}
+
+.sertifikat-details {
     text-align: center;
-  }
-  
-  .sertifikat-details h2 {
+}
+
+.sertifikat-details h2 {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #00aaff; /* Biru neon */
-    text-shadow: 0 0 10px rgba(0, 170, 255, 1);
-  }
-  
-  .sertifikat-details p {
-    font-size: 0.9rem;
+    color: #00c3ff;
+    text-shadow: 0 0 10px rgba(0, 195, 255, 1);
+}
+
+.sertifikat-details p {
+    font-size: 1rem;
     color: #d0eaff;
-  }
-  
-  .credential-link {
+}
+
+.credential-link {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 18px;
-    background: linear-gradient(135deg, #007bff, #0d0d0e);
-    color: #fff;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #111827, #1f2937);
+    color: white;
     font-weight: bold;
     text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(18, 18, 19, 0.8);
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  }
-  
-  .credential-link:hover {
-    background: linear-gradient(135deg, #0056b3, #121313);
+    border-radius: 12px;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 30px rgba(0, 195, 255, 0.5);
+    transition: all 0.4s ease-in-out;
+}
+
+.credential-link:hover {
+    background: linear-gradient(90deg, #1f2937, #374151);
     transform: scale(1.1);
-    box-shadow: 0 0 15px rgb(7, 14, 17);
-  }
-  
-  @media (max-width: 768px) {
+    box-shadow: 0 15px 40px rgba(0, 195, 255, 0.7);
+}
+
+@media (max-width: 768px) {
     .sertifikat-list {
-      grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
-  
     .sertifikat-item {
-      width: 90%;
+        width: 90%;
     }
-  }
-  
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
