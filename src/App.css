@@ -396,13 +396,13 @@ body {
 
 /* Hero Description */
 .hero-description {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: 'Merriweather', serif;
-  margin: 25px 0;
+  margin: 30px 0;
   color: #e0e0e0;
-  line-height: 1.9;
-  padding: 25px;
-  background: rgba(0, 0, 0, 0.3);
+  line-height: 2;
+  padding: 30px;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 102, 255, 0.3));
   border-left: 5px solid #00b7ff;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
@@ -416,6 +416,17 @@ body {
   box-shadow: 0 12px 35px rgba(0, 102, 255, 0.5);
 }
 
+/* Title Styling */
+.hero-description h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #00b7ff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 10px rgba(0, 183, 255, 0.5);
+}
+
+/* Animation */
 @keyframes fadeInDescription {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
@@ -618,70 +629,81 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
-  padding: 60px;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 100, 255, 0.6)); /* Blue gradient for tech feel */
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+  gap: 30px;
+  padding: 80px 5%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 100, 255, 0.7));
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
   position: relative;
 }
 
 /* Skill Card Styling */
 .skill-card {
-  width: 300px;
-  padding: 40px;
-  background: rgba(20, 20, 20, 0.9);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
+  width: 320px;
+  padding: 30px;
+  background: rgba(25, 25, 25, 0.95);
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
   text-align: center;
   border: 2px solid #4C9BFF;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   position: relative;
   overflow: hidden;
-  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, background 0.5s ease;
+  transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
 
 /* Hover effects for Skill Card */
 .skill-card:hover {
-  transform: scale(1.1) translateY(-10px);
-  box-shadow: 0px 20px 50px rgba(0, 100, 255, 0.3);
-  background: rgba(20, 20, 20, 1);
+  transform: scale(1.08) translateY(-8px);
+  box-shadow: 0px 15px 40px rgba(0, 100, 255, 0.4);
+  background: rgba(30, 30, 30, 1);
   border-color: #63C2FF;
 }
 
 /* Skill Card Title */
 .skill-card .skill-title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
-  color: #EAEAEA;
-  margin-bottom: 15px;
-  letter-spacing: 2px;
+  color: #F1F1F1;
+  margin-bottom: 12px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
 }
 
 /* Skill Description */
 .skill-card .skill-description {
-  font-size: 16px;
-  color: #D0D0D0;
-  margin-top: 10px;
-  opacity: 0.8;
-  line-height: 1.5;
+  font-size: 15px;
+  color: #CFCFCF;
+  margin-top: 8px;
+  opacity: 0.85;
+  line-height: 1.6;
 }
 
 /* Skill Image Hover Effect */
 .skill-card .skill-image {
   width: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 /* Neon Effect on Skill Card */
 .skill-card:hover .skill-image {
   opacity: 1;
+  transform: scale(1.05);
   filter: grayscale(0);
-  box-shadow: 0 0 25px rgba(0, 100, 255, 0.8);
+  box-shadow: 0 0 20px rgba(0, 100, 255, 0.9);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 60px 3%;
+  }
+  .skill-card {
+    width: 90%;
+  }
 }
 
 /* Button Aesthetic */
