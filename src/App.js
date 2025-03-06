@@ -98,14 +98,13 @@ function App() {
             </h2>
             <article class="hero-description" data-aos="fade-right">
   <h2>Driven by Code, Inspired by Innovation</h2>
-  Technology is more than just a field—it's a passion that fuels my curiosity and creativity.  
-  As an IT enthusiast, I thrive on solving complex problems, building efficient systems, and staying ahead of the ever-evolving digital landscape.  
-
-  With expertise in software development, networking, and database management, I see every challenge as an opportunity to innovate.  
-  From developing dynamic web applications to exploring cloud computing and cybersecurity, I am committed to pushing boundaries and creating impactful solutions.  
-
-  The tech world never stops evolving, and neither do I. Continuous learning, adaptability, and innovation define my journey as I strive to shape the future through technology.
+  <p>
+    Passionate about technology, I thrive on solving problems and building smart solutions.  
+    With expertise in software development, networking, and databases, I embrace challenges as opportunities to innovate.  
+    From web development to cloud computing and cybersecurity, I’m committed to driving progress in the ever-evolving tech world.
+  </p>
 </article>
+
 
 
             <div className="navigation" data-aos="slide-up">
