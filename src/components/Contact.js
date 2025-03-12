@@ -82,7 +82,7 @@ const Contact = () => {
           </a>
         </li>
         <li data-aos="zoom-in-up">
-          <a href="https://youtube.com/@bagasg.r04" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <a href="https://www.youtube.com/@bagasgilangramadhan7960" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
             <FaYoutube className="icon" /> YouTube
           </a>
         </li>
