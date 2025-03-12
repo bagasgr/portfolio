@@ -52,32 +52,39 @@ const Contact = () => {
       <h1 data-aos="fade-down">My Contact Details</h1>
       <ul className="contact-list">
         <li data-aos="zoom-in-up">
-          <FaEnvelope className="icon" />
-          <a href="mailto:bagasiyain205@gmail.com" aria-label="Email">Email</a>
+          <a href="mailto:bagasiyain205@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+            <FaEnvelope className="icon" /> Email
+          </a>
         </li>
         <li data-aos="zoom-in-up">
-          <FaPhone className="icon" />
-          <a href="tel:+6289699196195" aria-label="Phone">Phone</a>
+          <a href="tel:+6289699196195" aria-label="Phone">
+            <FaPhone className="icon" /> Phone
+          </a>
         </li>
         <li data-aos="zoom-in-up">
-          <FaLinkedin className="icon" />
-          <a href="https://www.linkedin.com/in/bagas-gilang-ramadhan-0119a9252/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/bagas-gilang-ramadhan-0119a9252" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <FaLinkedin className="icon" /> LinkedIn
+          </a>
         </li>
         <li data-aos="zoom-in-up">
-          <FaGithub className="icon" />
-          <a href="https://github.com/bagasgr" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+          <a href="https://github.com/bagasgr" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <FaGithub className="icon" /> GitHub
+          </a>
         </li>
         <li data-aos="zoom-in-up">
-          <FaInstagram className="icon" />
-          <a href="https://instagram.com/bagasg.r04" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+          <a href="https://instagram.com/bagasg.r04" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <FaInstagram className="icon" /> Instagram
+          </a>
         </li>
         <li data-aos="zoom-in-up">
-          <FaTiktok className="icon" />
-          <a href="https://tiktok.com/@bagasg.r04" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+          <a href="https://tiktok.com/@bagasg.r04" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <FaTiktok className="icon" /> TikTok
+          </a>
         </li>
         <li data-aos="zoom-in-up">
-          <FaYoutube className="icon" />
-          <a href="https://youtube.com/@bagasg.r04" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
+          <a href="https://youtube.com/@bagasg.r04" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <FaYoutube className="icon" /> YouTube
+          </a>
         </li>
       </ul>
 
