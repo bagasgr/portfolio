@@ -749,185 +749,140 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center horizontally and vertically */
-  width: 80%;
+  transform: translate(-50%, -50%);
+  width: 90%;
   max-width: 600px;
-  background: linear-gradient(135deg, #6c757d, #343a40); /* Softer yet refined gradient */
+  background: linear-gradient(135deg, #495057, #212529);
   color: #fff;
-  border-radius: 20px;
-  padding: 25px 35px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  border-radius: 15px;
+  padding: 20px 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   z-index: 1000;
   font-family: 'Poppins', sans-serif;
-  animation: slideInNotification 0.8s ease-out, popUpNotification 0.6s ease-in-out;
-  max-height: 70vh; /* Restrict the height */
-  overflow: hidden; /* Hide overflow outside the notification */
-  backdrop-filter: blur(10px);
-  border: 2px solid rgba(255, 255, 255, 0.3); /* Subtle border for elegance */
-  transition: all 0.3s ease;
+  animation: fadeInNotification 0.6s ease-out;
+  max-height: 75vh;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Scrollable Content */
 .notification-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  overflow-y: auto; /* Enables vertical scrolling */
-  max-height: calc(70vh - 80px); /* Leave space for padding and close button */
-  padding-right: 10px; /* Space for scrollbar */
-  margin-bottom: 20px; /* Space at the bottom */
+  gap: 15px;
+  overflow-y: auto;
+  max-height: calc(75vh - 70px);
+  padding-right: 8px;
+  margin-bottom: 15px;
 }
 
 .notification-content::-webkit-scrollbar {
-  width: 10px; /* Slightly wider scrollbar */
+  width: 8px;
 }
 
 .notification-content::-webkit-scrollbar-thumb {
-  background-color: #007bff; /* Blue thumb color */
+  background-color: #007bff;
   border-radius: 5px;
 }
 
 .notification-content::-webkit-scrollbar-track {
-  background-color: #333; /* Dark track color */
+  background-color: #444;
 }
 
-/* Close Button Styles */
+/* Close Button */
 .notification-close {
-  background: transparent;
-  border: none;
-  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  font-size: 22px;
   color: #fff;
   cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 50%;
   opacity: 0.8;
-  align-self: flex-end;
-  margin-top: -15px;
 }
 
 .notification-close:hover {
-  color: #ff6347; /* Red hover color for contrast */
-  transform: rotate(90deg);
-  opacity: 1;
-}
-
-/* Notification Title */
-.notification-title {
-  font-size: 28px; /* Larger title for better emphasis */
-  font-weight: 600;
+  background: #ff6347;
   color: #fff;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Title */
+.notification-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #f8f9fa;
   text-transform: uppercase;
-  letter-spacing: 1.5px; /* Increased spacing for a more refined look */
-  margin-bottom: 15px; /* Space between title and message */
-  text-align: center; /* Centered title for better aesthetics */
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-/* Notification Message */
+/* Message */
 .notification-message {
-  font-size: 18px;
-  color: #e0e0e0;
-  line-height: 1.8; /* Increased line-height for better readability */
-  text-align: justify; /* Justifies text for a more polished look */
-  margin-bottom: 20px; /* Adds space at the bottom for padding */
+  font-size: 16px;
+  color: #e9ecef;
+  line-height: 1.6;
+  text-align: justify;
 }
 
-/* Animation */
-@keyframes slideInNotification {
+/* Animations */
+@keyframes fadeInNotification {
   0% {
     opacity: 0;
-    transform: translate(-50%, 100px);
+    transform: translate(-50%, -40%);
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
   }
 }
 
-@keyframes popUpNotification {
-  0% {
-    transform: scale(0.85);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Media Queries for Responsiveness */
-
-/* For tablets and smaller screens */
+/* Responsiveness */
 @media (max-width: 768px) {
   .notification {
     width: 85%;
-    padding: 20px 30px;
-    max-width: 500px;
-    font-size: 14px;
-    top: 40%;
+    padding: 18px 25px;
   }
-
-  .notification-close {
-    font-size: 26px;
-  }
-
-  .notification-content {
-    gap: 18px;
-  }
-
   .notification-title {
-    font-size: 24px;
+    font-size: 22px;
   }
-
   .notification-message {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
 
-/* For mobile devices (portrait) */
 @media (max-width: 480px) {
   .notification {
-    width: 90%;
+    width: 95%;
     padding: 15px 20px;
-    max-width: 400px;
-    font-size: 12px;
-    top: 30%;
   }
-
-  .notification-close {
-    font-size: 22px;
-  }
-
-  .notification-content {
-    gap: 15px;
-  }
-
   .notification-title {
     font-size: 20px;
   }
-
   .notification-message {
     font-size: 14px;
   }
 }
 
-/* For Very Small Screens (extra small devices) */
 @media (max-width: 360px) {
   .notification {
-    padding: 10px 15px;
-    max-width: 350px;
-    top: 25%;
+    padding: 12px 18px;
   }
-
-  .notification-close {
+  .notification-title {
     font-size: 18px;
   }
-
-  .notification-title {
-    font-size: 16px;
-  }
-
   .notification-message {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 
@@ -953,7 +908,6 @@ body {
   opacity: 1;
   transform: scale(1.1);
 }
-
 
 /* Efek Paralaks */
 .hero {
