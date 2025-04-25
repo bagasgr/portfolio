@@ -7,6 +7,7 @@ import digitalentlogo from "../images/digitalent.png";
 import kominfologo from "../images/kominfo.jpeg";
 import dqlablogo from "../images/dqlab.png";
 import microsoft from "../images/microsoft.png";
+import coding from "../images/logocodingcamp.jpeg";
 import AOS from "aos"; // Import AOS
 import "aos/dist/aos.css"; // Import AOS CSS
 
@@ -132,6 +133,15 @@ const certificates = [
     title: "Cybersecurity for Entrepreneurs",
     issuer: "DQLab",
     credentialUrl: "/pdf/Sertifikat_BAGAS GILANG RAMADHAN_Keamanan Siber untuk Wirausaha (1).pdf",
+  },
+  {
+    logo: coding,
+    title: "Financial Literacy 101",
+    issuer: "Coding Camp powered by DBS Foundation",
+    date: "25 April 2025",
+    expiration: "125 April 2028",
+    credentialId: "N9ZO91EGDXG5",
+    credentialUrl: "https://www.dicoding.com/certificates/N9ZO91EGDXG5",
   },
 
   {
