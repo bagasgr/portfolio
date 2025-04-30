@@ -63,6 +63,15 @@ const certificates = [
     credentialUrl: "https://www.dicoding.com/users/bagas_gilang_ramadha/academies",
   },
   {
+    logo: dicodinglogo,
+    title: "Memulai Pemrograman dengan Python",
+    issuer: "Dicoding Indonesia",
+    date: "30 April 2025",
+    expiration: "30 April 2028",
+    credentialId: "GRX53RVW3Z0M",
+    credentialUrl: "https://www.dicoding.com/certificates/GRX53RVW3Z0M",
+  },
+  {
     logo: digitalentlogo,
     title: "Keamanan Siber untuk Wirausaha",
     issuer: "Digital Talent Scholarship",
