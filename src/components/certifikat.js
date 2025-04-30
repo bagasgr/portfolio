@@ -37,6 +37,24 @@ const certificates = [
   },
   {
     logo: dicodinglogo,
+    title: "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
+    issuer: "Dicoding Indonesia",
+    date: "10 Februari 2025",
+    expiration: "10 Februari 2028",
+    credentialId: "98XWEGY1WXM3",
+    credentialUrl: "https://www.dicoding.com/certificates/98XWEGY1WXM3",
+  },
+  {
+    logo: dicodinglogo,
+    title: "Belajar Pengembangan Web Intermediate",
+    issuer: "Dicoding Indonesia",
+    date: "29 April 2025",
+    expiration: "29 April 2028",
+    credentialId: "07Z6391LJZQR",
+    credentialUrl: "https://www.dicoding.com/certificates/07Z6391LJZQR",
+  },
+  {
+    logo: dicodinglogo,
     title: "Belajar Back-End Pemula dengan JavaScript",
     issuer: "Dicoding Indonesia",
     date: "24 Januari 2025",
@@ -144,15 +162,7 @@ const certificates = [
     credentialUrl: "https://www.dicoding.com/certificates/N9ZO91EGDXG5",
   },
 
-  {
-    logo: dicodinglogo,
-    title: "Memulai Dasar Pemrograman untuk Menjadi Pengembang Software",
-    issuer: "Dicoding Indonesia",
-    date: "10 Februari 2025",
-    expiration: "10 Februari 2028",
-    credentialId: "98XWEGY1WXM3",
-    credentialUrl: "https://www.dicoding.com/certificates/98XWEGY1WXM3",
-  }
+  
 ];
 
 const Certifikat = () => {

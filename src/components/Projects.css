@@ -135,3 +135,29 @@
     width: 100%;
   }
 }
+
+/* Section Background Styling */
+#projects {
+  background-color: #000000; /* latar belakang hitam pekat */
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: #070707;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  color: #0a0a0a;
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+}
+
+#projects h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #ff416c);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
