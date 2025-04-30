@@ -157,7 +157,7 @@ const certificates = [
     title: "Financial Literacy 101",
     issuer: "Coding Camp powered by DBS Foundation",
     date: "25 April 2025",
-    expiration: "125 April 2028",
+    expiration: "25 April 2028",
     credentialId: "N9ZO91EGDXG5",
     credentialUrl: "https://www.dicoding.com/certificates/N9ZO91EGDXG5",
   },
