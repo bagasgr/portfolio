@@ -7,8 +7,19 @@ import gtlImg from '../images/gtl.png';
 import swiftImg from '../images/swift.png';
 import shopImg from '../images/shopee.png';
 import bknImg from '../images/bkn.png';
+import coding from'../images/logocodingcamp.jpeg';
 
 const experiences = [
+  
+  {
+    logo: coding ,
+    title: "Front end and Backend",
+    company: "DBS FOUNDATION AND DICODING",
+    type: "6 MOUNTH TRAINING BEASISWA",
+    date: "JULY 2025",
+    location: "ONLINE",
+    description: `CREATE A WEBSITE`
+  },
   {
     logo: gtlImg,
     title: "Warehouse Operator",
@@ -16,7 +27,7 @@ const experiences = [
     type: "Freelancer",
     date: "Sep 2021",
     location: "Cilincing, North Jakarta",
-    description: `I have worked in inbound, inventory, and outbound divisions: ...`
+    description: `I have worked in inbound, inventory, and outbound `
   },
   {
     logo: swiftImg,
@@ -25,7 +36,7 @@ const experiences = [
     type: "Freelancer",
     date: "Sep 2021 - Sep 2023 · 2 yrs 1 mo",
     location: "Indonesia (Remote)",
-    description: `I have worked in inbound, inventory, and outbound divisions: ...`
+    description: `I have worked in inbound, inventory, and outbound `
   },
   {
     logo: shopImg,
@@ -34,7 +45,7 @@ const experiences = [
     type: "Freelancer",
     date: "Dec 2020 - Jul 2021 · 8 mos",
     location: "Indonesia (On-site)",
-    description: `I worked in Shopee's warehouse, rotating between different divisions: ...`
+    description: `I worked in Shopee's warehouse, rotating between different divisions: OPERATOR GUDANG `
   },
   {
     logo: bknImg,

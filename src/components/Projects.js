@@ -38,6 +38,7 @@ const projectData = [
   { title: "Notes App", description: "A web-based notes application using Web Components.", images: [catatan] },
   { title: "Web Based Notes Application with RESTful API & Webpack", description: "A modern notes app with RESTful API and Webpack.", images: [catatan2] },
   { title: "Aplikasi Pemrograman Dasar (DBS Coding Camp 2025)", description: "Basic programming final project.", video: "/video/web.mp4" },
+  { title: "Aplikasi DIcoding story Restfull API (DBS Coding Camp 2025)", description: "Pengembangan WEB intermediate.", video: "/video/0501 (1).mp4" },
 ];
 
 const Projects = () => {
