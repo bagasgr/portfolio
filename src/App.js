@@ -222,7 +222,9 @@ function App() {
         )}
 
 <section className="training-section">
-  <h2 className="training-title">Sertifikasi Pelatihan</h2>
+  <h2 className="training-title">Telah di Percaya 
+    oleh:
+  </h2>
   <div className="training-marquee">
     <div className="marquee-wrapper">
       <div className="marquee-content">
