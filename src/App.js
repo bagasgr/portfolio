@@ -21,6 +21,8 @@ import idcamp from "./images/idcamp.png";
 import komdigi from "./images/komdigi.jpeg";
 import evi from "./images/evi.jpeg";
 import dicoding from "./images/dicoding.jpeg";
+import dicoding1 from "./images/dicoding.png";
+import digitaltalent from "./images/digitalent.png";
 
 // Komponen
 import About from "./components/About";
@@ -223,7 +225,7 @@ function App() {
 
 <section className="training-section">
   <h2 className="training-title">Telah di Percaya 
-    oleh:
+    oleh :
   </h2>
   <div className="training-marquee">
     <div className="marquee-wrapper">
@@ -234,6 +236,8 @@ function App() {
         <img src={komdigi} alt="Kominfo Digital" />
         <img src={evi} alt="Evindo" />
         <img src={dicoding} alt="Dicoding" />
+        <img src={dicoding1} alt="Dicoding1" />
+        <img src={digitaltalent} alt="digitaltalent" />
       </div>
       <div className="marquee-content">
         <img src={codingcampImg} alt="Coding Camp" />
@@ -242,6 +246,8 @@ function App() {
         <img src={komdigi} alt="Kominfo Digital" />
         <img src={evi} alt="Evindo" />
         <img src={dicoding} alt="Dicoding" />
+        <img src={dicoding1} alt="Dicoding1" />
+        <img src={digitaltalent} alt="digitaltalent" />
       </div>
     </div>
   </div>
