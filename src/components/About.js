@@ -20,26 +20,22 @@ function About() {
   // Initialize AOS animation
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Set the duration for animations
-      easing: 'ease-in-out', // Set the easing type for animations
+      duration: 1000,
+      easing: 'ease-in-out',
     });
 
-    // Auto-slide every 3 seconds
     const interval = setInterval(nextSlide, 3000);
     return () => clearInterval(interval);
   }, []);
 
-  // Function to go to the next image
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
-  // Function to go to the previous image
   const prevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
-  // Function to toggle 'Read More' text
   const toggleReadMore = () => {
     setShowFullText(!showFullText);
   };
@@ -57,7 +53,7 @@ function About() {
 
       <p data-aos="fade-up">
         Hi! I'm <b>Bagas Gilang Ramadhan</b>, a dedicated and passionate <b>Software Developer</b> with expertise in 
-        <b>React, Node.js, PHP, and Java</b>. I specialize in both <b>frontend and backend development</b>, 
+        <b> React, Node.js, PHP, and Java</b>. I specialize in both <b>frontend and backend development</b>, 
         and have a strong interest in <b>Cybersecurity, AI, and Machine Learning</b>. 
         I am always eager to explore new technologies and build innovative, scalable, and secure digital solutions.
       </p>
@@ -87,7 +83,7 @@ function About() {
               student graduation rates based on academic performance and key indicators.
             </li>
             <li>
-              <b>API Development:</b> Built and optimized RESTful APIs using Node.js and PHP for seamless data communication.
+              <b>SEGARIKAN:</b> Built and optimized RESTful APIs using Node.js and PHP for seamless data communication.
             </li>
           </ul>
 
@@ -110,6 +106,20 @@ function About() {
             I thrive in collaborative environments and enjoy working with teams to create impactful solutions. 
             I am always open to new opportunities, challenges, and discussions in the field of technology. 
             If you're looking for a dedicated developer with a passion for innovation, let's connect and explore new possibilities!
+          </p>
+
+          {/* 🆕 Tambahan Terbaru */}
+          <p data-aos="fade-up">
+            Recently, I have also completed several intensive bootcamps and coding programs such as 
+            <b> Dicoding Academy</b>, <b> IDCamp by Indosat Ooredoo</b>, <b> Cisco Networking Academy</b>, and <b> Coding Camp 2025</b>, 
+            enhancing my proficiency in real-world software engineering practices.
+          </p>
+
+          <p data-aos="fade-up">
+            Through these experiences, I have sharpened not only my technical skills but also critical 
+            <b> soft skills</b> like leadership, problem solving, and teamwork — all of which are essential for succeeding in the tech industry. 
+            I strongly believe in continuous improvement and strive to stay up-to-date with the latest trends in 
+            <b> AI, DevOps, Cloud Computing, and Cybersecurity</b>.
           </p>
         </>
       )}

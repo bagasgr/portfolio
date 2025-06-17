@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// Import Gambar
+// Gambar
 import programmerImg from "./images/fota pro.jpeg";
 import cybersecurityImg from "./images/cyber security.jpeg";
 import dataImg from "./images/data.png";
@@ -15,13 +15,20 @@ import etImg from "./images/et.png";
 import macinImg from "./images/machine.png";
 import proImg from "./images/ai.jpeg";
 import fotobagasImg from "./images/fotobagas3.jpg";
+import codingcampImg from "./images/codingcamp.jpeg";
+import cisco2 from "./images/cisco2.jpeg";
+import idcamp from "./images/idcamp.png";
+import komdigi from "./images/komdigi.jpeg";
+import evi from "./images/evi.jpeg";
+import dicoding from "./images/dicoding.jpeg";
 
-// Import Komponen
+// Komponen
 import About from "./components/About";
 import Pengalaman from "./components/pengalaman";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Certifikat from "./components/certifikat";
+import ScrollToTop from "./components/ScrollToTop"; // ✅ Pastikan ini terimport
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -63,6 +70,9 @@ function App() {
 
   return (
     <Router>
+      {/* Tambahkan ScrollToTop di sini */}
+      <ScrollToTop />
+
       <div className="App">
         {/* Hero Section */}
         <div className="hero-section" data-aos="fade-up">
@@ -96,16 +106,16 @@ function App() {
                 }}
               />
             </h2>
-            <article class="hero-description" data-aos="fade-right">
-  <h2>Driven by Code, Inspired by Innovation</h2>
-  <p>
-    Passionate about technology, I thrive on solving problems and building smart solutions.  
-    With expertise in software development, networking, and databases, I embrace challenges as opportunities to innovate.  
-    From web development to cloud computing and cybersecurity, I’m committed to driving progress in the ever-evolving tech world.
-  </p>
-</article>
 
-
+            <article className="hero-description" data-aos="fade-right">
+              <h2>Driven by Code, Inspired by Innovation</h2>
+              <p>
+                Passionate about technology, I thrive on solving problems and
+                building smart solutions. With expertise in software
+                development, networking, and databases, I embrace challenges as
+                opportunities to innovate.
+              </p>
+            </article>
 
             <div className="navigation" data-aos="slide-up">
               <a href="/about">About</a>
@@ -122,6 +132,7 @@ function App() {
               <a href="/contact">Contact</a>
             </div>
           </div>
+
           <img
             src={fotobagasImg}
             alt="Bagas Gilang Ramadhan"
@@ -132,14 +143,55 @@ function App() {
 
         {/* Skill Section */}
         <div className="skills-section">
-          {[{ title: "Fullstack Developer", img: programmerImg, content: "As a Fullstack Developer, I seamlessly integrate the front-end with the back-end, creating end-to-end solutions that drive web applications. From building engaging user interfaces to optimizing server-side performance, I leverage my expertise across multiple frameworks to deliver complete, robust systems." },
-            { title: "Cybersecurity Specialist", img: cybersecurityImg, content: "I specialize in securing digital assets from ever-evolving threats. By conducting thorough vulnerability assessments and implementing strong encryption protocols, I ensure data protection is a top priority. I constantly adapt to new security trends and provide strategic recommendations to minimize risk and safeguard applications." },
-            { title: "Data Analyst", img: dataImg, content: "Turning raw data into actionable insights is where I shine. By applying statistical models and powerful analytical tools, I uncover trends and patterns that inform smarter decisions. Whether it's customer behavior or market trends, my data-driven approach helps organizations gain a competitive edge." },
-            { title: "Software Engineer", img: softwareImg, content: "With a keen eye for clean code and solid architecture, I develop software solutions that not only meet client needs but are also scalable and maintainable. I bring a methodical approach to coding, ensuring that the end product is both efficient and easy to adapt to future needs." },
-            { title: "Data science", img: devImg, content: "As a data scientist, I turn raw data into actionable insights through advanced analytics and machine learning. By leveraging Python, SQL, and frameworks like Scikit-learn and TensorFlow, I develop data-driven solutions for real-world challenges. Passionate about innovation, I continuously refine my skills to stay ahead in this evolving field." },
-            { title: "Ethical Hacking", img: etImg, content: "As an ethical hacker, I actively seek out vulnerabilities before they can be exploited. By conducting penetration tests and security audits, I identify weak points in systems and networks, providing actionable solutions to enhance security and prevent malicious attacks." },
-            { title: "Machine Learning", img: macinImg, content: "I build intelligent systems that learn and adapt over time. Using advanced machine learning algorithms, I create models that can predict, analyze, and optimize processes. From automating tasks to improving decision-making, my work empowers machines to think for themselves." },
-            { title: "AI ENGINEER", img: proImg, content: "I design intelligent systems using deep learning, neural networks, and reinforcement learning to solve complex problems. Having completed a specialized AI module at Microsoft, I enhance business processes through advanced models in natural language processing and predictive analytics, driving innovation with every project." }
+          {[
+            {
+              title: "Fullstack Developer",
+              img: programmerImg,
+              content:
+                "As a Fullstack Developer, I seamlessly integrate the front-end with the back-end, creating end-to-end solutions...",
+            },
+            {
+              title: "Cybersecurity Specialist",
+              img: cybersecurityImg,
+              content:
+                "I specialize in securing digital assets from ever-evolving threats...",
+            },
+            {
+              title: "Data Analyst",
+              img: dataImg,
+              content:
+                "Turning raw data into actionable insights is where I shine...",
+            },
+            {
+              title: "Software Engineer",
+              img: softwareImg,
+              content:
+                "With a keen eye for clean code and solid architecture, I develop software solutions...",
+            },
+            {
+              title: "Data science",
+              img: devImg,
+              content:
+                "As a data scientist, I turn raw data into actionable insights through advanced analytics...",
+            },
+            {
+              title: "Ethical Hacking",
+              img: etImg,
+              content:
+                "As an ethical hacker, I actively seek out vulnerabilities before they can be exploited...",
+            },
+            {
+              title: "Machine Learning",
+              img: macinImg,
+              content:
+                "I build intelligent systems that learn and adapt over time...",
+            },
+            {
+              title: "AI ENGINEER",
+              img: proImg,
+              content:
+                "I design intelligent systems using deep learning, neural networks, and reinforcement learning...",
+            },
           ].map((skill, index) => (
             <div
               className="skill-card"
@@ -168,6 +220,32 @@ function App() {
             </button>
           </div>
         )}
+
+<div className="training-marquee">
+  <div className="marquee-wrapper">
+    <div className="marquee-content">
+      <img src={codingcampImg} alt="Coding Camp" />
+      <img src={cisco2} alt="Cisco" />
+      <img src={idcamp} alt="IDCamp" />
+      <img src={komdigi} alt="Kominfo Digital" />
+      <img src={evi} alt="Evindo" />
+      <img src={dicoding} alt="Dicoding" />
+      {/* Tambah logo lain di sini */}
+    </div>
+    {/* Duplikat untuk loop tak terputus */}
+    <div className="marquee-content">
+      <img src={codingcampImg} alt="Coding Camp" />
+      <img src={cisco2} alt="Cisco" />
+      <img src={idcamp} alt="IDCamp" />
+      <img src={komdigi} alt="Kominfo Digital" />
+      <img src={evi} alt="Evindo" />
+      <img src={dicoding} alt="Dicoding" />
+    </div>
+  </div>
+</div>
+
+
+
 
         {/* Routes */}
         <Routes>

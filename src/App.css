@@ -1046,3 +1046,39 @@ body {
 .scroll-to-top {
   animation: slideIn 0.5s ease-out;
 }
+
+.training-marquee {
+  position: relative;
+  overflow: hidden;
+  background: #f9f9f9;
+  padding: 1rem 0;
+}
+
+.marquee-wrapper {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.marquee-content {
+  display: flex;
+}
+
+.marquee-content img {
+  height: 50px;
+  margin: 0 25px;
+  transition: transform 0.3s;
+}
+
+.marquee-content img:hover {
+  transform: scale(1.2);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
