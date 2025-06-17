@@ -1047,38 +1047,148 @@ body {
   animation: slideIn 0.5s ease-out;
 }
 
+/* Bagian container utama */
+.training-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to bottom, #f0faff, #ffffff);
+}
+
+/* Judul tengah */
+.training-title {
+  font-size: 2.5rem;
+  color: #00aaff;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 5px rgba(0, 170, 255, 0.5),
+               0 0 15px rgba(0, 170, 255, 0.3);
+  position: relative;
+  display: inline-block;
+}
+
+.training-title::after {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 4px;
+  background: linear-gradient(to right, #00d4ff, #007bff);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Marquee container */
 .training-marquee {
   position: relative;
   overflow: hidden;
-  background: #f9f9f9;
-  padding: 1rem 0;
+  padding: 2rem 0;
+  background: linear-gradient(90deg, #ffffff, #f8faff, #ffffff);
+  border-top: 2px solid rgba(0, 183, 255, 0.25);
+  border-bottom: 2px solid rgba(0, 183, 255, 0.25);
+  box-shadow: 0 0 30px rgba(0, 183, 255, 0.08);
+  border-radius: 12px;
 }
 
+/* Marquee scroll wrapper */
 .marquee-wrapper {
   display: flex;
   width: max-content;
-  animation: marquee 25s linear infinite;
+  animation: marqueeScroll 32s linear infinite;
+  will-change: transform;
+}
+
+.training-marquee:hover .marquee-wrapper {
+  animation-play-state: paused;
 }
 
 .marquee-content {
   display: flex;
+  gap: 70px;
+  padding: 0 3rem;
 }
 
 .marquee-content img {
-  height: 50px;
-  margin: 0 25px;
-  transition: transform 0.3s;
+  height: 75px;
+  opacity: 0.95;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: drop-shadow(0 0 8px rgba(0, 183, 255, 0.4));
+  animation: pulseGlow 2.5s ease-in-out infinite alternate;
+  cursor: pointer;
+  border-radius: 12px;
+  background: #fff;
+  padding: 6px 10px;
+  box-shadow: 0 4px 20px rgba(0, 183, 255, 0.08);
 }
 
 .marquee-content img:hover {
-  transform: scale(1.2);
+  transform: scale(1.2) rotateZ(-1.5deg);
+  filter: drop-shadow(0 0 25px rgba(0, 183, 255, 0.9));
+  opacity: 1;
+  background: linear-gradient(145deg, #e6f7ff, #ffffff);
 }
 
-@keyframes marquee {
+/* Animasi scroll */
+@keyframes marqueeScroll {
   0% {
     transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+/* Efek glow */
+@keyframes pulseGlow {
+  from {
+    filter: drop-shadow(0 0 6px rgba(0, 183, 255, 0.3));
+  }
+  to {
+    filter: drop-shadow(0 0 15px rgba(0, 183, 255, 0.7));
+  }
+}
+
+/* Efek cahaya menyapu */
+.training-marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 183, 255, 0.02) 0%,
+    rgba(0, 183, 255, 0.08) 50%,
+    rgba(0, 183, 255, 0.02) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine 8s infinite linear;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes shine {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .training-title {
+    font-size: 1.7rem;
+  }
+
+  .marquee-content {
+    gap: 35px;
+  }
+
+  .marquee-content img {
+    height: 55px;
   }
 }

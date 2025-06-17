@@ -221,29 +221,29 @@ function App() {
           </div>
         )}
 
-<div className="training-marquee">
-  <div className="marquee-wrapper">
-    <div className="marquee-content">
-      <img src={codingcampImg} alt="Coding Camp" />
-      <img src={cisco2} alt="Cisco" />
-      <img src={idcamp} alt="IDCamp" />
-      <img src={komdigi} alt="Kominfo Digital" />
-      <img src={evi} alt="Evindo" />
-      <img src={dicoding} alt="Dicoding" />
-      {/* Tambah logo lain di sini */}
-    </div>
-    {/* Duplikat untuk loop tak terputus */}
-    <div className="marquee-content">
-      <img src={codingcampImg} alt="Coding Camp" />
-      <img src={cisco2} alt="Cisco" />
-      <img src={idcamp} alt="IDCamp" />
-      <img src={komdigi} alt="Kominfo Digital" />
-      <img src={evi} alt="Evindo" />
-      <img src={dicoding} alt="Dicoding" />
+<section className="training-section">
+  <h2 className="training-title">Sertifikasi Pelatihan</h2>
+  <div className="training-marquee">
+    <div className="marquee-wrapper">
+      <div className="marquee-content">
+        <img src={codingcampImg} alt="Coding Camp" />
+        <img src={cisco2} alt="Cisco" />
+        <img src={idcamp} alt="IDCamp" />
+        <img src={komdigi} alt="Kominfo Digital" />
+        <img src={evi} alt="Evindo" />
+        <img src={dicoding} alt="Dicoding" />
+      </div>
+      <div className="marquee-content">
+        <img src={codingcampImg} alt="Coding Camp" />
+        <img src={cisco2} alt="Cisco" />
+        <img src={idcamp} alt="IDCamp" />
+        <img src={komdigi} alt="Kominfo Digital" />
+        <img src={evi} alt="Evindo" />
+        <img src={dicoding} alt="Dicoding" />
+      </div>
     </div>
   </div>
-</div>
-
+</section>
 
 
 
