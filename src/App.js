@@ -158,53 +158,61 @@ function App() {
         <div className="skills-section">
           {[
             {
-              title: "Fullstack Developer",
-              img: programmerImg,
-              content:
-                "As a Fullstack Developer, I seamlessly integrate the front-end with the back-end, creating end-to-end solutions...",
-            },
+  title: "Fullstack Developer",
+  img: programmerImg,
+  content:
+    "As a Fullstack Developer, I have built various web applications from the ground up, handling both frontend and backend development. I specialize in creating responsive and interactive user interfaces using HTML, CSS, JavaScript, and frameworks like React.js. On the backend, I work with technologies such as Node.js, Express, and PHP, with experience in integrating MySQL and MongoDB databases. My projects include e-commerce platforms, book lending systems, and warehouse inventory applications. I am capable of working independently or as part of a team to deliver efficient, scalable, and user-friendly digital solutions.",
+}
+,
+           {
+  title: "Cybersecurity Specialist",
+  img: cybersecurityImg,
+  content:
+    "I have a strong foundation in cybersecurity principles, including knowledge of threats, vulnerabilities, and cyber attacks. My understanding covers the core concepts such as the CIA Triad (Confidentiality, Integrity, Availability), encryption, authentication, and firewalls. I am also familiar with defense techniques against phishing, malware, and social engineering attacks. Additionally, I have studied security policies and ethical considerations in the digital world, ensuring that I approach cybersecurity with both technical skill and professional integrity.",
+}
+,
             {
-              title: "Cybersecurity Specialist",
-              img: cybersecurityImg,
-              content:
-                "I specialize in securing digital assets from ever-evolving threats...",
-            },
-            {
-              title: "Data Analyst",
-              img: dataImg,
-              content:
-                "Turning raw data into actionable insights is where I shine...",
-            },
-            {
-              title: "Software Engineer",
-              img: softwareImg,
-              content:
-                "With a keen eye for clean code and solid architecture, I develop software solutions...",
-            },
-            {
-              title: "Data science",
-              img: devImg,
-              content:
-                "As a data scientist, I turn raw data into actionable insights through advanced analytics...",
-            },
-            {
-              title: "Ethical Hacking",
-              img: etImg,
-              content:
-                "As an ethical hacker, I actively seek out vulnerabilities before they can be exploited...",
-            },
-            {
-              title: "Machine Learning",
-              img: macinImg,
-              content:
-                "I build intelligent systems that learn and adapt over time...",
-            },
-            {
-              title: "AI ENGINEER",
-              img: proImg,
-              content:
-                "I design intelligent systems using deep learning, neural networks, and reinforcement learning...",
-            },
+  title: "Data Analyst",
+  img: dataImg,
+  content:
+    "As a Data Analyst, I specialize in transforming raw data into meaningful insights using both statistical and machine learning techniques. I have experience working with classification algorithms such as K-Nearest Neighbor (KNN) and Decision Tree, as well as solving linear programming problems using tools like Python and PuLP. I am also proficient in using Microsoft Excel for data cleaning, visualization, and basic analysis. My goal is to support data-driven decision-making by identifying patterns, trends, and actionable insights from complex datasets.",
+}
+,
+          {
+  title: "Software Developer",
+  img: softwareImg,
+  content:
+    "As a Software Developer, I have experience building real-world web applications using Java, PHP, HTML, CSS, and JavaScript. I have developed e-commerce websites with features like shopping carts, online order systems, and payment integration. I also created systems such as a book borrowing application and a warehouse inventory system. My focus is on creating user-friendly, functional, and efficient software by following clean code principles and structured programming. I enjoy turning user needs into practical digital solutions.",
+}
+,
+           {
+  title: "Data Science",
+  img: devImg,
+  content:
+    "In my journey in Data Science, I have worked on classification and association problems using algorithms like K-Nearest Neighbor (KNN), Decision Tree, and Apriori. I use Python to perform data analysis and modeling, and I’ve also applied linear programming techniques using libraries such as PuLP in Google Colab. My focus is on extracting patterns, building predictive models, and transforming data into valuable insights that support informed decision-making.",
+}
+,
+           {
+  title: "Ethical Hacking",
+  img: etImg,
+  content:
+    "As an aspiring ethical hacker, I have explored basic penetration testing techniques using Kali Linux to identify potential vulnerabilities in network systems. With hands-on experience in configuring LAN, MAN, and WAN networks and working with devices like Mikrotik and Cisco, I understand how network infrastructures can be both attacked and secured. My focus is on learning how to ethically test systems to improve their security, and I am continuously deepening my skills in areas such as social engineering, network scanning, and system hardening.",
+}
+,
+         {
+  title: "Machine Learning",
+  img: macinImg,
+  content:
+    "In my experience with Machine Learning, I have worked with classification algorithms such as K-Nearest Neighbor (KNN) and Decision Tree to solve real-world problems like student graduation prediction. I use Python and tools like Google Colab to build, train, and evaluate models, gaining insights from data through supervised learning. My focus is on understanding how machines can learn from data and applying that knowledge to create intelligent, data-driven solutions.",
+}
+,
+           {
+  title: "AI Engineer",
+  img: proImg,
+  content:
+    "As an AI enthusiast, I have worked with fundamental AI concepts such as K-Nearest Neighbor (KNN) and Decision Tree algorithms to build predictive models. Using Python and platforms like Google Colab, I apply AI techniques to solve real-world problems, such as predicting student graduation outcomes. While I continue to deepen my knowledge in advanced areas like deep learning, my current focus is on developing intelligent solutions through supervised learning and practical AI applications.",
+}
+
           ].map((skill, index) => (
             <div
               className="skill-card"
@@ -267,8 +275,7 @@ function App() {
 
 
 <section className="training-section">
-  <h2 className="training-title">Telah di Percaya 
-    oleh :
+  <h2 className="training-title">has been trusted by:
   </h2>
   <div className="training-marquee">
     <div className="marquee-wrapper">
