@@ -23,6 +23,17 @@ import evi from "./images/evi.jpeg";
 import dicoding from "./images/dicoding.jpeg";
 import dicoding1 from "./images/dicoding.png";
 import digitaltalent from "./images/digitalent.png";
+import react from "./images/react.png";
+import node from "./images/node.jpeg";
+import py from "./images/py.jpeg";
+import php from "./images/php.png";
+import java from "./images/java.jpeg";
+import tensor from "./images/tensor.png";
+import rest from "./images/rest.png";
+import kali from "./images/kali.jpeg";
+import data from "./images/database.jpeg";
+
+
 
 // Komponen
 import About from "./components/About";
@@ -222,6 +233,38 @@ function App() {
             </button>
           </div>
         )}
+<section className="stack-section" data-aos="fade-up">
+  <h2>🛠️ Tools & Tech Stack</h2>
+  <div className="stack-marquee">
+    <div className="stack-track">
+      <div className="stack-list">
+        <img src={react} alt="React" title="React" />
+        <img src={node} alt="Node.js" title="Node.js" />
+        <img src={py} alt="Python" title="Python" />
+        <img src={php} alt="PHP" title="PHP" />
+        <img src={java} alt="Java" title="Java" />
+        <img src={tensor} alt="TensorFlow" title="TensorFlow" />
+        <img src={rest} alt="REST API" title="REST API" />
+        <img src={kali} alt="Kali Linux" title="Kali Linux" />
+        <img src={data} alt="Database" title="Database" />
+      </div>
+      {/* Salinan kedua agar animasi looping */}
+      <div className="stack-list">
+        <img src={react} alt="React" title="React" />
+        <img src={node} alt="Node.js" title="Node.js" />
+        <img src={py} alt="Python" title="Python" />
+        <img src={php} alt="PHP" title="PHP" />
+        <img src={java} alt="Java" title="Java" />
+        <img src={tensor} alt="TensorFlow" title="TensorFlow" />
+        <img src={rest} alt="REST API" title="REST API" />
+        <img src={kali} alt="Kali Linux" title="Kali Linux" />
+        <img src={data} alt="Database" title="Database" />
+        
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section className="training-section">
   <h2 className="training-title">Telah di Percaya 

@@ -211,8 +211,10 @@ const Certifikat = () => {
                 Tampilkan kredensial
               </a>
             </div>
+            
           </div>
         ))}
+        
       </div>
     </section>
   );

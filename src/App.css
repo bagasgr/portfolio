@@ -1193,3 +1193,139 @@ body {
     height: 55px;
   }
 }
+
+/* Tema gelap untuk stack section */
+.stack-section {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+
+/* Judul bagian */
+.stack-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc88;
+}
+
+/* Grid daftar stack */
+.stack-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  animation: slideInRight 1s ease-out both;
+}
+
+/* Gambar logo */
+.stack-list img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border: 2px solid #444;
+  border-radius: 12px;
+  padding: 0.5rem;
+  background-color: #2a2a2a;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.stack-list img:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 0 15px #00ffc3aa;
+}
+
+/* Animasi ke kanan */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* ===============================
+   🌑 Stack Section (Dark Theme)
+   =============================== */
+
+.stack-section {
+  background-color: #111;
+  color: #f0f0f0;
+  padding: 4rem 2rem;
+  text-align: center;
+  overflow: hidden;
+  border-top: 2px solid #222;
+  border-bottom: 2px solid #222;
+}
+
+.stack-section h2 {
+  font-size: 2rem;
+  color: #0f8ce0;
+  margin-bottom: 2.5rem;
+  text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+/* ===============================
+   🔁 Infinite Horizontal Scroll
+   =============================== */
+
+.stack-marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.stack-track {
+  display: flex;
+  width: max-content;
+  animation: scrollRight 25s linear infinite;
+}
+
+.stack-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+/* ===============================
+   🧩 Stack Item Styling
+   =============================== */
+
+.stack-list img {
+  width: 100px; /* sebelumnya 80px */
+  height: 100px; /* sebelumnya 80px */
+  object-fit: contain;
+  border-radius: 12px;
+  padding: 10px;
+  background-color: #1e1e1e;
+  box-shadow: 0 0 12px rgba(0, 255, 195, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  filter: brightness(1.15);
+}
+
+
+.stack-list img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(0, 255, 204, 0.7);
+}
+
+/* ===============================
+   🎞️ Keyframe Animation
+   =============================== */
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
