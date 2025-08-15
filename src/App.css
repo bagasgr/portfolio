@@ -1,134 +1,48 @@
-/* Global Styles */
+/* =======================
+   🌐 GLOBAL STYLES
+======================= */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: "Roboto", sans-serif; /* Modern and clean font */
-  background: linear-gradient(135deg, #0f0f0f, #212121);  /* Dark gradient background for a sleek look */
-  color: #EAEAEA;  /* Light gray text for readability */
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #212121);
+  color: #EAEAEA;
   overflow-x: hidden;
-  box-sizing: border-box;
-  animation: fadeInBody 1.2s ease-out;
   padding: 0;
+  animation: fadeInBody 1.2s ease-out;
 }
 
-/* Animation for body */
 @keyframes fadeInBody {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 1024px) {
-  .hero-title {
-    font-size: 3rem;
-  }
-
-  .hero-description {
-    font-size: 1rem;
-  }
-
-  .navigation a {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .hero-section {
-    padding: 20px;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-description {
-    font-size: 1rem;
-    max-width: 500px;
-  }
-
-  .skill-card {
-    width: 250px;
-    padding: 30px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .hero-description {
-    font-size: 0.9rem;
-    max-width: 400px;
-  }
-
-  .navigation a {
-    padding: 8px 16px;
-    font-size: 0.8rem;
-  }
-
-  .skill-card {
-    width: 200px;
-    padding: 25px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .hero-title {
-    font-size: 1.8rem;
-  }
-
-  .hero-description {
-    font-size: 0.85rem;
-    max-width: 300px;
-  }
-
-  .navigation a {
-    padding: 6px 12px;
-    font-size: 0.75rem;
-  }
-
-  .skill-card {
-    width: 180px;
-    padding: 20px;
-  }
-}
-
-
-/* Hero Section */
+/* =======================
+   🦸 HERO SECTION
+======================= */
 .hero-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 20px;
   justify-items: center;
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(135deg, #1e1e1e, #003366);
-  padding: 50px 20px;
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
+  padding: 20px;
   text-align: center;
 }
 
-/* Hero Container */
 .hero-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  max-width: 800px;
-  width: 100%;
   background: rgba(0, 0, 0, 0.8);
-  padding: 40px;
-  border-radius: 30px;
+  padding: 20px;
+  border-radius: 20px;
   box-shadow: 0 0 40px rgba(0, 102, 255, 0.8);
-  text-align: center;
-  animation: fadeInHero 2s ease-out;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -137,574 +51,135 @@ body {
   box-shadow: 0 0 80px rgba(0, 102, 255, 1);
 }
 
-/* Animasi Fade In */
-@keyframes fadeInHero {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Hero Title */
-.hero-title {
-  font-size: 2rem;
-  letter-spacing: 2px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  text-align: center;
-  text-shadow: 0 0 15px rgba(0, 102, 255, 0.7);
-  transition: transform 0.3s ease, color 0.3s ease;
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-/* Hover Effect on Hero Title */
-.hero-title:hover {
-  transform: translateY(-5px);
-  color: #00b7ff;
-}
-
-/* Wrapper untuk I AM Text dan Nama */
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-}
-
-/* I AM Text */
 .iam {
-  font-size: 4rem;
+  font-size: clamp(2rem, 6vw, 5rem);
   font-weight: 900;
-  color: white;
   background: linear-gradient(90deg, #00b7ff, #003366);
-  background-size: 300% auto;
-  -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 20px rgba(0, 102, 255, 0.6), 0 0 50px rgba(0, 102, 255, 0.3);
-  transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-  animation: scaleFade 2s ease-in-out;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 20px rgba(0, 102, 255, 0.6);
+  margin-bottom: 10px;
 }
 
-.iam:hover {
-  text-shadow: 0 0 30px rgba(0, 102, 255, 1), 0 0 80px rgba(0, 102, 255, 0.5);
-  transform: scale(1.05);
-}
-
-/* Nama */
 .name {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.8rem);
   font-weight: 700;
+  margin-bottom: 10px;
   color: white;
-  margin-top: 10px;
-  position: relative;
-  padding-bottom: 12px;
-  text-align: center;
-  letter-spacing: 1px;
-  transition: transform 0.4s ease, color 0.3s ease;
-  animation: fadeIn 1.5s ease-in-out;
 }
 
-.name::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 60%;
-  height: 3px;
-  background: linear-gradient(to right, #00b7ff, #003366);
-  transform: translateX(-50%);
-  transition: width 0.3s ease, opacity 0.3s ease;
-}
-
-.name:hover {
-  transform: translateY(-10px);
-  color: #00b7ff;
-}
-
-.name:hover::after {
-  width: 100%;
-  opacity: 1;
-}
-
-/* Profesi (IT Enthusiast) */
 .profesi {
-  display: block;
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: clamp(1.2rem, 3.5vw, 2rem);
   color: #00b7ff;
   text-transform: uppercase;
-  margin-top: 10px;
-  text-shadow: 0 0 10px rgba(0, 102, 255, 0.8);
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
-  animation: fadeInUp 1.5s ease-in-out;
 }
 
-.profesi:hover {
-  transform: scale(1.05);
-  color: #008cff;
-  text-shadow: 0 0 20px rgba(0, 102, 255, 1);
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scaleFade {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* RESPONSIVE DESIGN */
-
-/* Mobile Devices (small screens) */
-@media only screen and (max-width: 600px) {
-  .iam {
-    font-size: 2.5rem;
-  }
-  
-  .name {
-    font-size: 1.5rem;
-    padding-bottom: 10px;
-  }
-
-  .profesi {
-    font-size: 1.3rem;
-  }
-}
-
-/* Tablets (medium screens) */
-@media only screen and (max-width: 768px) {
-  .iam {
-    font-size: 3rem;
-  }
-
-  .name {
-    font-size: 2rem;
-  }
-
-  .profesi {
-    font-size: 1.5rem;
-  }
-}
-
-/* Large Screens (desktops) */
-@media only screen and (min-width: 1024px) {
-  .iam {
-    font-size: 5rem;
-  }
-
-  .name {
-    font-size: 2.8rem;
-  }
-
-  .profesi {
-    font-size: 2rem;
-  }
-}
-
-/* Animated Title */
-.animated-title {
-  font-size: 2.5rem; /* Lebih besar dan mencolok */
-  font-weight: 900; /* Super bold */
-  color: white; /* Warna teks tetap jelas */
-  padding: 20px 60px;
-  margin-top: 30px;
-  border-radius: 50px;
-  display: inline-block;
-  white-space: nowrap;
-  position: relative;
-  z-index: 2;
-  overflow: hidden;
-  text-transform: uppercase; /* Huruf kapital semua */
-  letter-spacing: 3px; /* Spasi antar huruf lebih lebar */
-  border: 4px solid rgba(255, 255, 255, 0.8); /* Border putih elegan */
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-  background: linear-gradient(45deg, #ff00ff, #00ffea, #007bff, #ff007b, #ffcc00);
-  background-size: 400%;
-  animation: glowEffect 1.5s infinite alternate, waveEffect 3s ease-in-out infinite, colorShift 6s infinite alternate, textGlow 2s infinite alternate;
-  transition: all 0.4s ease-in-out;
-}
-
-/* Efek Glowing 3D */
-@keyframes glowEffect {
-  0% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.8); }
-  50% { text-shadow: 0 0 50px rgba(255, 255, 255, 1), 0 0 70px rgba(0, 255, 255, 0.9); }
-  100% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.8); }
-}
-
-/* Efek Gelombang */
-@keyframes waveEffect {
-  0% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-5px) rotate(2deg); }
-  100% { transform: translateY(0) rotate(0deg); }
-}
-
-/* Efek Warna Berganti */
-@keyframes colorShift {
-  0% { background-position: 0%; }
-  50% { background-position: 100%; }
-  100% { background-position: 0%; }
-}
-
-/* Efek Cahaya di Teks */
-@keyframes textGlow {
-  0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
-  100% { text-shadow: 0 0 40px rgba(255, 255, 255, 1); }
-}
-
-/* Hover Effect */
-.animated-title:hover {
-  transform: scale(1.15) rotate(2deg);
-  filter: brightness(1.3);
-  border-color: rgba(255, 255, 255, 1);
-  box-shadow: 0 0 50px rgba(255, 255, 255, 1), 0 0 70px rgba(0, 255, 255, 1);
-}
-
-/* Hero Description */
 .hero-description {
-  font-size: 1.3rem;
-  font-family: 'Merriweather', serif;
-  margin: 30px 0;
-  color: #e0e0e0;
-  line-height: 2;
-  padding: 30px;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 102, 255, 0.3));
+  font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+  padding: 20px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0, 102, 255, 0.3));
   border-left: 5px solid #00b7ff;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  animation: fadeInDescription 2s ease-out;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
 }
 
-/* Hover Effect on Hero Description */
-.hero-description:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 35px rgba(0, 102, 255, 0.5);
-}
-
-/* Title Styling */
-.hero-description h2 {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #00b7ff;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 10px rgba(0, 183, 255, 0.5);
-}
-
-/* Animation */
-@keyframes fadeInDescription {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Hero Image */
 .hero-image {
   width: 100%;
-  max-width: 400px;
-  height: 400px;
+  max-width: 300px;
+  height: auto;
   border-radius: 50%;
-  object-fit: cover;
-  padding: 15px;
-  box-shadow: 0 0 20px rgba(0, 102, 255, 0.7), inset 0 0 20px rgba(0, 102, 255, 0.5);
-  transition: transform 0.4s ease, box-shadow 0.4s ease, filter 0.4s ease, transform 0.5s ease-out;
-  animation: floating 3s ease-in-out infinite;
   border: 4px solid rgba(0, 102, 255, 0.3);
-  position: relative;
-  z-index: 1;
+  box-shadow: 0 0 20px rgba(0, 102, 255, 0.7);
+  animation: floating 3s ease-in-out infinite;
 }
 
-/* Efek Animasi Floating */
 @keyframes floating {
   0% { transform: translateY(0); }
-  50% { transform: translateY(-30px); } /* Gerakan lebih besar */
+  50% { transform: translateY(-20px); }
   100% { transform: translateY(0); }
 }
 
-/* Efek Hover dengan Transisi 3D, Glow, dan Pembesaran */
-.hero-image:hover {
-  transform: scale(1.1) rotate(4deg); /* Membesarkan dan memutar gambar */
-  box-shadow: 0 0 60px rgba(0, 102, 255, 0.9), inset 0 0 40px rgba(0, 102, 255, 0.6); /* Glow lebih kuat */
-  filter: brightness(1.2) saturate(1.5); /* Mencerahkan dan meningkatkan saturasi warna */
-  cursor: pointer;
-  z-index: 2; /* Memastikan gambar berada di atas elemen lain */
-}
-
-/* Efek Kilau Ketika Fokus pada Hero Image */
-.hero-image::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: rgba(0, 102, 255, 0.8);
-  animation: pulseEffect 1.5s infinite;
-  opacity: 0.5;
-  z-index: -1;
-}
-
-/* Efek Kilau Pulse */
-@keyframes pulseEffect {
-  0% { opacity: 0.5; }
-  50% { opacity: 0.8; }
-  100% { opacity: 0.5; }
-}
-
-
-/* Navigation Button */
-.navigation a {
-  display: inline-block;
-  padding: 14px 30px;
-  border-radius: 35px;
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 600;
-  background: linear-gradient(45deg, #00b7ff, #003366);
-  border: 2px solid transparent;
-  text-align: center;
-  margin-top: 35px;
-  transition: all 0.4s ease;
-  box-shadow: 0 8px 25px rgba(0, 102, 255, 0.3);
-}
-
-/* Hover Effect on Navigation Button */
-.navigation a:hover {
-  background: linear-gradient(45deg, #00c6ff, #003366);
-  transform: scale(1.1);
-  box-shadow: 0 15px 35px rgba(0, 102, 255, 0.5);
-}
-
-/* Responsiveness */
-@media (max-width: 1024px) {
-  .hero-title {
-    font-size: 1.6rem;
-  }
-  .iam {
-    font-size: 3.5rem;
-  }
-  .name {
-    font-size: 1.8rem;
-  }
-  .hero-description {
-    font-size: 1.1rem;
-  }
-  .animated-title {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-container {
-    max-width: 90%;
-  }
-
-  .hero-image {
-    max-width: 320px;
-  }
-
-  .iam {
-    font-size: 2.8rem;
-  }
-
-  .name {
-    font-size: 1.5rem;
-  }
-
-  .hero-description {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title {
-    font-size: 1.3rem;
-  }
-
-  .iam {
-    font-size: 2.5rem;
-  }
-
-  .name {
-    font-size: 1.4rem;
-  }
-
-  .hero-description {
-    font-size: 0.9rem;
-  }
-
-  .navigation a {
-    font-size: 1rem;
-    padding: 12px 25px;
-  }
-}
-
-
-
-/* Button styles for when loading */
-.navigation a.loading {
-  pointer-events: none; /* Disable button click */
-}
-
-.navigation a.loading .loading-spinner {
-  display: inline-block;
-  margin-left: 10px;
-}
-
-.navigation a.clicked {
-  animation: boom 0.6s ease; /* Apply boom animation */
-}
-
-/* Hover effect */
-.navigation a:hover {
-  background: linear-gradient(135deg, #4CAFFF, #368BFF);
-  color: white;
-  box-shadow: 0px 5px 20px rgba(76, 175, 255, 0.5);
-  transform: translateY(-4px);
-}
-
-/* Shine effect */
-.navigation a::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.3), transparent);
-  transition: all 0.5s ease-in-out;
-}
-
-.navigation a:hover::after {
-  left: 100%;
-}
-
-/* Active state */
-.navigation a:active {
-  transform: translateY(2px);
-  box-shadow: 0px 3px 10px rgba(76, 175, 255, 0.3);
-}
-
-/* Skill Cards Section */
+/* =======================
+   📦 SKILLS SECTION
+======================= */
 .skills-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  padding: 80px 5%;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 100, 255, 0.7));
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
-  position: relative;
+  gap: 20px;
+  padding: 40px 5%;
+  background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,100,255,0.7));
 }
 
-/* Skill Card Styling */
 .skill-card {
-  width: 320px;
-  padding: 30px;
+  width: 100%;
+  max-width: 320px;
+  padding: 20px;
   background: rgba(25, 25, 25, 0.95);
   border-radius: 15px;
-  backdrop-filter: blur(12px);
   text-align: center;
   border: 2px solid #4C9BFF;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease-in-out;
-  cursor: pointer;
+  transition: all 0.4s ease;
 }
 
-/* Hover effects for Skill Card */
 .skill-card:hover {
-  transform: scale(1.08) translateY(-8px);
-  box-shadow: 0px 15px 40px rgba(0, 100, 255, 0.4);
-  background: rgba(30, 30, 30, 1);
+  transform: scale(1.05);
   border-color: #63C2FF;
 }
 
-/* Skill Card Title */
-.skill-card .skill-title {
-  font-size: 22px;
+.skill-title {
+  font-size: 1.2rem;
   font-weight: bold;
-  color: #F1F1F1;
   margin-bottom: 12px;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
 }
 
-/* Skill Description */
-.skill-card .skill-description {
-  font-size: 15px;
-  color: #CFCFCF;
-  margin-top: 8px;
-  opacity: 0.85;
-  line-height: 1.6;
-}
-
-/* Skill Image Hover Effect */
-.skill-card .skill-image {
-  width: 100%;
-  border-radius: 10px;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+.skill-description {
+  font-size: 0.95rem;
   opacity: 0.85;
 }
 
-/* Neon Effect on Skill Card */
-.skill-card:hover .skill-image {
-  opacity: 1;
+/* =======================
+   🔘 BUTTONS
+======================= */
+.navigation a {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  background: linear-gradient(45deg, #00b7ff, #003366);
+  transition: all 0.4s ease;
+}
+
+.navigation a:hover {
   transform: scale(1.05);
-  filter: grayscale(0);
-  box-shadow: 0 0 20px rgba(0, 100, 255, 0.9);
+  background: linear-gradient(45deg, #00c6ff, #003366);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .skills-section {
-    padding: 60px 3%;
+/* =======================
+   📱 RESPONSIVE BREAKPOINTS
+======================= */
+@media (min-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
   }
-  .skill-card {
-    width: 90%;
+  .hero-image {
+    max-width: 350px;
   }
 }
+
+@media (min-width: 1024px) {
+  .hero-section {
+    padding: 50px;
+  }
+  .hero-image {
+    max-width: 400px;
+  }
+}
+
 
 /* Button Aesthetic */
 .button {
@@ -1329,3 +804,166 @@ body {
     transform: translateX(0%);
   }
 }
+
+.activity-section {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: #f0f4f8;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.activity-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #38bdf8;
+  margin-bottom: 1rem;
+}
+
+.activity-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #dbeafe;
+}
+
+.activity-grid.single-event {
+  display: flex;
+  justify-content: center;
+}
+
+.activity-card.full {
+  background-color: #1e293b;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  max-width: 900px;
+  width: 100%;
+}
+
+.activity-card.full img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.card-content {
+  padding: 2rem;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-size: 1.5rem;
+  color: #60a5fa;
+  margin-bottom: 1rem;
+}
+
+.card-content ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+  color: #e0f2fe;
+}
+
+.facility-highlight {
+  margin-top: 1.5rem;
+  color: #f1f5f9;
+  font-style: italic;
+}
+
+
+/* ===== Container utama kartu acara ===== */
+.activity-card {
+  background: linear-gradient(145deg, #0d1117, #141823); /* gradien gelap */
+  border-radius: 20px;
+  padding: 25px;
+  margin: 25px 0;
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7), 0 0 15px rgba(30, 144, 255, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(30, 144, 255, 0.5);
+}
+
+/* ===== Slider gambar ===== */
+.event-images {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.event-images img {
+  width: 320px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  scroll-snap-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.event-images img:hover {
+  transform: scale(1.1) rotate(-1deg);
+  box-shadow: 0 10px 25px rgba(30, 144, 255, 0.5), 0 0 15px rgba(30, 144, 255, 0.3);
+}
+
+/* ===== Scrollbar custom ===== */
+.event-images::-webkit-scrollbar {
+  height: 10px;
+}
+
+.event-images::-webkit-scrollbar-thumb {
+  background: #1e90ff;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.event-images::-webkit-scrollbar-thumb:hover {
+  background: #63b3ff;
+}
+
+.event-images::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+/* ===== Konten kartu ===== */
+.card-content h3 {
+  color: #1e90ff;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  text-shadow: 0 0 8px rgba(30, 144, 255, 0.7);
+}
+
+.card-content ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 12px;
+}
+
+.card-content ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #1e90ff;
+}
+
+/* ===== Highlight fasilitas ===== */
+.facility-highlight {
+  background: rgba(30, 144, 255, 0.08);
+  padding: 12px;
+  border-left: 5px solid #1e90ff;
+  border-radius: 10px;
+  margin-top: 18px;
+  transition: background 0.3s ease;
+}
+
+.facility-highlight:hover {
+  background: rgba(30, 144, 255, 0.15);
+}
+

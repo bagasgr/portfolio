@@ -32,7 +32,10 @@ import tensor from "./images/tensor.png";
 import rest from "./images/rest.png";
 import kali from "./images/kali.jpeg";
 import data from "./images/database.jpeg";
-
+import astra1 from "./images/astra1.jpg";
+import astra2 from "./images/astra2.jpg";
+import astra3 from "./images/astra3.jpg";
+import astra4 from "./images/astra4.jpg";
 
 
 // Komponen
@@ -42,6 +45,8 @@ import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Certifikat from "./components/certifikat";
 import ScrollToTop from "./components/ScrollToTop"; // ✅ Pastikan ini terimport
+
+
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -304,6 +309,38 @@ function App() {
 </section>
 
 
+   (
+    <section className="activity-section" data-aos="fade-up">
+      <h2 className="activity-title">Events I Have Attended</h2>
+
+      {/* Acara 1 */}
+      <div className="activity-grid single-event">
+        <div className="activity-card full" data-aos="zoom-in">
+          <div className="event-images">
+            <img src={astra1} alt="ASTRAnouts Conference 2025 - 1" />
+            <img src={astra2} alt="ASTRAnouts Conference 2025 - 2" />
+            <img src={astra3} alt="ASTRAnouts Conference 2025 - 3" />
+            <img src={astra4} alt="ASTRAnouts Conference 2025 - 4" />
+          </div>
+          <div className="card-content">
+            <h3>Topik yang Dibahas:</h3>
+            <ul>
+              <li>Transformasi Digital di Era AI</li>
+              <li>Inovasi Cloud Computing together <strong>Google Cloud, AWS, dan Alibaba</strong></li>
+              <li>Collaboration Industri & Education together <strong>Microsoft dan XData Labs</strong></li>
+              <li>Development of Indonesian Digital Talent by<strong>Astra Digital</strong></li>
+            </ul>
+            <p className="facility-highlight">
+              I also tried various interactive facilities such as AI simulations, cloud deployment demos, and professional networking with industry figures such as:
+              <br /><strong>Najelaa Shihab, Dharma Simorangkir, Paul Soegiantoro, Bebby Sisselo, dan lainnya.</strong>
+            </p>
+          </div>
+          
+        </div>
+      </div>
+
+
+</section>  
 
         {/* Routes */}
         <Routes>
