@@ -323,7 +323,7 @@ function App() {
             <img src={astra4} alt="ASTRAnouts Conference 2025 - 4" />
           </div>
           <div className="card-content">
-            <h3>Topik yang Dibahas:</h3>
+            <h3>Topics Discussed:</h3>
             <ul>
               <li>Transformasi Digital di Era AI</li>
               <li>Inovasi Cloud Computing together <strong>Google Cloud, AWS, dan Alibaba</strong></li>
