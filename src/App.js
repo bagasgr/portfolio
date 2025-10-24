@@ -50,6 +50,38 @@ import Projects from "./components/Projects";
 import Certifikat from "./components/certifikat";
 import ScrollToTop from "./components/ScrollToTop"; // ✅ Pastikan ini terimport
 
+function EventImages({ images }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  return (
+    <div className="event-images">
+      {images.map((img, index) => (
+        <img
+          key={index}
+          src={img}
+          alt={`event-${index}`}
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        />
+      ))}
+      <button className="slide-arrow left" onClick={prevSlide}>
+        ◀
+      </button>
+      <button className="slide-arrow right" onClick={nextSlide}>
+        ▶
+      </button>
+    </div>
+  );
+}
+
+
 
 
 const ScrollToTopButton = () => {
@@ -252,18 +284,13 @@ function App() {
         )}
 
         
-    <section className="activity-section" data-aos="fade-up">
+    <section className="activity-section">
   <h2 className="activity-title">Events I Have Attended</h2>
 
-  {/* Acara 1 */}
-  <div className="activity-grid single-event">
-    <div className="activity-card full" data-aos="zoom-in">
-      <div className="event-images">
-        <img src={astra1} alt="ASTRAnouts Conference 2025 - 1" />
-        <img src={astra2} alt="ASTRAnouts Conference 2025 - 2" />
-        <img src={astra3} alt="ASTRAnouts Conference 2025 - 3" />
-        <img src={astra4} alt="ASTRAnouts Conference 2025 - 4" />
-      </div>
+  <div className="activity-grid">
+    {/* Acara 1 */}
+    <div className="activity-card full">
+      <EventImages images={[astra1, astra2, astra3, astra4]} />
       <div className="card-content">
         <h3>Topics Discussed:</h3>
         <ul>
@@ -278,18 +305,10 @@ function App() {
         </p>
       </div>
     </div>
-  </div>
 
-  {/* Acara 2 */}
-  <div className="activity-grid single-event">
-    <div className="activity-card full" data-aos="zoom-in">
-      <div className="event-images">
-        <img src={walk1} alt="Pelatihan Walk Interview - 1" />
-        <img src={walk2} alt="Pelatihan Walk Interview - 2" />
-        <img src={walk3} alt="Pelatihan Walk Interview - 3" />
-        <img src={walk4} alt="Pelatihan Walk Interview - 4" />
-        
-      </div>
+    {/* Acara 2 */}
+    <div className="activity-card full">
+      <EventImages images={[walk1, walk2, walk3, walk4]} />
       <div className="card-content">
         <h3>Pelatihan Walk Interview – Alumni Digital Talent Kominfo (Bersertifikat BNSP)</h3>
         <ul>
@@ -302,7 +321,7 @@ function App() {
         <p className="facility-highlight">
           Kegiatan ini merupakan inisiatif dari <strong>Kementerian Komunikasi dan Informatika (Kominfo)</strong> 
           yang bekerja sama dengan lembaga pelatihan digital nasional, 
-          bertujuan untuk membekali para alumni Bersertifikat BNSP<strong>Digital Talent Scholarship</strong> 
+          bertujuan untuk membekali para alumni Bersertifikat BNSP <strong>Digital Talent Scholarship</strong> 
           dengan keterampilan profesional dunia kerja.
         </p>
       </div>

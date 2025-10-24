@@ -870,195 +870,92 @@ body {
 }
 
 
-/* ======== SECTION UTAMA ======== */
-.activity-section {
-  background: linear-gradient(180deg, #000a1f 0%, #001a33 100%);
-  color: #eaf4ff;
-  padding: 100px 40px;
-  font-family: "Poppins", sans-serif;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Cahaya lembut latar belakang */
-.activity-section::before,
-.activity-section::after {
-  content: "";
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  filter: blur(150px);
-  opacity: 0.25;
-  z-index: 0;
-}
-
-.activity-section::before {
-  background: #00aaff;
-  top: -150px;
-  left: -150px;
-}
-
-.activity-section::after {
-  background: #0077ff;
-  bottom: -150px;
-  right: -150px;
-}
-
-/* ======== JUDUL ======== */
-.activity-title {
-  font-size: 3rem;
-  text-align: center;
-  color: #00d9ff;
-  text-shadow: 0 0 25px rgba(0, 217, 255, 0.7);
-  margin-bottom: 80px;
-  position: relative;
-  z-index: 1;
-  letter-spacing: 1px;
-  font-weight: 600;
-  animation: fadeDown 1s ease forwards;
-}
-
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ======== CARD ======== */
-.activity-grid {
+/* Card compact */
+.activity-card {
+  background-color: #14253d;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+  max-width: 400px;      /* card lebih kecil */
+  flex: 1 1 300px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
   display: flex;
-  justify-content: center;
-  margin-bottom: 90px;
-  position: relative;
-  z-index: 1;
+  flex-direction: column;
 }
 
-.activity-card.full {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  border: 1px solid rgba(0, 221, 255, 0.25);
-  width: 90%;
-  max-width: 1100px;
-  box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
-  transition: all 0.6s ease;
-  transform-style: preserve-3d;
+/* Konten card */
+.card-content h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.card-content ul {
+  list-style: disc inside;
+  margin-bottom: 10px;
+}
+.card-content li {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.facility-highlight {
+  background-color: #1f3150;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
 }
 
-.activity-card.full:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 0 60px rgba(0, 255, 255, 0.4);
-}
-
-/* ======== GALLERY ======== */
+/* Slideshow */
 .event-images {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 18px;
-  padding: 25px;
-  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-height: 220px;        /* tinggi sama semua */
+  background-color: #0a1a2f; /* supaya area kosong terlihat rapi */
 }
 
 .event-images img {
+  flex-shrink: 0;
   width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 14px;
-  transition: transform 0.6s ease, filter 0.5s ease, box-shadow 0.5s ease;
-  filter: brightness(0.85);
-}
-
-.event-images img:hover {
-  transform: scale(1.07);
-  filter: brightness(1.05);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
-}
-
-/* ======== ISI KONTEN ======== */
-.card-content {
-  padding: 50px 60px;
-  position: relative;
-  animation: fadeUp 1s ease forwards;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.card-content h3 {
-  color: #00d9ff;
-  font-size: 1.9rem;
-  margin-bottom: 20px;
-  font-weight: 600;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
-}
-
-.card-content ul {
-  margin: 0 0 25px 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.card-content ul li {
-  margin-bottom: 12px;
-  color: #d8eaff;
-  font-size: 1rem;
-  line-height: 1.6;
-  padding-left: 0;
-  transition: color 0.3s ease;
-}
-
-.card-content ul li:hover {
-  color: #00c3ff;
-}
-
-/* ======== HIGHLIGHT PARAGRAF ======== */
-.facility-highlight {
-  background: rgba(0, 255, 255, 0.08);
-  border-left: 5px solid #00eaff;
-  padding: 20px 25px;
+  height: 100%;
+  object-fit: contain;       /* tampil penuh, proporsional, tidak crop */
   border-radius: 8px;
-  color: #cfefff;
-  font-style: italic;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.2);
-  transition: all 0.4s ease;
+  transition: transform 0.3s ease-in-out;
 }
 
-.facility-highlight:hover {
-  background: rgba(0, 255, 255, 0.15);
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+/* Panah navigasi */
+.slide-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.3);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  color: #0a1a2f;
+  z-index: 10;
+}
+.slide-arrow:hover {
+  background-color: rgba(255,255,255,0.5);
+}
+.slide-arrow.left { left: 5px; }
+.slide-arrow.right { right: 5px; }
+
+/* Container dua card side-by-side */
+.activity-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* responsive */
 }
 
-/* ======== RESPONSIVE ======== */
-@media (max-width: 768px) {
-  .activity-title {
-    font-size: 2.2rem;
-  }
-
-  .activity-card.full {
-    width: 100%;
-  }
-
-  .card-content {
-    padding: 30px 25px;
-  }
-
-  .card-content h3 {
-    font-size: 1.4rem;
+/* Responsif mobile */
+@media screen and (max-width: 768px) {
+  .activity-grid {
+    flex-direction: column;
+    gap: 15px;
   }
 }
