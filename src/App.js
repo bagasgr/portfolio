@@ -294,7 +294,7 @@ function App() {
         <h3>Pelatihan Walk Interview – Alumni Digital Talent Kominfo (Bersertifikat BNSP)</h3>
         <ul>
           <li>Simulasi langsung wawancara kerja dengan HR profesional</li>
-          <li>Review dan pembenahan CV oleh mentor bersertifikat BNSP</li>
+          <li>Review dan pembenahan CV oleh mentor yang sudah sangat ahli</li>
           <li>Pengenalan etika dan bahasa tubuh saat interview</li>
           <li>Pelatihan komunikasi dan personal branding untuk dunia kerja</li>
           <li>Kesempatan mendapatkan <strong>voucher Virtual Internship</strong></li>
@@ -302,7 +302,7 @@ function App() {
         <p className="facility-highlight">
           Kegiatan ini merupakan inisiatif dari <strong>Kementerian Komunikasi dan Informatika (Kominfo)</strong> 
           yang bekerja sama dengan lembaga pelatihan digital nasional, 
-          bertujuan untuk membekali para alumni <strong>Digital Talent Scholarship</strong> 
+          bertujuan untuk membekali para alumni Bersertifikat BNSP<strong>Digital Talent Scholarship</strong> 
           dengan keterampilan profesional dunia kerja.
         </p>
       </div>
