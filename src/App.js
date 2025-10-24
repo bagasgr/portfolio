@@ -36,6 +36,10 @@ import astra1 from "./images/astra1.jpg";
 import astra2 from "./images/astra2.jpg";
 import astra3 from "./images/astra3.jpg";
 import astra4 from "./images/astra4.jpg";
+import walk1 from "./images/walk1.jpeg";
+import walk2 from "./images/walk2.jpeg";
+import walk3 from "./images/walk3.jpeg";
+import walk4 from "./images/walk4.jpeg";
 
 
 // Komponen
@@ -246,6 +250,67 @@ function App() {
             </button>
           </div>
         )}
+
+        
+    <section className="activity-section" data-aos="fade-up">
+  <h2 className="activity-title">Events I Have Attended</h2>
+
+  {/* Acara 1 */}
+  <div className="activity-grid single-event">
+    <div className="activity-card full" data-aos="zoom-in">
+      <div className="event-images">
+        <img src={astra1} alt="ASTRAnouts Conference 2025 - 1" />
+        <img src={astra2} alt="ASTRAnouts Conference 2025 - 2" />
+        <img src={astra3} alt="ASTRAnouts Conference 2025 - 3" />
+        <img src={astra4} alt="ASTRAnouts Conference 2025 - 4" />
+      </div>
+      <div className="card-content">
+        <h3>Topics Discussed:</h3>
+        <ul>
+          <li>Transformasi Digital di Era AI</li>
+          <li>Inovasi Cloud Computing together <strong>Google Cloud, AWS, dan Alibaba</strong></li>
+          <li>Collaboration Industri & Education together <strong>Microsoft dan XData Labs</strong></li>
+          <li>Development of Indonesian Digital Talent by <strong>Astra Digital</strong></li>
+        </ul>
+        <p className="facility-highlight">
+          I also tried various interactive facilities such as AI simulations, cloud deployment demos, and professional networking with industry figures such as:
+          <br /><strong>Najelaa Shihab, Dharma Simorangkir, Paul Soegiantoro, Bebby Sisselo, dan lainnya.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Acara 2 */}
+  <div className="activity-grid single-event">
+    <div className="activity-card full" data-aos="zoom-in">
+      <div className="event-images">
+        <img src={walk1} alt="Pelatihan Walk Interview - 1" />
+        <img src={walk2} alt="Pelatihan Walk Interview - 2" />
+        <img src={walk3} alt="Pelatihan Walk Interview - 3" />
+        <img src={walk4} alt="Pelatihan Walk Interview - 4" />
+        
+      </div>
+      <div className="card-content">
+        <h3>Pelatihan Walk Interview – Alumni Digital Talent Kominfo (Bersertifikat BNSP)</h3>
+        <ul>
+          <li>Simulasi langsung wawancara kerja dengan HR profesional</li>
+          <li>Review dan pembenahan CV oleh mentor bersertifikat BNSP</li>
+          <li>Pengenalan etika dan bahasa tubuh saat interview</li>
+          <li>Pelatihan komunikasi dan personal branding untuk dunia kerja</li>
+          <li>Kesempatan mendapatkan <strong>voucher Virtual Internship</strong></li>
+        </ul>
+        <p className="facility-highlight">
+          Kegiatan ini merupakan inisiatif dari <strong>Kementerian Komunikasi dan Informatika (Kominfo)</strong> 
+          yang bekerja sama dengan lembaga pelatihan digital nasional, 
+          bertujuan untuk membekali para alumni <strong>Digital Talent Scholarship</strong> 
+          dengan keterampilan profesional dunia kerja.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section className="stack-section" data-aos="fade-up">
   <h2>🛠️ Tools & Tech Stack</h2>
   <div className="stack-marquee">
@@ -309,38 +374,7 @@ function App() {
 </section>
 
 
-   (
-    <section className="activity-section" data-aos="fade-up">
-      <h2 className="activity-title">Events I Have Attended</h2>
-
-      {/* Acara 1 */}
-      <div className="activity-grid single-event">
-        <div className="activity-card full" data-aos="zoom-in">
-          <div className="event-images">
-            <img src={astra1} alt="ASTRAnouts Conference 2025 - 1" />
-            <img src={astra2} alt="ASTRAnouts Conference 2025 - 2" />
-            <img src={astra3} alt="ASTRAnouts Conference 2025 - 3" />
-            <img src={astra4} alt="ASTRAnouts Conference 2025 - 4" />
-          </div>
-          <div className="card-content">
-            <h3>Topics Discussed:</h3>
-            <ul>
-              <li>Transformasi Digital di Era AI</li>
-              <li>Inovasi Cloud Computing together <strong>Google Cloud, AWS, dan Alibaba</strong></li>
-              <li>Collaboration Industri & Education together <strong>Microsoft dan XData Labs</strong></li>
-              <li>Development of Indonesian Digital Talent by<strong>Astra Digital</strong></li>
-            </ul>
-            <p className="facility-highlight">
-              I also tried various interactive facilities such as AI simulations, cloud deployment demos, and professional networking with industry figures such as:
-              <br /><strong>Najelaa Shihab, Dharma Simorangkir, Paul Soegiantoro, Bebby Sisselo, dan lainnya.</strong>
-            </p>
-          </div>
-          
-        </div>
-      </div>
-
-
-</section>  
+   
 
         {/* Routes */}
         <Routes>

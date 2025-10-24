@@ -870,100 +870,195 @@ body {
 }
 
 
-/* ===== Container utama kartu acara ===== */
-.activity-card {
-  background: linear-gradient(145deg, #0d1117, #141823); /* gradien gelap */
-  border-radius: 20px;
-  padding: 25px;
-  margin: 25px 0;
-  color: #ffffff;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7), 0 0 15px rgba(30, 144, 255, 0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+/* ======== SECTION UTAMA ======== */
+.activity-section {
+  background: linear-gradient(180deg, #000a1f 0%, #001a33 100%);
+  color: #eaf4ff;
+  padding: 100px 40px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
 }
 
-.activity-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8), 0 0 25px rgba(30, 144, 255, 0.5);
+/* Cahaya lembut latar belakang */
+.activity-section::before,
+.activity-section::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(150px);
+  opacity: 0.25;
+  z-index: 0;
 }
 
-/* ===== Slider gambar ===== */
-.event-images {
+.activity-section::before {
+  background: #00aaff;
+  top: -150px;
+  left: -150px;
+}
+
+.activity-section::after {
+  background: #0077ff;
+  bottom: -150px;
+  right: -150px;
+}
+
+/* ======== JUDUL ======== */
+.activity-title {
+  font-size: 3rem;
+  text-align: center;
+  color: #00d9ff;
+  text-shadow: 0 0 25px rgba(0, 217, 255, 0.7);
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 1px;
+  font-weight: 600;
+  animation: fadeDown 1s ease forwards;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======== CARD ======== */
+.activity-grid {
   display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 20px;
-  padding-bottom: 15px;
-  margin-bottom: 25px;
+  justify-content: center;
+  margin-bottom: 90px;
+  position: relative;
+  z-index: 1;
+}
+
+.activity-card.full {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(0, 221, 255, 0.25);
+  width: 90%;
+  max-width: 1100px;
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.15);
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.activity-card.full:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 60px rgba(0, 255, 255, 0.4);
+}
+
+/* ======== GALLERY ======== */
+.event-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  padding: 25px;
+  border-radius: 20px;
 }
 
 .event-images img {
-  width: 320px;
+  width: 100%;
   height: 220px;
   object-fit: cover;
-  border-radius: 15px;
-  scroll-snap-align: center;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 14px;
+  transition: transform 0.6s ease, filter 0.5s ease, box-shadow 0.5s ease;
+  filter: brightness(0.85);
 }
 
 .event-images img:hover {
-  transform: scale(1.1) rotate(-1deg);
-  box-shadow: 0 10px 25px rgba(30, 144, 255, 0.5), 0 0 15px rgba(30, 144, 255, 0.3);
+  transform: scale(1.07);
+  filter: brightness(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
 }
 
-/* ===== Scrollbar custom ===== */
-.event-images::-webkit-scrollbar {
-  height: 10px;
+/* ======== ISI KONTEN ======== */
+.card-content {
+  padding: 50px 60px;
+  position: relative;
+  animation: fadeUp 1s ease forwards;
 }
 
-.event-images::-webkit-scrollbar-thumb {
-  background: #1e90ff;
-  border-radius: 5px;
-  transition: background 0.3s;
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.event-images::-webkit-scrollbar-thumb:hover {
-  background: #63b3ff;
-}
-
-.event-images::-webkit-scrollbar-track {
-  background: #0d1117;
-}
-
-/* ===== Konten kartu ===== */
 .card-content h3 {
-  color: #1e90ff;
-  font-size: 1.6rem;
-  margin-bottom: 12px;
-  text-shadow: 0 0 8px rgba(30, 144, 255, 0.7);
+  color: #00d9ff;
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+.card-content ul {
+  margin: 0 0 25px 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .card-content ul li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  color: #d8eaff;
+  font-size: 1rem;
   line-height: 1.6;
-  position: relative;
-  padding-left: 12px;
+  padding-left: 0;
+  transition: color 0.3s ease;
 }
 
-.card-content ul li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: #1e90ff;
+.card-content ul li:hover {
+  color: #00c3ff;
 }
 
-/* ===== Highlight fasilitas ===== */
+/* ======== HIGHLIGHT PARAGRAF ======== */
 .facility-highlight {
-  background: rgba(30, 144, 255, 0.08);
-  padding: 12px;
-  border-left: 5px solid #1e90ff;
-  border-radius: 10px;
-  margin-top: 18px;
-  transition: background 0.3s ease;
+  background: rgba(0, 255, 255, 0.08);
+  border-left: 5px solid #00eaff;
+  padding: 20px 25px;
+  border-radius: 8px;
+  color: #cfefff;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.2);
+  transition: all 0.4s ease;
 }
 
 .facility-highlight:hover {
-  background: rgba(30, 144, 255, 0.15);
+  background: rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
 }
 
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .activity-title {
+    font-size: 2.2rem;
+  }
+
+  .activity-card.full {
+    width: 100%;
+  }
+
+  .card-content {
+    padding: 30px 25px;
+  }
+
+  .card-content h3 {
+    font-size: 1.4rem;
+  }
+}
