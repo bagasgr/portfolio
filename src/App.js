@@ -333,7 +333,7 @@ function App() {
     <div className="activity-card full">
       <EventImages images={[cert1, cert2, cert3]} />
       <div className="card-content">
-        <h3>Pelaksanaan Sertifikasi BNSP Kominfo Digital Talent – BPPTIK Cikarang Jababeka</h3>
+        <h3>Pelaksanaan Sertifikasi BNSP Kominfo Digital Talent – BPPTIK Cikarang Jababeka (Ilmuwan Data Madya (Associate Data Scientist)</h3>
         <ul>
           <li>Peserta mengikuti tes sertifikasi sesuai standar BNSP Kominfo</li>
           <li>Materi mencakup kompetensi digital dan profesional</li>
