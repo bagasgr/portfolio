@@ -40,7 +40,9 @@ import walk1 from "./images/walk1.jpeg";
 import walk2 from "./images/walk2.jpeg";
 import walk3 from "./images/walk3.jpeg";
 import walk4 from "./images/walk4.jpeg";
-
+import cert1 from "./images/cert1.jpeg";
+import cert2 from "./images/cert2.jpeg";
+import cert3 from "./images/cert3.jpeg";
 
 // Komponen
 import About from "./components/About";
@@ -326,6 +328,25 @@ function App() {
         </p>
       </div>
     </div>
+
+    {/* Acara 3 */}
+    <div className="activity-card full">
+      <EventImages images={[cert1, cert2, cert3]} />
+      <div className="card-content">
+        <h3>Pelaksanaan Sertifikasi BNSP Kominfo Digital Talent – BPPTIK Cikarang Jababeka</h3>
+        <ul>
+          <li>Peserta mengikuti tes sertifikasi sesuai standar BNSP Kominfo</li>
+          <li>Materi mencakup kompetensi digital dan profesional</li>
+          <li>Evaluasi dilakukan secara langsung oleh penguji bersertifikat</li>
+          <li>Hasil akhir: <strong>Lulus Sertifikasi BNSP Digital Talent</strong></li>
+        </ul>
+        <p className="facility-highlight">
+          Acara ini diselenggarakan di <strong>BPPTIK Cikarang Jababeka</strong> dengan fasilitas ruang tes yang nyaman dan lengkap. 
+          Kegiatan ini menegaskan pencapaian kompetensi digital secara resmi oleh pemerintah.
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>
 
