@@ -163,15 +163,20 @@ function App() {
               />
             </h2>
 
-            <article className="hero-description" data-aos="fade-right">
-              <h2>Driven by Code, Inspired by Innovation</h2>
-              <p>
-                Passionate about technology, I thrive on solving problems and
-                building smart solutions. With expertise in software
-                development, networking, and databases, I embrace challenges as
-                opportunities to innovate.
-              </p>
-            </article>
+          <article className="hero-description" data-aos="fade-right">
+  <h2>Profile Summary</h2>
+  <p>
+    I'm <strong>Bagas Gilang Ramadhan</strong>, a fresh <strong>Informatics Engineering</strong> graduate from 
+    <strong> Indraprasta University (UNINDRA)</strong>. Passionate about <strong>web development </strong> 
+     and <strong>data science</strong>, skilled in <strong>Java, PHP, Python, RapidMiner, Google Colab, HTML, CSS,</strong> 
+    and <strong>JavaScript</strong>.
+  </p>
+  <p>
+    My main project, <strong>Segarikan</strong>, is a web app using the <strong>Dicoding Story API</strong> 
+    to deliver interactive, data-driven experiences.
+  </p>
+</article>
+
 
             <div className="navigation" data-aos="slide-up">
               <a href="/about">About</a>
