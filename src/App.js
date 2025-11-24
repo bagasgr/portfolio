@@ -46,6 +46,7 @@ import cert3 from "./images/cert3.jpeg";
 import bdd1 from "./images/bd1.jpg";
 import bdd2 from "./images/bd2.jpg";
 import bdd3 from "./images/bd3.jpg";
+import fr from "./images/fr1.jpg";
 
 
 
@@ -200,7 +201,7 @@ function App() {
           </div>
 
           <img
-            src={fotobagasImg}
+            src={fr}
             alt="Bagas Gilang Ramadhan"
             className="hero-image"
             data-aos="fade-up"
