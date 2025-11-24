@@ -362,7 +362,7 @@ function App() {
 <div className="activity-card full">
   <EventImages images={[bdd1, bdd2, bdd3]} />
   <div className="card-content">
-    <h3>Bandung Developer Day (BDD) – Dicoding Indonesia</h3>
+    <h3>Badan EKRAF Developer Day 2025</h3>
     <ul>
       <li>Mengikuti sesi talkshow dan workshop yang membahas teknologi terbaru dan ekosistem developer di Indonesia</li>
       <li>Bertemu dan berdiskusi dengan developer dari berbagai background dan perusahaan teknologi</li>
