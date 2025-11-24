@@ -43,6 +43,11 @@ import walk4 from "./images/walk4.jpeg";
 import cert1 from "./images/cert1.jpeg";
 import cert2 from "./images/cert2.jpeg";
 import cert3 from "./images/cert3.jpeg";
+import bdd1 from "./images/bd1.jpg";
+import bdd2 from "./images/bd2.jpg";
+import bdd3 from "./images/bd3.jpg";
+
+
 
 // Komponen
 import About from "./components/About";
@@ -280,15 +285,16 @@ function App() {
         </div>
 
         {/* Notification Section */}
-        {notification && (
-          <div className="notification" data-aos="fade-up">
-            <h2>{notification.title}</h2>
-            <p>{notification.content}</p>
-            <button className="close-button" onClick={closeNotification}>
-              Close
-            </button>
-          </div>
-        )}
+      {notification && (
+  <div className="modal-overlay" onClick={closeNotification}>
+    <div className="modal-content" data-aos="zoom-in" onClick={(e) => e.stopPropagation()}>
+      <button className="modal-close" onClick={closeNotification}>✕</button>
+      <h2 className="modal-title">{notification.title}</h2>
+      <p className="modal-text">{notification.content}</p>
+    </div>
+  </div>
+)}
+
 
         
     <section className="activity-section">
@@ -352,6 +358,27 @@ function App() {
       </div>
     </div>
 
+    {/* Acara 4 */}
+<div className="activity-card full">
+  <EventImages images={[bdd1, bdd2, bdd3]} />
+  <div className="card-content">
+    <h3>Bandung Developer Day (BDD) – Dicoding Indonesia</h3>
+    <ul>
+      <li>Mengikuti sesi talkshow dan workshop yang membahas teknologi terbaru dan ekosistem developer di Indonesia</li>
+      <li>Bertemu dan berdiskusi dengan developer dari berbagai background dan perusahaan teknologi</li>
+      <li>Mendapat insight seputar karir, tren teknologi, serta best practice dalam industri IT</li>
+      <li>Berhasil berfoto langsung dengan <strong>CEO Dicoding</strong> sebagai momen networking berharga</li>
+    </ul>
+
+    <p className="facility-highlight">
+      Acara ini dilaksanakan di <strong>Bandung</strong> dengan pengalaman networking yang hangat, inspiratif, 
+      dan penuh wawasan. Kegiatan ini menjadi momen penting dalam perjalanan karir sebagai developer dan bagian dari 
+      ekosistem teknologi Indonesia.
+    </p>
+  </div>
+</div>
+
+ 
   </div>
 </section>
 

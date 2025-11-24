@@ -802,3 +802,77 @@ body {
     gap: 15px;
   }
 }
+
+/* Overlay Background */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in-out;
+  z-index: 999;
+}
+
+/* Modal Box */
+.modal-content {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  padding: 25px 35px;
+  width: 550px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  animation: scaleIn 0.35s ease;
+  color: #fff;
+}
+
+/* Title */
+.modal-title {
+  font-size: 26px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Text */
+.modal-text {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+/* Close Button */
+.modal-close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.modal-close:hover {
+  transform: scale(1.2);
+  color: #ff5252;
+}
+
+/* Animations */
+@keyframes scaleIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
