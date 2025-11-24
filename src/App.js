@@ -305,7 +305,7 @@ function App() {
     <div className="activity-card full">
       <EventImages images={[astra1, astra2, astra3, astra4]} />
       <div className="card-content">
-        <h3>Topics Discussed:</h3>
+        <h3> ASTRANOUTS 2025 Topics Discussed:</h3>
         <ul>
           <li>Transformasi Digital di Era AI</li>
           <li>Inovasi Cloud Computing together <strong>Google Cloud, AWS, dan Alibaba</strong></li>
