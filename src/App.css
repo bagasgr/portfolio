@@ -912,16 +912,49 @@ body {
 }
 
 .animated-title {
-  font-size: 42px;
-  font-weight: 700;
+  font-size: 52px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
   display: inline-block;
-  background: linear-gradient(90deg, #5ab4ff, #9f5bff, #ff4f81);
-  background-size: 200% auto;
 
-  /* FIX: vendor prefixes + standard property */
+  /* Premium Aurora Gradient */
+  background: linear-gradient(
+    90deg,
+    #00eaff,
+    #009dff,
+    #7b5bff,
+    #ff4fde,
+    #ffb347,
+    #00eaff
+  );
+  background-size: 500% 500%;
+
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  animation: titleGradient 4s linear infinite;
+  animation: gradientFlow 6s ease-in-out infinite, floating 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 12px rgba(0, 194, 255, 0.25));
+}
+
+/* Smooth Gradient Movement */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Gentle Floating Effect */
+@keyframes floating {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+  100% { transform: translateY(0); }
+}
+
+/* Hover Glow Boost */
+.animated-title:hover {
+  transform: scale(1.07);
+  transition: 0.4s ease;
+  filter: drop-shadow(0 0 30px rgba(0, 247, 255, 0.8));
 }
