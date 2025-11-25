@@ -322,7 +322,7 @@ function App() {
 
     {/* Acara 2 */}
     <div className="activity-card full">
-      <EventImages images={[walk1, walk2, walk3, walk4]} />
+      <EventImages images={[walk1, walk3, walk4]} />
       <div className="card-content">
         <h3>Pelatihan Walk Interview – Alumni Digital Talent Kominfo (Bersertifikat BNSP)</h3>
         <ul>
