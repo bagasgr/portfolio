@@ -47,6 +47,7 @@ import bdd1 from "./images/bd1.jpg";
 import bdd2 from "./images/bd2.jpg";
 import bdd3 from "./images/bd3.jpg";
 import fr from "./images/fr1.jpg";
+import bdd8 from "./images/bdd8.jpg";
 
 
 
@@ -361,7 +362,7 @@ function App() {
 
     {/* Acara 4 */}
 <div className="activity-card full">
-  <EventImages images={[bdd1, bdd2, bdd3]} />
+  <EventImages images={[bdd1, bdd2,bdd8 , bdd3]} />
   <div className="card-content">
     <h3>Badan EKRAF Developer Day 2025</h3>
     <ul>
