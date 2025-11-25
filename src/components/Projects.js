@@ -23,9 +23,13 @@ import proyek from "../images/c3.png";
 import catatan from "../images/catatan.png";
 import catatan2 from "../images/catatan2.png";
 import webpri from "../images/por1.png";
+import segarikan1 from "../images/segarikan1.png";
+import segarikan2 from "../images/segarikan5.png";
+
 
 const projectData = [
   { title: "Absensi Karyawan Web", description: "A web-based employee attendance system built with PHP.", images: [php1, php2] },
+  { title: "Project Capstone Segarikan", description: "Segarikan is a web-based platform designed to directly connect local fishermen, distributors, and consumers in the seafood supply chain. The project's primary goal is to create a digital solution that improves distribution efficiency, price transparency, and the quality of fishery products received by customers..", images: [segarikan1, segarikan2] },
   { title: "Belajar Membuat Front-End Web untuk Pemula", description: "Learning how to create beginner-friendly front-end websites using HTML, CSS, and JavaScript.", images: [buku1, buku2] },
   { title: "Bookshelf API", description: "A backend project to manage book collections using RESTful API with Hapi.js.", images: [b1, b2] },
   { title: "Inventory Gudang", description: "A warehouse management system developed using NetBeans.", images: [net1] },
